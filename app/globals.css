@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
+/**
+ * Design System Belondjo Portfolio
+ * Couleurs: Cream, Orange, Navy, Dark
+ * Typographie: Courier Prime (monospace obligatoire)
+ * Boutons: border-radius 50px (pill)
+ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Couleurs principales */
+  --color-cream: #F9F6F0;
+  --color-orange: #FF7B54;
+  --color-navy: #2C3E50;
+  --color-dark: #1A1A1A;
+
+  /* Couleurs grises */
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+
+  /* Couleur de bordure */
+  --color-border: var(--color-orange);
+
+  /* Background et foreground pour compatibilité */
+  --background: var(--color-cream);
+  --foreground: var(--color-dark);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* === COULEURS === */
+  --color-cream: #F9F6F0;
+  --color-orange: #FF7B54;
+  --color-navy: #2C3E50;
+  --color-dark: #1A1A1A;
+
+  /* Nuances de gris */
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+
+  /* Bordures */
+  --color-border: var(--color-orange);
+
+  /* Compatibilité */
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-dark);
+
+  /* === TYPOGRAPHIE === */
+  /* Font family - Courier Prime obligatoire */
+  --font-mono: 'Courier Prime', 'Courier New', Courier, monospace;
+
+  /* Tailles de texte custom */
+  --font-size-hero: 4rem;      /* 64px */
+  --font-size-h2: 3rem;        /* 48px */
+  --font-size-h3: 2rem;        /* 32px */
+
+  /* Line heights correspondants */
+  --line-height-hero: 1.1;
+  --line-height-h2: 1.2;
+  --line-height-h3: 1.3;
+
+  /* === BORDER RADIUS === */
+  --radius-pill: 50px;
+  --radius-full: 9999px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Styles de base */
+* {
+  font-family: var(--font-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Titres avec couleur orange par défaut */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-orange);
+  font-weight: 700;
+}
+
+/* Classes utilitaires custom */
+.text-hero {
+  font-size: var(--font-size-hero);
+  line-height: var(--line-height-hero);
+}
+
+.text-h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+.text-h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+.rounded-pill {
+  border-radius: var(--radius-pill);
+}
+
+/* Boutons avec style Design System */
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-orange);
+  border-radius: var(--radius-pill);
+  color: var(--color-orange);
+  font-weight: 700;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.btn-primary:hover {
+  background: var(--color-orange);
+  color: var(--color-cream);
+}
+
+/* Inputs avec border-bottom uniquement */
+.input-bottom {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--color-orange);
+  padding: 0.75rem 0;
+  color: var(--color-dark);
+  font-family: var(--font-mono);
+  outline: none;
+  transition: border-width 0.2s ease;
+}
+
+.input-bottom:focus {
+  border-bottom-width: 3px;
+}
+
+.input-bottom::placeholder {
+  color: var(--color-gray-500);
 }

@@ -9,6 +9,17 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <h1 className="text-hero text-orange mb-12">À propos</h1>
 
+          {/* Image d'illustration */}
+          <div className="mb-16 flex justify-center">
+            <div className="w-full max-w-3xl">
+              <img
+                src="/images/about.svg"
+                alt="À propos illustration"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Présentation */}
             <div className="space-y-6">

@@ -10,29 +10,43 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="min-h-screen bg-cream flex items-center justify-center pt-28">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12 py-20">
-          <div className="text-center">
-            <h1 className="text-hero text-orange mb-6 animate-fade-in">
-              Belondjo
-            </h1>
-            <h2 className="text-h2 text-dark mb-8 animate-slide-up">
-              Développeur Full Stack
-            </h2>
-            <p className="text-xl text-dark/80 mb-12 max-w-2xl mx-auto animate-slide-up">
-              Je crée des expériences web modernes, performantes et élégantes
-              avec Next.js, React et TypeScript.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-              <Link href="/cv">
-                <Button size="lg" iconAfter={<ArrowRight />}>
-                  Voir mon CV
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="secondary">
-                  Me contacter
-                </Button>
-              </Link>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image à gauche */}
+            <div className="order-2 lg:order-1 animate-fade-in">
+              <div className="relative w-full h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/hero.jpeg"
+                  alt="Belondjo Portfolio"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Texte à droite */}
+            <div className="order-1 lg:order-2 text-center lg:text-left">
+              <h1 className="text-hero text-orange mb-6 animate-fade-in">
+                Belondjo
+              </h1>
+              <h2 className="text-h2 text-dark mb-8 animate-slide-up">
+                Développeur Full Stack
+              </h2>
+              <p className="text-xl text-dark/80 mb-12 max-w-2xl mx-auto lg:mx-0 animate-slide-up">
+                Je crée des expériences web modernes, performantes et élégantes
+                avec Next.js, React et TypeScript.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up">
+                <Link href="/cv">
+                  <Button size="lg" iconAfter={<ArrowRight />}>
+                    Voir mon CV
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button size="lg" variant="secondary">
+                    Me contacter
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

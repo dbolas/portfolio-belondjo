@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface LogoProps {
@@ -38,6 +37,9 @@ interface LogoProps {
  * Utilise le logo SVG situé dans /public/images/logo-belondjo.svg
  * Couleur principale: Navy (#2C3E50) selon le Design System
  *
+ * Note: Utilise <img> au lieu de Next.js Image pour une meilleure
+ * compatibilité avec les fichiers SVG volumineux.
+ *
  * @example
  * // Logo par défaut dans le header
  * <Logo />
@@ -57,18 +59,24 @@ export default function Logo({
   className = '',
   variant = 'default',
 }: LogoProps) {
+  // Classes pour les variants
+  const variantClasses = {
+    default: '',
+    light: 'brightness-0 invert',
+    dark: 'brightness-0',
+  };
+
   const logo = (
-    <Image
+    <img
       src="/images/logo-belondjo.svg"
       alt="Belondjo Portfolio Logo"
       width={width}
       height={height}
-      priority
-      className={`
-        ${variant === 'light' ? 'brightness-0 invert' : ''}
-        ${variant === 'dark' ? 'brightness-0' : ''}
-        ${className}
-      `}
+      className={`${variantClasses[variant]} ${className}`.trim()}
+      style={{
+        maxWidth: '100%',
+        height: 'auto',
+      }}
     />
   );
 

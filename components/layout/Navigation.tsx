@@ -75,9 +75,9 @@ export default function Navigation() {
         `}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-28 py-4">
             {/* Logo */}
-            <Logo width={140} height={45} />
+            <Logo width={160} height={55} />
 
             {/* Navigation Desktop */}
             <div className="hidden md:flex items-center gap-8">
@@ -137,7 +137,7 @@ export default function Navigation() {
           md:hidden
           ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
         `}
-        style={{ top: '80px' }}
+        style={{ top: '112px' }}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
           {/* Liens de navigation mobile */}

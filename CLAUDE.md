@@ -65,6 +65,116 @@ module.exports = {
 <div className="bg-navy">Logo</div>
 ```
 
+### Logo et Identité Visuelle
+
+#### Fichiers Logo
+
+Le logo du portfolio est disponible en format SVG:
+
+- **Emplacement**: `public/images/logo-belondjo.svg`
+- **Format**: SVG vectoriel (346KB)
+- **Couleur principale**: Navy (`#2C3E50`)
+- **Optimisation**: Utiliser avec Next.js Image pour les performances
+
+#### Composant Logo
+
+Un composant React réutilisable est disponible dans `components/layout/Logo.tsx`.
+
+##### Import et utilisation
+
+```tsx
+// Import du composant
+import { Logo } from '@/components/layout';
+
+// Utilisation par défaut (120x40px, cliquable)
+<Logo />
+
+// Logo personnalisé
+<Logo
+  width={200}
+  height={60}
+  clickable={false}
+  className="hover:scale-105"
+/>
+```
+
+##### Props disponibles
+
+| Prop | Type | Défaut | Description |
+|------|------|--------|-------------|
+| `width` | `number` | `120` | Largeur en pixels |
+| `height` | `number` | `40` | Hauteur en pixels |
+| `clickable` | `boolean` | `true` | Si true, redirige vers "/" au clic |
+| `className` | `string` | `''` | Classes CSS additionnelles |
+| `variant` | `'default' \| 'light' \| 'dark'` | `'default'` | Variante de couleur |
+
+##### Variantes du logo
+
+```tsx
+// Logo par défaut (navy)
+<Logo variant="default" />
+
+// Logo clair (pour fond sombre)
+<Logo variant="light" />
+
+// Logo sombre (pour fond clair)
+<Logo variant="dark" />
+```
+
+##### Exemples d'intégration
+
+```tsx
+// Dans le Header
+export default function Header() {
+  return (
+    <header className="bg-cream py-6 px-8">
+      <nav className="flex items-center justify-between">
+        <Logo width={140} height={45} />
+        <ul className="flex gap-6">
+          {/* Navigation */}
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+// Dans le Footer
+export default function Footer() {
+  return (
+    <footer className="bg-navy py-12 px-8">
+      <Logo variant="light" width={100} height={35} />
+      {/* Contenu footer */}
+    </footer>
+  );
+}
+
+// Logo standalone non cliquable
+<div className="flex items-center justify-center py-20">
+  <Logo
+    width={300}
+    height={100}
+    clickable={false}
+    className="opacity-80"
+  />
+</div>
+```
+
+#### Utilisation directe du SVG
+
+Si vous préférez utiliser le SVG directement sans le composant:
+
+```tsx
+import Image from 'next/image';
+
+<Image
+  src="/images/logo-belondjo.svg"
+  alt="Belondjo Logo"
+  width={120}
+  height={40}
+  priority
+/>
+```
+
 ### Typographie
 
 #### Police Obligatoire: Courier Prime
@@ -481,7 +591,14 @@ portfolio-belondjo/
 │   ├── layout.tsx         # Layout racine avec métadonnées
 │   ├── page.tsx           # Page d'accueil
 │   └── globals.css        # Styles globaux
+├── components/            # Composants React réutilisables
+│   ├── layout/           # Composants de structure
+│   │   ├── Logo.tsx      # Composant Logo
+│   │   └── index.ts      # Export des composants layout
+│   └── ui/               # Composants Design System
 ├── public/                # Assets statiques
+│   ├── images/           # Images et logos
+│   │   └── logo-belondjo.svg  # Logo principal (346KB)
 │   ├── file.svg
 │   ├── globe.svg
 │   ├── next.svg

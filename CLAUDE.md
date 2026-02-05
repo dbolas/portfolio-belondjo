@@ -67,14 +67,24 @@ module.exports = {
 
 ### Logo et Identité Visuelle
 
-#### Fichiers Logo
+#### Fichiers Logo et Favicon
 
-Le logo du portfolio est disponible en format SVG:
+Le portfolio dispose de deux assets visuels principaux:
 
+##### Logo Principal
 - **Emplacement**: `public/images/logo-belondjo.svg`
 - **Format**: SVG vectoriel (346KB)
 - **Couleur principale**: Navy (`#2C3E50`)
+- **Usage**: Header, Footer, pages
 - **Optimisation**: Utiliser avec Next.js Image pour les performances
+
+##### Favicon
+- **Emplacement**: `app/icon.svg` (détection automatique Next.js)
+- **Copie**: `public/images/favicon.svg`
+- **Format**: SVG vectoriel (309KB)
+- **Taille**: 16x16px recommandée pour l'affichage
+- **Usage**: Icône du navigateur, onglets, favoris
+- **Configuration**: Automatique via App Router de Next.js
 
 #### Composant Logo
 
@@ -173,6 +183,66 @@ import Image from 'next/image';
   height={40}
   priority
 />
+```
+
+#### Configuration du Favicon
+
+Next.js détecte automatiquement le favicon via le fichier `app/icon.svg`.
+
+##### Fonctionnement automatique
+
+Le fichier `app/icon.svg` est automatiquement:
+- Détecté par Next.js au build
+- Converti en formats multiples (ICO, PNG)
+- Ajouté aux métadonnées HTML
+- Optimisé pour différentes tailles
+
+##### Vérification du favicon
+
+```bash
+# Le favicon est généré automatiquement au build
+npm run build
+
+# Vérifier dans le navigateur
+# L'icône apparaît dans l'onglet et les favoris
+```
+
+##### Configuration personnalisée (optionnelle)
+
+Si vous souhaitez personnaliser les métadonnées du favicon:
+
+```tsx
+// app/layout.tsx
+export const metadata = {
+  icons: {
+    icon: '/images/favicon.svg',
+    apple: '/images/favicon.svg',
+  },
+}
+```
+
+##### Formats alternatifs
+
+Pour créer des formats alternatifs (ICO, PNG):
+
+```bash
+# Installer un convertisseur (optionnel)
+npm install -D sharp
+
+# Ou utiliser un service en ligne
+# https://realfavicongenerator.net/
+```
+
+##### Emplacements des fichiers
+
+```
+app/
+├── icon.svg              # ✅ Favicon principal (détection auto)
+
+public/
+└── images/
+    ├── logo-belondjo.svg # Logo principal
+    └── favicon.svg       # Copie du favicon
 ```
 
 ### Typographie
@@ -590,7 +660,8 @@ portfolio-belondjo/
 ├── app/                    # Répertoire App Router
 │   ├── layout.tsx         # Layout racine avec métadonnées
 │   ├── page.tsx           # Page d'accueil
-│   └── globals.css        # Styles globaux
+│   ├── globals.css        # Styles globaux
+│   └── icon.svg           # Favicon (détection automatique Next.js)
 ├── components/            # Composants React réutilisables
 │   ├── layout/           # Composants de structure
 │   │   ├── Logo.tsx      # Composant Logo

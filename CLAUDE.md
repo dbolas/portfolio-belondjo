@@ -17,6 +17,462 @@ Portfolio personnel développé avec Next.js 16, React 19 et Tailwind CSS v4. Ce
 - **PostCSS** - Traitement CSS avec Tailwind
 - **Geist Font** - Polices optimisées de Vercel (Sans & Mono)
 
+## Design System
+
+### Palette de Couleurs
+
+Le portfolio utilise une palette de couleurs stricte et cohérente:
+
+| Couleur | Hex Code | Usage | Variable CSS |
+|---------|----------|-------|--------------|
+| **Cream** | `#F9F6F0` | Fond principal du site | `--color-cream` |
+| **Orange** | `#FF7B54` | Titres, accents, hover | `--color-orange` |
+| **Navy** | `#2C3E50` | Logo, éléments secondaires | `--color-navy` |
+| **Dark** | `#1A1A1A` | Texte principal | `--color-dark` |
+
+#### Configuration Tailwind
+
+Ajouter ces couleurs dans `tailwind.config.js`:
+
+```js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        cream: '#F9F6F0',
+        orange: '#FF7B54',
+        navy: '#2C3E50',
+        dark: '#1A1A1A',
+      },
+    },
+  },
+}
+```
+
+#### Exemples d'utilisation
+
+```tsx
+// Fond principal
+<div className="bg-cream">
+
+// Titre avec couleur orange
+<h1 className="text-orange">Portfolio</h1>
+
+// Texte principal
+<p className="text-dark">Description</p>
+
+// Logo ou élément secondaire
+<div className="bg-navy">Logo</div>
+```
+
+### Typographie
+
+#### Police Obligatoire: Courier Prime
+
+**IMPORTANT**: Courier Prime (monospace) est la police OBLIGATOIRE pour l'ensemble du site.
+
+##### Installation avec Google Fonts
+
+```tsx
+// app/layout.tsx
+import { Courier_Prime } from "next/font/google";
+
+const courierPrime = Courier_Prime({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-courier',
+});
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="fr">
+      <body className={courierPrime.variable}>
+        {children}
+      </body>
+    </html>
+  );
+}
+```
+
+##### Configuration CSS Globale
+
+```css
+/* app/globals.css */
+:root {
+  --font-courier: 'Courier Prime', monospace;
+}
+
+* {
+  font-family: var(--font-courier);
+}
+
+body {
+  font-family: var(--font-courier);
+}
+```
+
+##### Hiérarchie Typographique
+
+```tsx
+// H1 - Titres principaux
+<h1 className="text-4xl md:text-6xl font-bold text-orange">
+  Titre Principal
+</h1>
+
+// H2 - Sous-titres
+<h2 className="text-3xl md:text-5xl font-bold text-orange">
+  Sous-titre
+</h2>
+
+// H3 - Titres de section
+<h3 className="text-2xl md:text-4xl font-bold text-orange">
+  Section
+</h3>
+
+// Paragraphe
+<p className="text-base md:text-lg text-dark leading-relaxed">
+  Texte de paragraphe
+</p>
+
+// Petit texte
+<span className="text-sm text-dark/70">
+  Détails
+</span>
+```
+
+### Boutons
+
+#### Spécifications strictes
+
+- **Border**: Outline orange 2px
+- **Border-radius**: 50px (complètement arrondi)
+- **Hover**: Remplissage avec fond orange
+- **Transition**: Smooth (200-300ms)
+
+#### Composant Button Standard
+
+```tsx
+// components/Button.tsx
+interface ButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+  className?: string;
+}
+
+export default function Button({
+  children,
+  onClick,
+  type = 'button',
+  className = ''
+}: ButtonProps) {
+  return (
+    <button
+      type={type}
+      onClick={onClick}
+      className={`
+        px-6 py-3
+        border-2 border-orange
+        rounded-[50px]
+        text-orange
+        font-bold
+        transition-all duration-300
+        hover:bg-orange hover:text-cream
+        active:scale-95
+        ${className}
+      `}
+    >
+      {children}
+    </button>
+  );
+}
+```
+
+#### Classes Tailwind pour les boutons
+
+```tsx
+// Bouton primaire
+<button className="
+  px-6 py-3
+  border-2 border-orange
+  rounded-[50px]
+  text-orange
+  font-bold
+  transition-all duration-300
+  hover:bg-orange hover:text-cream
+">
+  Cliquez ici
+</button>
+
+// Bouton avec icône
+<button className="
+  flex items-center gap-2
+  px-6 py-3
+  border-2 border-orange
+  rounded-[50px]
+  text-orange
+  font-bold
+  transition-all duration-300
+  hover:bg-orange hover:text-cream
+">
+  <Icon />
+  Télécharger CV
+</button>
+```
+
+### Inputs et Formulaires
+
+#### Spécifications strictes
+
+- **Border**: Border-bottom uniquement (pas de bordure complète)
+- **Border-color**: Orange
+- **Background**: Transparent ou cream
+- **Focus**: Border-bottom plus épais
+
+#### Composant Input Standard
+
+```tsx
+// components/Input.tsx
+interface InputProps {
+  type?: 'text' | 'email' | 'tel' | 'url';
+  placeholder?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
+}
+
+export default function Input({
+  type = 'text',
+  placeholder,
+  value,
+  onChange,
+  className = ''
+}: InputProps) {
+  return (
+    <input
+      type={type}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      className={`
+        w-full
+        bg-transparent
+        border-0 border-b-2 border-orange
+        py-3 px-0
+        text-dark
+        placeholder:text-dark/50
+        focus:outline-none
+        focus:border-b-[3px]
+        transition-all duration-200
+        ${className}
+      `}
+    />
+  );
+}
+```
+
+#### Textarea
+
+```tsx
+// components/Textarea.tsx
+export default function Textarea({
+  placeholder,
+  value,
+  onChange,
+  rows = 4,
+  className = ''
+}: TextareaProps) {
+  return (
+    <textarea
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      rows={rows}
+      className={`
+        w-full
+        bg-transparent
+        border-0 border-b-2 border-orange
+        py-3 px-0
+        text-dark
+        placeholder:text-dark/50
+        focus:outline-none
+        focus:border-b-[3px]
+        transition-all duration-200
+        resize-none
+        ${className}
+      `}
+    />
+  );
+}
+```
+
+#### Exemple de formulaire complet
+
+```tsx
+// app/contact/page.tsx
+import Input from '@/components/Input';
+import Textarea from '@/components/Textarea';
+import Button from '@/components/Button';
+
+export default function ContactForm() {
+  return (
+    <form className="max-w-2xl mx-auto space-y-6 p-8 bg-cream">
+      <div>
+        <label className="block text-dark font-bold mb-2">
+          Nom
+        </label>
+        <Input
+          type="text"
+          placeholder="Votre nom"
+        />
+      </div>
+
+      <div>
+        <label className="block text-dark font-bold mb-2">
+          Email
+        </label>
+        <Input
+          type="email"
+          placeholder="votre@email.com"
+        />
+      </div>
+
+      <div>
+        <label className="block text-dark font-bold mb-2">
+          Message
+        </label>
+        <Textarea
+          placeholder="Votre message..."
+          rows={6}
+        />
+      </div>
+
+      <Button type="submit">
+        Envoyer
+      </Button>
+    </form>
+  );
+}
+```
+
+### Composants UI Réutilisables
+
+#### Card
+
+```tsx
+// components/Card.tsx
+export default function Card({
+  children,
+  className = ''
+}: CardProps) {
+  return (
+    <div className={`
+      bg-cream
+      border-2 border-orange
+      rounded-lg
+      p-6
+      transition-all duration-300
+      hover:shadow-lg
+      hover:scale-[1.02]
+      ${className}
+    `}>
+      {children}
+    </div>
+  );
+}
+```
+
+#### Section Container
+
+```tsx
+// components/Section.tsx
+export default function Section({
+  children,
+  className = ''
+}: SectionProps) {
+  return (
+    <section className={`
+      min-h-screen
+      bg-cream
+      py-16 md:py-24
+      px-6 md:px-12
+      ${className}
+    `}>
+      <div className="max-w-6xl mx-auto">
+        {children}
+      </div>
+    </section>
+  );
+}
+```
+
+### Règles de Design Strictes
+
+#### À FAIRE ✅
+
+- Utiliser **uniquement** Courier Prime pour toutes les polices
+- Respecter la palette de couleurs (cream, orange, navy, dark)
+- Boutons avec `border-radius: 50px` et outline orange
+- Inputs avec `border-bottom` uniquement
+- Transitions smooth sur tous les éléments interactifs
+- Titres toujours en orange (`text-orange`)
+- Texte principal toujours en dark (`text-dark`)
+- Fond principal toujours en cream (`bg-cream`)
+
+#### À ÉVITER ❌
+
+- Ne **JAMAIS** utiliser d'autres polices que Courier Prime
+- Ne pas utiliser de couleurs en dehors de la palette définie
+- Éviter les border complètes sur les inputs
+- Ne pas utiliser `border-radius` inférieur à 50px pour les boutons
+- Éviter les ombres excessives (sauf hover subtil)
+- Ne pas mélanger les styles (rester cohérent)
+
+### Responsive Design
+
+```tsx
+// Exemple de composant responsive
+<div className="
+  grid
+  grid-cols-1
+  md:grid-cols-2
+  lg:grid-cols-3
+  gap-6
+  p-4 md:p-8 lg:p-12
+">
+  {/* Contenu */}
+</div>
+
+// Typographie responsive
+<h1 className="
+  text-3xl md:text-5xl lg:text-6xl
+  text-orange
+  font-bold
+">
+  Titre
+</h1>
+```
+
+### Animations et Transitions
+
+```tsx
+// Hover effects
+<div className="
+  transition-all duration-300
+  hover:scale-105
+  hover:shadow-xl
+">
+
+// Fade in on scroll (avec framer-motion)
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+>
+  {/* Contenu */}
+</motion.div>
+```
+
 ## Structure du Projet
 
 ```
@@ -70,16 +526,17 @@ npm run lint
 - **Langue**: Anglais (en)
 
 ### Polices
-- **Geist Sans** - Police principale
-- **Geist Mono** - Police monospace
+- **Courier Prime** - Police monospace OBLIGATOIRE pour tout le site
 - Chargement optimisé via `next/font/google`
-- Variables CSS: `--font-geist-sans`, `--font-geist-mono`
+- Variable CSS: `--font-courier`
+- Poids disponibles: 400 (regular), 700 (bold)
 
 ### Thème
-- Support du mode sombre intégré
-- Classes Tailwind: `dark:` pour les variantes sombres
-- Fond clair: `bg-zinc-50`
-- Fond sombre: `bg-black`
+- **Fond principal**: Cream (`#F9F6F0`)
+- **Couleur d'accent**: Orange (`#FF7B54`) pour titres et éléments interactifs
+- **Logo/Secondaire**: Navy (`#2C3E50`)
+- **Texte principal**: Dark (`#1A1A1A`)
+- Pas de mode sombre (design system strict)
 
 ## Architecture
 
@@ -150,11 +607,36 @@ export default function DashboardLayout({ children }) {
 }
 ```
 
-### Utiliser Tailwind CSS
+### Utiliser Tailwind CSS avec le Design System
 ```tsx
-<div className="flex items-center justify-center bg-white dark:bg-black">
-  <h1 className="text-3xl font-semibold">Titre</h1>
+// Respecter les couleurs du design system
+<div className="flex items-center justify-center bg-cream">
+  <h1 className="text-3xl md:text-5xl font-bold text-orange">
+    Titre Principal
+  </h1>
+  <p className="text-base text-dark">
+    Texte de description
+  </p>
 </div>
+
+// Bouton avec le style du design system
+<button className="
+  px-6 py-3
+  border-2 border-orange rounded-[50px]
+  text-orange font-bold
+  hover:bg-orange hover:text-cream
+  transition-all duration-300
+">
+  Call to Action
+</button>
+
+// Input avec border-bottom uniquement
+<input className="
+  w-full bg-transparent
+  border-0 border-b-2 border-orange
+  py-3 text-dark
+  focus:outline-none focus:border-b-[3px]
+" />
 ```
 
 ## Conventions de Code
@@ -247,18 +729,32 @@ export default function Loading() {
 ## Prochaines Étapes
 
 ### Recommandations
+
+#### Priorité 1: Implémenter le Design System
+1. **Configurer Courier Prime** dans `app/layout.tsx`
+2. **Configurer la palette de couleurs** dans `tailwind.config.js`
+3. **Créer les composants de base**
+   - `Button.tsx` (outline orange, border-radius 50px)
+   - `Input.tsx` (border-bottom uniquement)
+   - `Textarea.tsx` (border-bottom uniquement)
+   - `Card.tsx` (avec bordure orange)
+   - `Section.tsx` (container responsive)
+4. **Mettre à jour `globals.css`** avec les variables CSS et la police
+
+#### Priorité 2: Structure et Contenu
 1. **Personnaliser les métadonnées** (titre, description)
 2. **Créer les pages du portfolio**
    - À propos
    - Projets
    - Contact
-3. **Ajouter des composants réutilisables**
+3. **Ajouter des composants layout**
    - Header/Navigation
    - Footer
-   - Cards de projets
-4. **Intégrer des animations** (Framer Motion)
-5. **Ajouter des analytics** (Vercel Analytics)
-6. **Optimiser SEO**
+
+#### Priorité 3: Améliorations
+1. **Intégrer des animations** (Framer Motion)
+2. **Ajouter des analytics** (Vercel Analytics)
+3. **Optimiser SEO**
    - Sitemap
    - robots.txt
    - Open Graph tags
@@ -276,10 +772,23 @@ app/
 │       └── page.tsx
 ├── contact/
 │   └── page.tsx
-└── components/
-    ├── Header.tsx
-    ├── Footer.tsx
-    └── ProjectCard.tsx
+├── layout.tsx              # Layout racine avec Courier Prime
+└── globals.css             # Styles globaux + variables CSS
+
+components/
+├── ui/                     # Composants Design System
+│   ├── Button.tsx         # Bouton outline orange
+│   ├── Input.tsx          # Input border-bottom
+│   ├── Textarea.tsx       # Textarea border-bottom
+│   ├── Card.tsx           # Card avec bordure orange
+│   └── Section.tsx        # Container de section
+├── layout/                 # Composants de structure
+│   ├── Header.tsx         # Navigation
+│   ├── Footer.tsx         # Pied de page
+│   └── Navigation.tsx     # Menu de navigation
+└── projects/              # Composants spécifiques
+    ├── ProjectCard.tsx    # Card de projet
+    └── ProjectGrid.tsx    # Grille de projets
 ```
 
 ## Ressources
@@ -300,4 +809,5 @@ Pour toute question ou assistance avec Claude Code:
 
 **Dernière mise à jour**: 5 février 2026
 **Version Next.js**: 16.1.6
-**État du projet**: Initialisé et prêt pour le développement
+**État du projet**: Initialisé avec Design System documenté
+**Design System**: Courier Prime • Cream/Orange/Navy/Dark • Boutons outline 50px • Inputs border-bottom

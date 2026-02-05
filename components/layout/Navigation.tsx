@@ -12,9 +12,10 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: 'Travail', href: '#travail' },
-  { label: 'À propos', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Maison', href: '/' },
+  { label: 'À propos', href: '/about' },
+  { label: 'CV', href: '/cv' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 /**
@@ -95,10 +96,6 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
-
-              <Button size="sm">
-                <Link href="#contact">Contactez-moi</Link>
-              </Button>
             </div>
 
             {/* Bouton Menu Mobile */}
@@ -159,16 +156,6 @@ export default function Navigation() {
               {link.label}
             </Link>
           ))}
-
-          {/* Bouton CTA mobile */}
-          <div
-            className="mt-8 animate-slide-up"
-            style={{ animationDelay: '300ms' }}
-          >
-            <Button size="lg" fullWidth>
-              <Link href="#contact">Contactez-moi</Link>
-            </Button>
-          </div>
         </div>
       </div>
 

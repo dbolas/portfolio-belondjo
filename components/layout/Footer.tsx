@@ -15,9 +15,10 @@ interface SocialLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: 'Travail', href: '#travail' },
-  { label: 'À propos', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Maison', href: '/' },
+  { label: 'À propos', href: '/about' },
+  { label: 'CV', href: '/cv' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const socialLinks: SocialLink[] = [

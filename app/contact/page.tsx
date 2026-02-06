@@ -29,11 +29,11 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Image à gauche */}
             <div className="space-y-8">
-              <div className="w-full h-[500px] rounded-2xl overflow-hidden">
+              <div className="w-full flex items-center justify-center bg-cream/5 rounded-2xl p-8">
                 <img
-                  src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80"
-                  alt="City skyline"
-                  className="w-full h-full object-cover"
+                  src="/images/about.svg"
+                  alt="Contact illustration"
+                  className="w-full h-auto max-h-[500px] object-contain"
                 />
               </div>
 

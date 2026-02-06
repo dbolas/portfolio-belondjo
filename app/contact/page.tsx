@@ -25,44 +25,8 @@ export default function ContactPage() {
       <Navigation />
 
       <main className="min-h-screen bg-cream pt-28 py-24">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Image à gauche */}
-            <div className="space-y-8">
-              <div className="w-full flex items-center justify-center bg-cream/5 rounded-2xl p-8">
-                <img
-                  src="/images/about.svg"
-                  alt="Contact illustration"
-                  className="w-full h-auto max-h-[500px] object-contain"
-                />
-              </div>
-
-              {/* Informations de contact */}
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="bg-orange/10 p-3 rounded-full">
-                    <Mail className="text-orange" size={24} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-dark/60">Contactez-nous à</p>
-                    <a
-                      href="mailto:contact@belondjo.com"
-                      className="text-lg font-bold text-dark hover:text-orange transition-colors"
-                    >
-                      contact@belondjo.com
-                    </a>
-                  </div>
-                </div>
-
-                <Button size="lg" fullWidth>
-                  <Mail size={20} />
-                  Contactez-moi
-                </Button>
-              </div>
-            </div>
-
-            {/* Formulaire à droite */}
-            <div>
+        <div className="max-w-4xl mx-auto px-6 lg:px-12">
+          <div>
               <h1 className="text-h2 text-orange mb-2">Entrer en contact!</h1>
               <p className="text-dark/70 mb-8">
                 Remplissez le formulaire ci-dessous pour m&apos;envoyer un message
@@ -111,20 +75,45 @@ export default function ContactPage() {
               <div className="mt-12 pt-8 border-t border-dark/10">
                 <h3 className="text-h3 text-orange mb-6">Autres moyens de contact</h3>
 
-                <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex items-center gap-4">
-                    <Phone className="text-orange" size={20} />
-                    <a
-                      href="tel:+33612345678"
-                      className="text-dark hover:text-orange transition-colors"
-                    >
-                      +33 6 12 34 56 78
-                    </a>
+                    <div className="bg-orange/10 p-3 rounded-full">
+                      <Mail className="text-orange" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-dark/60">Email</p>
+                      <a
+                        href="mailto:contact@belondjo.com"
+                        className="font-bold text-dark hover:text-orange transition-colors"
+                      >
+                        contact@belondjo.com
+                      </a>
+                    </div>
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <MapPin className="text-orange" size={20} />
-                    <span className="text-dark">Paris, France</span>
+                    <div className="bg-orange/10 p-3 rounded-full">
+                      <Phone className="text-orange" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-dark/60">Téléphone</p>
+                      <a
+                        href="tel:+33612345678"
+                        className="font-bold text-dark hover:text-orange transition-colors"
+                      >
+                        +33 6 12 34 56 78
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="bg-orange/10 p-3 rounded-full">
+                      <MapPin className="text-orange" size={24} />
+                    </div>
+                    <div>
+                      <p className="text-sm text-dark/60">Localisation</p>
+                      <span className="font-bold text-dark">Paris, France</span>
+                    </div>
                   </div>
                 </div>
 

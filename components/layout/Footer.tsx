@@ -50,12 +50,12 @@ export default function Footer() {
         {/* Navigation et liens sociaux */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Liens de navigation */}
-          <nav className="flex flex-wrap gap-6 justify-center md:justify-start">
+          <nav className="flex flex-wrap gap-8 justify-center md:justify-start">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-dark/70 hover:text-orange transition-colors duration-200"
+                className="text-dark font-bold hover:text-orange transition-colors duration-200 text-base"
               >
                 {link.label}
               </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
             href="https://linkedin.com/in/belondjo"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-dark/70 hover:text-orange transition-colors duration-200"
+            className="text-dark font-bold hover:text-orange transition-colors duration-200 text-base"
           >
             LinkedIn
           </a>

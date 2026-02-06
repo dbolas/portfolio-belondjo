@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Code, Palette, Rocket, Globe, Database, Smartphone } from 'lucide-react';
 import { Navigation, Footer } from '@/components/layout';
 import { Button } from '@/components/ui';
@@ -9,6 +10,7 @@ const projects = [
     icon: Code,
     color: 'orange',
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
+    slug: 'portfolio-moderne',
   },
   {
     title: 'Design System',
@@ -16,6 +18,7 @@ const projects = [
     icon: Palette,
     color: 'navy',
     tags: ['React', 'Storybook', 'CSS', 'Documentation'],
+    slug: 'design-system',
   },
   {
     title: 'Application SaaS',
@@ -23,6 +26,7 @@ const projects = [
     icon: Rocket,
     color: 'orange',
     tags: ['Next.js', 'PostgreSQL', 'Stripe', 'Auth'],
+    slug: 'portfolio-moderne',
   },
   {
     title: 'Site E-commerce',
@@ -30,6 +34,7 @@ const projects = [
     icon: Globe,
     color: 'navy',
     tags: ['React', 'Node.js', 'MongoDB', 'PayPal'],
+    slug: 'design-system',
   },
   {
     title: 'API RESTful',
@@ -37,6 +42,7 @@ const projects = [
     icon: Database,
     color: 'orange',
     tags: ['Node.js', 'Express', 'PostgreSQL', 'JWT'],
+    slug: 'portfolio-moderne',
   },
   {
     title: 'Application Mobile',
@@ -44,6 +50,7 @@ const projects = [
     icon: Smartphone,
     color: 'navy',
     tags: ['React Native', 'Firebase', 'Redux', 'APIs'],
+    slug: 'design-system',
   },
 ];
 
@@ -90,9 +97,11 @@ export default function CVPage() {
                     ))}
                   </div>
 
-                  <Button size="sm" fullWidth>
-                    Voir le projet
-                  </Button>
+                  <Link href={`/cv/${project.slug}`}>
+                    <Button size="sm" fullWidth>
+                      Voir le projet
+                    </Button>
+                  </Link>
                 </div>
               );
             })}

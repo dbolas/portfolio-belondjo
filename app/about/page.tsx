@@ -10,6 +10,17 @@ export default function AboutPage() {
           <h1 className="text-hero text-orange mb-12">À propos</h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Photo portrait */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="w-full max-w-md">
+                <img
+                  src="/images/about-portrait.png"
+                  alt="Belondjo - Développeur Full Stack"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+              </div>
+            </div>
+
             {/* Présentation */}
             <div className="space-y-6">
               <h2 className="text-h2 text-orange">Qui suis-je ?</h2>

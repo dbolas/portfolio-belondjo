@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Trophy, Calculator, GraduationCap } from 'lucide-react';
+import { ArrowRight, Trophy, Calculator, GraduationCap, FileText } from 'lucide-react';
 import { Navigation, Footer } from '@/components/layout';
 import { Button } from '@/components/ui';
 
@@ -99,7 +99,7 @@ export default function Home() {
               </div>
               <h3 className="text-h3 text-orange mb-3">Compta Concept — Automatisation comptable IA</h3>
               <p className="text-dark/70 mb-4">
-                SaaS B2B d'automatisation de saisie de factures pour cabinets comptables — 80% de réduction du temps de saisie
+                Conception UX d'un service d'automatisation de saisie de factures pour cabinets comptables — concept validé terrain, pipeline technique conçu
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Automatisation IA", "n8n", "Claude API", "B2B SaaS"].map((tag) => (
@@ -118,6 +118,21 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {["UX Research", "EdTech", "Figma", "RGPD mineurs"].map((tag) => (
+                  <span key={tag} className="text-xs border border-orange text-orange rounded-full px-3 py-1">{tag}</span>
+                ))}
+              </div>
+            </Link>
+
+            <Link href="/projets/generateur-factures" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
+              <div className="bg-navy/10 rounded-lg p-4 mb-4 flex items-center justify-center h-48">
+                <FileText size={64} className="text-navy" />
+              </div>
+              <h3 className="text-h3 text-orange mb-3">Générateur de Factures IA</h3>
+              <p className="text-dark/70 mb-4">
+                Application web en production — création de factures par dictée vocale ou texte avec Gemini 3 Pro
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["IA générative", "Gemini 3 Pro", "Next.js", "En production"].map((tag) => (
                   <span key={tag} className="text-xs border border-orange text-orange rounded-full px-3 py-1">{tag}</span>
                 ))}
               </div>

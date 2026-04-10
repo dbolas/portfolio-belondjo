@@ -50,7 +50,7 @@ export default function MoveIQPage() {
             <div>
               <h3 className="text-h3 text-navy mb-4">Durée</h3>
               <p className="text-dark/80">2023 – en cours</p>
-              <p className="text-dark/80">(92% finalisé)</p>
+              <p className="text-dark/80">Prototype avancé · Design system complet · En phase de finalisation</p>
             </div>
             <div>
               <h3 className="text-h3 text-navy mb-4">Stack</h3>
@@ -105,7 +105,7 @@ export default function MoveIQPage() {
               </li>
             </ul>
             <p className="text-lg text-dark/80 leading-relaxed font-bold">
-              Produit conçu, designé et développé en solo — sans développeur backend recruté.
+              Produit conçu, designé et développé en solo via Claude Code.
             </p>
           </div>
 
@@ -340,7 +340,7 @@ export default function MoveIQPage() {
                 <h3 className="text-2xl font-bold text-navy mb-4">6. Développement avec Claude Code</h3>
                 <p className="text-lg text-dark/80 leading-relaxed mb-4">
                   Implémentation TypeScript/Next.js via Claude Code : diagnostic automatisé, gamification, dashboard temps réel,
-                  conformité RGPD mineurs. Zéro développeur backend recruté.
+                  conformité RGPD mineurs. Développé en solo via Claude Code.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
@@ -353,7 +353,7 @@ export default function MoveIQPage() {
                     <span className="text-orange font-bold">RGPD mineurs</span>
                   </div>
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
-                    <span className="text-orange font-bold">Zéro dev backend recruté</span>
+                    <span className="text-orange font-bold">Développé en solo via Claude Code</span>
                   </div>
                 </div>
               </div>
@@ -424,8 +424,8 @@ export default function MoveIQPage() {
                   <div className="text-dark/70">Interviews terrain</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-orange mb-2">0</div>
-                  <div className="text-dark/70">Développeur backend recruté</div>
+                  <div className="text-4xl font-bold text-orange mb-2">Solo</div>
+                  <div className="text-dark/70">Développé via Claude Code</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">3</div>
@@ -437,7 +437,7 @@ export default function MoveIQPage() {
               <ul className="space-y-3 text-lg text-dark/80">
                 <li className="flex items-start gap-3">
                   <span className="text-orange mt-1">•</span>
-                  <span>Produit fonctionnel avec beta testeurs actifs</span>
+                  <span>Prototype fonctionnel testé lors d&apos;interviews utilisateurs terrain</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-orange mt-1">•</span>

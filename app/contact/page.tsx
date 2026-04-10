@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Instagram, Github } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { Navigation, Footer } from '@/components/layout';
 import { Button, Input, Textarea } from '@/components/ui';
 
@@ -24,9 +24,22 @@ export default function ContactPage() {
     <>
       <Navigation />
 
-      <main className="min-h-screen bg-cream pt-28 py-24">
-        <div className="max-w-4xl mx-auto px-6 lg:px-12">
-          <div>
+      <main className="min-h-screen bg-cream pt-48 py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Image à gauche */}
+            <div className="order-2 lg:order-1">
+              <div className="relative w-full h-[400px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/contact-strasbourg.jpg"
+                  alt="Strasbourg"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Formulaire à droite */}
+            <div className="order-1 lg:order-2">
               <h1 className="text-h2 text-orange mb-2">Entrer en contact!</h1>
               <p className="text-dark/70 mb-8">
                 Remplissez le formulaire ci-dessous pour m&apos;envoyer un message
@@ -75,80 +88,50 @@ export default function ContactPage() {
               <div className="mt-12 pt-8 border-t border-dark/10">
                 <h3 className="text-h3 text-orange mb-6">Autres moyens de contact</h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-orange/10 p-3 rounded-full">
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-orange/10 p-3 rounded-full flex-shrink-0">
                       <Mail className="text-orange" size={24} />
                     </div>
-                    <div>
-                      <p className="text-sm text-dark/60">Email</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm text-dark/60 mb-1">Email</p>
                       <a
-                        href="mailto:contact@belondjo.com"
-                        className="font-bold text-dark hover:text-orange transition-colors"
+                        href="mailto:belondjobolankoko@gmail.com"
+                        className="font-bold text-dark hover:text-orange transition-colors break-words"
                       >
-                        contact@belondjo.com
+                        belondjobolankoko@gmail.com
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <div className="bg-orange/10 p-3 rounded-full">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-orange/10 p-3 rounded-full flex-shrink-0">
                       <Phone className="text-orange" size={24} />
                     </div>
-                    <div>
-                      <p className="text-sm text-dark/60">Téléphone</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm text-dark/60 mb-1">Téléphone</p>
                       <a
-                        href="tel:+33612345678"
+                        href="tel:+33768638705"
                         className="font-bold text-dark hover:text-orange transition-colors"
                       >
-                        +33 6 12 34 56 78
+                        +33 7 68 63 87 05
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <div className="bg-orange/10 p-3 rounded-full">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-orange/10 p-3 rounded-full flex-shrink-0">
                       <MapPin className="text-orange" size={24} />
                     </div>
-                    <div>
-                      <p className="text-sm text-dark/60">Localisation</p>
-                      <span className="font-bold text-dark">Paris, France</span>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm text-dark/60 mb-1">Localisation</p>
+                      <span className="font-bold text-dark">Strasbourg, France</span>
                     </div>
-                  </div>
-                </div>
-
-                {/* Réseaux sociaux */}
-                <div className="mt-8">
-                  <h4 className="text-lg font-bold text-dark mb-4">Suivez-moi</h4>
-                  <div className="flex gap-4">
-                    <a
-                      href="https://linkedin.com/in/belondjo"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-orange text-orange hover:bg-orange hover:text-cream transition-all"
-                    >
-                      <Linkedin size={20} />
-                    </a>
-                    <a
-                      href="https://instagram.com/belondjo"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-orange text-orange hover:bg-orange hover:text-cream transition-all"
-                    >
-                      <Instagram size={20} />
-                    </a>
-                    <a
-                      href="https://github.com/belondjo"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-orange text-orange hover:bg-orange hover:text-cream transition-all"
-                    >
-                      <Github size={20} />
-                    </a>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </main>
 

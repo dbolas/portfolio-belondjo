@@ -1,21 +1,21 @@
 import { Navigation, Footer } from '@/components/layout';
+import { Button } from '@/components/ui';
+import { ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <>
       <Navigation />
 
-      <main className="min-h-screen bg-navy pt-28 py-24">
+      <main className="min-h-screen bg-cream pt-48 py-24">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <h1 className="text-hero text-orange mb-12">À propos</h1>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Photo portrait */}
             <div className="flex justify-center lg:justify-start">
               <div className="w-full max-w-md">
                 <img
                   src="/images/about-portrait.png"
-                  alt="Belondjo - Développeur Full Stack"
+                  alt="Belondjo - Product Designer"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
               </div>
@@ -23,106 +23,122 @@ export default function AboutPage() {
 
             {/* Présentation */}
             <div className="space-y-6">
-              <h2 className="text-h2 text-orange">Qui suis-je ?</h2>
-              <p className="text-xl text-cream/90 leading-relaxed">
-                Développeur Full Stack passionné avec une expertise en React,
-                Next.js et TypeScript. Je me spécialise dans la création
-                d&apos;applications web performantes et accessibles.
+              <h2 className="text-h2 text-orange">À propos de Moi</h2>
+              <p className="text-xl text-dark/90 leading-relaxed">
+                Product Designer avec 11 ans d&apos;expérience dans le numérique, dont 4 ans de spécialisation en UX/UI. Mon parcours en scénographie et architecture intérieure m&apos;a donné une approche singulière du design : je pense l&apos;espace avant de penser l&apos;interface. Je conçois des produits centrés utilisateur et je les construis — de la research au produit fonctionnel — grâce à mon stack Claude Code, Google Stitch, n8n et Figma. Fondateur de MoveIQ (SaaS coaching basketball) et Compta Concept (automatisation comptable IA).
               </p>
-              <p className="text-lg text-cream/70 leading-relaxed">
-                Mon approche combine design moderne, code propre et attention aux
-                détails pour créer des expériences utilisateur exceptionnelles.
-              </p>
-              <p className="text-lg text-cream/70 leading-relaxed">
-                Passionné par l&apos;apprentissage continu, je reste toujours à jour
-                avec les dernières technologies et meilleures pratiques du
-                développement web.
-              </p>
+              <a
+                href="/cv/CV-Belondjo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4"
+              >
+                <Button size="lg" iconAfter={<ArrowRight />}>
+                  Voir mon CV
+                </Button>
+              </a>
             </div>
+          </div>
 
-            {/* Compétences */}
-            <div className="space-y-6">
-              <h2 className="text-h2 text-orange">Compétences</h2>
-
-              <div>
-                <h3 className="text-h3 text-orange mb-4">Frontend</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'HTML/CSS'].map((skill) => (
-                    <div
-                      key={skill}
-                      className="bg-cream/10 border border-orange/30 rounded-lg px-4 py-3 text-cream text-center hover:bg-orange/20 transition-colors"
-                    >
-                      {skill}
-                    </div>
-                  ))}
-                </div>
+          {/* Expérience */}
+          <div className="mt-24">
+            <h2 className="text-h2 text-orange mb-8">Expérience</h2>
+            <div className="space-y-8">
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">UX-UI Designer</h3>
+                <p className="text-dark/70 text-lg mb-1">SGCD — Préfecture des Hauts-de-Seine</p>
+                <p className="text-dark/50 text-sm mb-3">Août 2025 – Septembre 2026 · Nanterre (92)</p>
+                <p className="text-dark/80">
+                  Refonte de l&apos;intranet interministériel pour 400 agents. Discovery, wireframes, prototypes Figma haute fidélité, ateliers Design Thinking avec 30+ agents, intégration Joomla et Webmaster.
+                </p>
               </div>
 
-              <div>
-                <h3 className="text-h3 text-orange mb-4">Backend</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {['Node.js', 'PostgreSQL', 'MongoDB', 'Express', 'API REST', 'GraphQL'].map((skill) => (
-                    <div
-                      key={skill}
-                      className="bg-cream/10 border border-orange/30 rounded-lg px-4 py-3 text-cream text-center hover:bg-orange/20 transition-colors"
-                    >
-                      {skill}
-                    </div>
-                  ))}
-                </div>
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Product Designer &amp; Builder No-Code</h3>
+                <p className="text-dark/70 text-lg mb-1">Freelance</p>
+                <p className="text-dark/50 text-sm mb-3">Janvier 2023 – Août 2025 · Paris · Remote</p>
+                <p className="text-dark/80">
+                  10+ projets livrés de la discovery au déploiement. Intégration d&apos;automatisations IA (n8n, Claude API) dans les workflows clients. Design systems documentés transmis aux équipes.
+                </p>
               </div>
 
-              <div>
-                <h3 className="text-h3 text-orange mb-4">Outils</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {['Git', 'Docker', 'Vercel', 'VS Code', 'Figma', 'Postman'].map((skill) => (
-                    <div
-                      key={skill}
-                      className="bg-cream/10 border border-orange/30 rounded-lg px-4 py-3 text-cream text-center hover:bg-orange/20 transition-colors"
-                    >
-                      {skill}
-                    </div>
-                  ))}
-                </div>
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">UX Researcher</h3>
+                <p className="text-dark/70 text-lg mb-1">Musée Royal d&apos;Afrique Centrale</p>
+                <p className="text-dark/50 text-sm mb-3">Octobre 2021 – Décembre 2023 · Tervuren, Belgique</p>
+                <p className="text-dark/80">
+                  Research complète pour une exposition interactive dédiée à la diaspora africaine. Interviews, personas, parcours visiteurs, dispositifs numériques de médiation culturelle.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Intégrateur Web &amp; Développeur Webflow</h3>
+                <p className="text-dark/70 text-lg mb-1">Freelance</p>
+                <p className="text-dark/50 text-sm mb-3">Février 2015 – Janvier 2021</p>
+                <p className="text-dark/80">
+                  Intégration HTML/CSS conformes W3C, accessibilité, performances web. Création de systèmes de design légers et guidelines d&apos;édition pour clients non-techniques.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Expérience / Formation */}
-          <div className="mt-16 space-y-12">
-            <div>
-              <h2 className="text-h2 text-orange mb-8">Expérience</h2>
-              <div className="space-y-8">
-                <div className="border-l-4 border-orange pl-6">
-                  <h3 className="text-h3 text-orange">Développeur Full Stack</h3>
-                  <p className="text-cream/70 text-lg mb-2">Freelance • 2023 - Présent</p>
-                  <p className="text-cream/80">
-                    Développement d&apos;applications web sur mesure pour divers clients.
-                    Conception et mise en œuvre de solutions techniques adaptées.
-                  </p>
-                </div>
+          {/* Formation */}
+          <div className="mt-20">
+            <h2 className="text-h2 text-orange mb-8">Formation</h2>
+            <div className="space-y-8">
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Certifications Design Thinking · User Research · Design de Service · UX/UI</h3>
+                <p className="text-dark/70 text-lg mb-1">DThinking Academy</p>
+                <p className="text-dark/50 text-sm">2023 – 2024</p>
+              </div>
 
-                <div className="border-l-4 border-orange pl-6">
-                  <h3 className="text-h3 text-orange">Développeur Frontend</h3>
-                  <p className="text-cream/70 text-lg mb-2">Entreprise XYZ • 2021 - 2023</p>
-                  <p className="text-cream/80">
-                    Développement de composants React réutilisables et maintenance
-                    d&apos;applications SaaS à grande échelle.
-                  </p>
-                </div>
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Formation Développement &amp; Intégration Web et Mobile</h3>
+                <p className="text-dark/70 text-lg mb-1">3W Academy, Strasbourg</p>
+                <p className="text-dark/50 text-sm">2019</p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Diplôme National Supérieur d&apos;Expression Plastique — Scénographie</h3>
+                <p className="text-dark/70 text-lg mb-1">Haute École des Arts du Rhin, Strasbourg</p>
+                <p className="text-dark/50 text-sm">2016</p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Licence en Architecture d&apos;Intérieure</h3>
+                <p className="text-dark/70 text-lg mb-1">Académie des Beaux-Arts de Kinshasa</p>
+                <p className="text-dark/50 text-sm">2011</p>
               </div>
             </div>
+          </div>
 
-            <div>
-              <h2 className="text-h2 text-orange mb-8">Formation</h2>
-              <div className="space-y-8">
-                <div className="border-l-4 border-orange pl-6">
-                  <h3 className="text-h3 text-orange">Master Informatique</h3>
-                  <p className="text-cream/70 text-lg mb-2">Université • 2019 - 2021</p>
-                  <p className="text-cream/80">
-                    Spécialisation en développement web et applications distribuées
-                  </p>
-                </div>
+          {/* Compétences */}
+          <div className="mt-20">
+            <h2 className="text-h2 text-orange mb-8">Compétences</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-3">Product &amp; Discovery</h3>
+                <p className="text-dark/80">UX Research · Interviews · Personas · Journey Mapping · UX Audit · Problem Definition</p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-3">Design &amp; Prototypage</h3>
+                <p className="text-dark/80">Figma (expert) · Google Stitch · Design System · Atomic Design · Tokens · Wireframes · Prototypes · WCAG 2.1 · DSFR</p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-3">IA &amp; Automatisation</h3>
+                <p className="text-dark/80">Claude Code · Claude API · n8n · Prompt Engineering · OCR automatisé · Workflows LLM</p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-3">Build &amp; Intégration</h3>
+                <p className="text-dark/80">Webflow (avancé) · HTML5/CSS3 · TypeScript/Next.js (notions) · Joomla · APIs REST · CMS</p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-3">Méthodes</h3>
+                <p className="text-dark/80">Agile/Scrum · Design Thinking · Lean Startup · Co-conception · Stakeholder management</p>
               </div>
             </div>
           </div>

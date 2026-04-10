@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui';
 
 interface NavLink {
   label: string;
@@ -7,7 +6,7 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: 'Maison', href: '/' },
+  { label: 'Réalisations', href: '/' },
   { label: 'À propos', href: '/about' },
   { label: 'CV', href: '/cv' },
   { label: 'Contact', href: '/contact' },
@@ -28,25 +27,8 @@ const navLinks: NavLink[] = [
  */
 export default function Footer() {
   return (
-    <footer className="bg-cream py-12 px-6 lg:px-12">
+    <footer className="bg-navy py-12 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        {/* Section Email et CTA */}
-        <div className="mb-8">
-          <p className="flex items-center gap-2 text-dark/70 mb-4">
-            <span className="text-2xl">👋</span>
-            <span>Contactez-nous à</span>
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-6">
-            contact@belondjo.com
-          </h2>
-          <Link href="/contact">
-            <Button size="lg">Contactez-moi</Button>
-          </Link>
-        </div>
-
-        {/* Ligne de séparation */}
-        <div className="border-t border-dark/10 my-8"></div>
-
         {/* Navigation et liens sociaux */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Liens de navigation */}
@@ -55,7 +37,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-dark font-bold hover:text-orange transition-colors duration-200 text-base"
+                className="text-cream font-bold hover:text-orange transition-colors duration-200 text-base"
               >
                 {link.label}
               </Link>
@@ -67,7 +49,7 @@ export default function Footer() {
             href="https://linkedin.com/in/belondjo"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-dark font-bold hover:text-orange transition-colors duration-200 text-base"
+            className="text-cream font-bold hover:text-orange transition-colors duration-200 text-base"
           >
             LinkedIn
           </a>

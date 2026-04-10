@@ -206,7 +206,7 @@ export default async function ProjectPage({
         </section>
 
         {/* CTA */}
-        {project.liveUrl && (
+        {'liveUrl' in project && project.liveUrl && (
           <section className="py-16 px-6 lg:px-12 bg-navy">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-h2 text-orange mb-6">

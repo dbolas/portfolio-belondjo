@@ -12,3 +12,8 @@
 export { default as Button } from './Button';
 export { default as Input } from './Input';
 export { default as Textarea } from './Textarea';
+export { default as Verbatim } from './Verbatim';
+export { default as ScrollAnimation } from './ScrollAnimation';
+export { default as ScrollAnimationInit } from './ScrollAnimationInit';
+export { default as ScrollToTop } from './ScrollToTop';
+export { default as ImageZoom } from './ImageZoom';

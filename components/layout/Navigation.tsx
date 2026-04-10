@@ -12,7 +12,7 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: 'Maison', href: '/' },
+  { label: 'Réalisations', href: '/' },
   { label: 'À propos', href: '/about' },
   { label: 'CV', href: '/cv' },
   { label: 'Contact', href: '/contact' },
@@ -82,20 +82,48 @@ export default function Navigation() {
 
             {/* Navigation Desktop */}
             <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="
-                    text-dark font-bold
-                    hover:text-orange
-                    transition-colors duration-200
-                    text-base
-                  "
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                // Cas spécial pour le CV : ouvrir le PDF dans un nouvel onglet
+                if (link.label === 'CV') {
+                  return (
+                    <a
+                      key={link.href}
+                      href="/cv/CV-Belondjo.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        text-dark font-bold
+                        hover:text-orange
+                        transition-colors duration-200
+                        text-base
+                        cursor-pointer
+                        relative
+                        z-10
+                      "
+                    >
+                      {link.label}
+                    </a>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="
+                      text-dark font-bold
+                      hover:text-orange
+                      transition-colors duration-200
+                      text-base
+                      cursor-pointer
+                      relative
+                      z-10
+                    "
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
 
             {/* Bouton Menu Mobile */}
@@ -138,24 +166,56 @@ export default function Navigation() {
       >
         <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
           {/* Liens de navigation mobile */}
-          {navLinks.map((link, index) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={handleLinkClick}
-              className="
-                text-3xl font-bold text-dark
-                hover:text-orange
-                transition-colors duration-200
-                animate-slide-up
-              "
-              style={{
-                animationDelay: `${index * 100}ms`,
-              }}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link, index) => {
+            // Cas spécial pour le CV : ouvrir le PDF dans un nouvel onglet
+            if (link.label === 'CV') {
+              return (
+                <a
+                  key={link.href}
+                  href="/cv/CV-Belondjo.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleLinkClick}
+                  className="
+                    text-3xl font-bold text-dark
+                    hover:text-orange
+                    transition-colors duration-200
+                    animate-slide-up
+                    cursor-pointer
+                    relative
+                    z-10
+                  "
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                  }}
+                >
+                  {link.label}
+                </a>
+              );
+            }
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={handleLinkClick}
+                className="
+                  text-3xl font-bold text-dark
+                  hover:text-orange
+                  transition-colors duration-200
+                  animate-slide-up
+                  cursor-pointer
+                  relative
+                  z-10
+                "
+                style={{
+                  animationDelay: `${index * 100}ms`,
+                }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       </div>
 

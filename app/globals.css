@@ -14,6 +14,11 @@
   --color-navy: #2C3E50;
   --color-dark: #1A1A1A;
 
+  /* Couleurs pour verbatims (accessibilité WCAG AA) */
+  --color-verbatim-bg: #f5f3f0;
+  --color-verbatim-text: #1a1a1a;
+  --color-verbatim-author: #4a4a4a;
+
   /* Couleurs grises */
   --color-gray-50: #F9FAFB;
   --color-gray-100: #F3F4F6;
@@ -92,6 +97,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Smooth scroll pour la navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* Titres avec couleur orange par défaut */
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-orange);
@@ -100,18 +116,55 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Classes utilitaires custom */
 .text-hero {
-  font-size: var(--font-size-hero);
-  line-height: var(--line-height-hero);
+  font-size: 2.3rem;        /* 36.8px sur mobile */
+  line-height: 1.2;
+  text-align: left;
 }
 
 .text-h2 {
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-h2);
+  font-size: 2rem;          /* 32px sur mobile */
+  line-height: 1.3;
 }
 
 .text-h3 {
-  font-size: var(--font-size-h3);
-  line-height: var(--line-height-h3);
+  font-size: 1.5rem;        /* 24px sur mobile */
+  line-height: 1.4;
+}
+
+/* Tablettes (768px et plus) */
+@media (min-width: 768px) {
+  .text-hero {
+    font-size: 3rem;        /* 48px sur tablette */
+    line-height: 1.15;
+  }
+
+  .text-h2 {
+    font-size: 2.5rem;      /* 40px sur tablette */
+    line-height: 1.25;
+  }
+
+  .text-h3 {
+    font-size: 1.75rem;     /* 28px sur tablette */
+    line-height: 1.35;
+  }
+}
+
+/* Desktop (1024px et plus) */
+@media (min-width: 1024px) {
+  .text-hero {
+    font-size: var(--font-size-hero);    /* 64px sur desktop */
+    line-height: var(--line-height-hero);
+  }
+
+  .text-h2 {
+    font-size: var(--font-size-h2);      /* 48px sur desktop */
+    line-height: var(--line-height-h2);
+  }
+
+  .text-h3 {
+    font-size: var(--font-size-h3);      /* 32px sur desktop */
+    line-height: var(--line-height-h3);
+  }
 }
 
 .rounded-pill {
@@ -153,4 +206,70 @@ h1, h2, h3, h4, h5, h6 {
 
 .input-bottom::placeholder {
   color: var(--color-gray-500);
+}
+
+/* Animations au scroll */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Désactiver les animations si l'utilisateur préfère réduire les mouvements */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Accessibilité : Focus visible pour la navigation au clavier */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-orange);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Focus spécifique pour les cartes de projets */
+.project-card:focus-visible {
+  outline: 3px solid var(--color-orange);
+  outline-offset: 4px;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(255, 123, 84, 0.3);
+}
+
+/* Animations pour le zoom d'images */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-zoomIn {
+  animation: zoomIn 0.3s ease-out;
 }

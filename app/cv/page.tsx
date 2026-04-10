@@ -134,8 +134,16 @@ export default function CVPage() {
               Téléchargez mon CV ou contactez-moi pour discuter de votre projet
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">Télécharger le CV (PDF)</Button>
-              <Button size="lg" variant="secondary">Me contacter</Button>
+              <a
+                href="/cv/CV-Belondjo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg">Télécharger le CV (PDF)</Button>
+              </a>
+              <Link href="/contact">
+                <Button size="lg" variant="secondary">Me contacter</Button>
+              </Link>
             </div>
           </div>
         </div>

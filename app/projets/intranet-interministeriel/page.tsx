@@ -383,16 +383,10 @@ export default function IntranetInterministerielPage() {
               </div>
             </div>
 
-            {/* 3. Wireframes et maquettes */}
+            {/* 3. Maquettes */}
             <div className="mb-12">
-              <h3 className="text-2xl font-bold text-navy mb-6">Wireframes et maquettes</h3>
+              <h3 className="text-2xl font-bold text-navy mb-6">Maquettes</h3>
               <div className="fade-in-section grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-dark/5 rounded-xl p-12 min-h-[400px] flex items-center justify-center">
-                  <p className="text-center text-dark/50 text-lg">
-                    Wireframes basse fidélité<br />
-                    (Navigation et structure)
-                  </p>
-                </div>
                 <div className="bg-dark/5 rounded-xl p-12 min-h-[400px] flex items-center justify-center">
                   <p className="text-center text-dark/50 text-lg">
                     Maquettes haute fidélité<br />

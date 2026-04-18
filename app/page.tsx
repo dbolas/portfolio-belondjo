@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Calculator, GraduationCap, FileText } from 'lucide-react';
+import { ArrowRight, FileText } from 'lucide-react';
 import { Navigation, Footer } from '@/components/layout';
 import { Button } from '@/components/ui';
 
@@ -99,31 +99,22 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/projets/compta-concept" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <div className="bg-navy/10 rounded-lg p-4 mb-4 flex items-center justify-center h-48">
-                <Calculator size={64} className="text-navy" />
+            <Link href="/projets/leucare" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
+              <div className="bg-slate-50 rounded-lg p-0 mb-4 flex items-center justify-center h-96 overflow-hidden">
+                <Image
+                  src="/images/leucare-splash.png"
+                  alt="LeuCare — Application mobile leucémie"
+                  width={1200}
+                  height={900}
+                  className="w-full h-full object-contain bg-slate-50"
+                />
               </div>
-              <h3 className="text-h3 text-orange mb-3">Compta Concept — Automatisation comptable IA</h3>
+              <h3 className="text-h3 text-orange mb-3">LeuCare — Application mobile leucémie</h3>
               <p className="text-dark/70 mb-4">
-                Conception UX d'un service d'automatisation de saisie de factures pour cabinets comptables — concept validé terrain, pipeline technique conçu
+                Application mobile de suivi pour enfants atteints de leucémie à Kinshasa, RDC — conçue avec Google Stitch et Figma
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Automatisation IA", "n8n", "Claude API", "B2B SaaS"].map((tag) => (
-                  <span key={tag} className="text-xs border border-orange text-orange rounded-full px-3 py-1">{tag}</span>
-                ))}
-              </div>
-            </Link>
-
-            <Link href="/projets/designlab-academy" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <div className="bg-orange/10 rounded-lg p-4 mb-4 flex items-center justify-center h-48">
-                <GraduationCap size={64} className="text-orange" />
-              </div>
-              <h3 className="text-h3 text-orange mb-3">DesignLab Academy — Plateforme EdTech design</h3>
-              <p className="text-dark/70 mb-4">
-                Conception UX d'une plateforme de formation au design numérique pour les 8–18 ans — RGPD mineurs, 3 tranches d'âge, gamification
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["UX Research", "EdTech", "Figma", "RGPD mineurs"].map((tag) => (
+                {["UX Research", "Mobile", "Santé", "Kinshasa RDC"].map((tag) => (
                   <span key={tag} className="text-xs border border-orange text-orange rounded-full px-3 py-1">{tag}</span>
                 ))}
               </div>

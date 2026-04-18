@@ -71,6 +71,24 @@ export default function MoveIQPage() {
             </div>
           </div>
 
+          {/* Boutons CTA */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+            <a
+              href="https://www.figma.com/design/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=0-1&t=4b5V8afpOv588dQ3-1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg">Voir le prototype Figma →</Button>
+            </a>
+            <a
+              href="https://moveiq-basket.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="secondary">Voir le produit en ligne →</Button>
+            </a>
+          </div>
+
           {/* Sommaire de navigation */}
           <nav className="mb-16 bg-cream/80 border border-orange/20 rounded-2xl p-6 md:p-8 sticky top-24 z-10" aria-label="Navigation de l'étude de cas">
             <ul className="flex flex-col md:flex-row md:flex-wrap gap-4 md:gap-6 justify-center items-start md:items-center text-sm md:text-base">
@@ -373,6 +391,22 @@ export default function MoveIQPage() {
           {/* Section — Aperçu du produit */}
           <div className="fade-in-section mb-16">
             <h2 className="text-h2 text-orange mb-10">Aperçu du produit — interfaces réelles</h2>
+
+            {/* Encart prototype Figma */}
+            <div className="bg-orange/5 rounded-xl p-6 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+              <div>
+                <h3 className="text-xl font-bold text-navy mb-2">Prototype interactif Figma</h3>
+                <p className="text-dark/70">Explorez le prototype complet avec toutes les interactions — parcours joueur, coach et parent.</p>
+              </div>
+              <a
+                href="https://www.figma.com/design/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=0-1&t=4b5V8afpOv588dQ3-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0"
+              >
+                <Button>Voir le prototype →</Button>
+              </a>
+            </div>
 
             {/* Groupe 1 — Interface Joueur */}
             <div className="mb-12">

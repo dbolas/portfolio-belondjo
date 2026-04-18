@@ -74,7 +74,7 @@ export default function MoveIQPage() {
           {/* Boutons CTA */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <a
-              href="https://www.figma.com/design/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=0-1&t=4b5V8afpOv588dQ3-1"
+              href="https://www.figma.com/proto/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=2-165&t=U4mwBVYwHHCCIEge-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A165"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -399,7 +399,7 @@ export default function MoveIQPage() {
                 <p className="text-dark/70">Explorez le prototype complet avec toutes les interactions — parcours joueur, coach et parent.</p>
               </div>
               <a
-                href="https://www.figma.com/design/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=0-1&t=4b5V8afpOv588dQ3-1"
+                href="https://www.figma.com/proto/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=2-165&t=U4mwBVYwHHCCIEge-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A165"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shrink-0"

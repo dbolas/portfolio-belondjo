@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Trophy, Calculator, GraduationCap, FileText } from 'lucide-react';
+import { ArrowRight, Calculator, GraduationCap, FileText } from 'lucide-react';
 import { Navigation, Footer } from '@/components/layout';
 import { Button } from '@/components/ui';
 
@@ -79,8 +79,14 @@ export default function Home() {
             </Link>
 
             <Link href="/projets/moveiq" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <div className="bg-orange/10 rounded-lg p-4 mb-4 flex items-center justify-center h-48">
-                <Trophy size={64} className="text-orange" />
+              <div className="bg-navy/10 rounded-lg p-0 mb-4 flex items-center justify-center h-96 overflow-hidden">
+                <Image
+                  src="/images/moveiq-landing.png"
+                  alt="MoveIQ — Plateforme de coaching basketball"
+                  width={1200}
+                  height={900}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <h3 className="text-h3 text-orange mb-3">MoveIQ — Plateforme de coaching basketball</h3>
               <p className="text-dark/70 mb-4">

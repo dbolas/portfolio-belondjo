@@ -28,9 +28,19 @@ export default function MoveIQPage() {
             <h1 className="text-hero text-orange mb-4">MoveIQ — Plateforme de suivi de progression pour jeunes basketteurs</h1>
             <p className="text-xl text-dark/70 mb-8">Fondateur · Product Designer · Builder — De l&apos;insight terrain au produit fonctionnel</p>
 
+            {/* Statut */}
+            <p className="text-sm font-bold text-dark/50 mb-8 tracking-wide">Produit fonctionnel · 3 interfaces · Déployé sur Vercel</p>
+
             {/* Image principale */}
-            <div className="w-full h-[400px] lg:h-[600px] bg-orange/10 rounded-2xl overflow-hidden flex items-center justify-center">
-              <p className="text-dark/40 text-xl font-bold">Mockup MoveIQ dashboard</p>
+            <div className="w-full h-[400px] lg:h-[600px] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/moveiq-landing.png"
+                alt="MoveIQ - Landing page"
+                width={1200}
+                height={800}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
           </div>
 
@@ -360,6 +370,71 @@ export default function MoveIQPage() {
             </div>
           </div>
 
+          {/* Section — Aperçu du produit */}
+          <div className="fade-in-section mb-16">
+            <h2 className="text-h2 text-orange mb-10">Aperçu du produit — interfaces réelles</h2>
+
+            {/* Groupe 1 — Interface Joueur */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-navy mb-6">Interface Joueur</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  { src: '/images/moveiq-dashboard-joueur.png', alt: 'Dashboard joueur', caption: 'Dashboard joueur — score et progression' },
+                  { src: '/images/moveiq-diagnostic-choix.png', alt: 'Choix du mode diagnostic', caption: 'Choix du mode diagnostic' },
+                  { src: '/images/moveiq-diagnostic-question.png', alt: 'Évaluation par dimension', caption: 'Évaluation par dimension' },
+                  { src: '/images/moveiq-diagnostic-resultat.png', alt: 'Résultats — profil personnalisé', caption: 'Résultats — profil personnalisé' },
+                  { src: '/images/moveiq-missions.png', alt: 'Mes missions', caption: 'Mes missions — suivi hebdomadaire' },
+                  { src: '/images/moveiq-progression.png', alt: 'Ma progression', caption: 'Ma progression — historique et badges' },
+                ].map((img) => (
+                  <div key={img.src}>
+                    <div className="bg-dark/5 rounded-xl overflow-hidden">
+                      <ImageZoom src={img.src} alt={img.alt} width={800} height={600} className="w-full h-auto" />
+                    </div>
+                    <p className="text-sm text-dark/60 mt-2 text-center">{img.caption}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Groupe 2 — Interface Coach */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-navy mb-6">Interface Coach</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { src: '/images/moveiq-dashboard-coach.png', alt: 'Dashboard coach', caption: 'Dashboard coach — vue équipe' },
+                  { src: '/images/moveiq-equipe.png', alt: 'Mon équipe', caption: 'Mon équipe — profils et diagnostics' },
+                  { src: '/images/moveiq-joueur-detail.png', alt: 'Vue joueur', caption: 'Vue joueur — profil détaillé' },
+                  { src: '/images/moveiq-invitations.png', alt: 'Gestion des invitations', caption: 'Gestion des invitations' },
+                ].map((img) => (
+                  <div key={img.src}>
+                    <div className="bg-dark/5 rounded-xl overflow-hidden">
+                      <ImageZoom src={img.src} alt={img.alt} width={800} height={600} className="w-full h-auto" />
+                    </div>
+                    <p className="text-sm text-dark/60 mt-2 text-center">{img.caption}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Groupe 3 — Interface Parent */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-navy mb-6">Interface Parent</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { src: '/images/moveiq-dashboard-parent.png', alt: 'Vue parent', caption: 'Vue parent — progression de l\'enfant' },
+                  { src: '/images/moveiq-consentement.png', alt: 'Consentement parental RGPD', caption: 'Consentement parental RGPD' },
+                ].map((img) => (
+                  <div key={img.src}>
+                    <div className="bg-dark/5 rounded-xl overflow-hidden">
+                      <ImageZoom src={img.src} alt={img.alt} width={800} height={600} className="w-full h-auto" />
+                    </div>
+                    <p className="text-sm text-dark/60 mt-2 text-center">{img.caption}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Section 05 — Solution */}
           <div id="solution" className="fade-in-section mb-16 scroll-mt-32">
             <h2 className="text-h2 text-orange mb-6">05. La solution — 3 interfaces, 3 réalités</h2>
@@ -416,8 +491,8 @@ export default function MoveIQPage() {
 
               <div className="fade-in-section grid grid-cols-2 md:grid-cols-4 gap-8 bg-cream rounded-2xl p-8 mb-10">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-orange mb-2">92%</div>
-                  <div className="text-dark/70">Produit finalisé</div>
+                  <div className="text-4xl font-bold text-orange mb-2">3</div>
+                  <div className="text-dark/70">Interfaces déployées</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">20+</div>
@@ -454,6 +529,10 @@ export default function MoveIQPage() {
                 <li className="flex items-start gap-3">
                   <span className="text-orange mt-1">•</span>
                   <span>Conformité RGPD mineurs intégrée dès la conception</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Application déployée sur Vercel — authentification Google/Apple, RGPD mineurs, 3 interfaces distinctes joueur · coach · parent</span>
                 </li>
               </ul>
             </div>

@@ -28,9 +28,6 @@ export default function LeuCarePage() {
             <p className="text-xl text-dark/70 mb-8">Product Designer · Conception UX from scratch · Application mobile · Santé · Kinshasa, RDC</p>
 
             {/* Image principale */}
-            <div className="w-full h-[400px] lg:h-[600px] bg-blue-50 rounded-2xl overflow-hidden flex items-center justify-center">
-              <p className="text-xl text-dark/60 font-medium text-center px-8">LeuCare — Prototype interactif disponible ci-dessous</p>
-            </div>
           </div>
 
           {/* Infos du projet */}
@@ -58,6 +55,32 @@ export default function LeuCarePage() {
               <p className="text-dark/80">Design System</p>
               <p className="text-dark/80">Mobile-first</p>
             </div>
+          </div>
+
+          {/* Section — Prototype interactif */}
+          <div className="mb-16">
+            <h2 className="text-h2 text-orange mb-6">
+              Prototype interactif
+            </h2>
+            <p className="text-lg text-dark/80 mb-6">
+              Explorez le prototype complet — naviguez
+              entre les écrans, testez le mode hors-ligne,
+              changez la langue (FR / Lingala / Swahili).
+            </p>
+            <div
+              className="rounded-2xl overflow-hidden border-2 border-orange/20 shadow-xl"
+              style={{height: '860px'}}>
+              <iframe
+                src="/leucare-prototype/index.html"
+                className="w-full h-full border-0"
+                title="Prototype LeuCare interactif"
+                allow="fullscreen"
+              />
+            </div>
+            <p className="text-sm text-dark/50 mt-3 text-center">
+              Prototype haute fidélité —
+              conçu avec Claude Design · Anthropic
+            </p>
           </div>
 
           {/* Sommaire de navigation */}
@@ -408,32 +431,6 @@ export default function LeuCarePage() {
                 </ul>
               </div>
             </div>
-          </div>
-
-          {/* Section — Prototype interactif */}
-          <div className="mb-16">
-            <h2 className="text-h2 text-orange mb-6">
-              Prototype interactif
-            </h2>
-            <p className="text-lg text-dark/80 mb-6">
-              Explorez le prototype complet — naviguez
-              entre les écrans, testez le mode hors-ligne,
-              changez la langue (FR / Lingala / Swahili).
-            </p>
-            <div
-              className="rounded-2xl overflow-hidden border-2 border-orange/20 shadow-xl"
-              style={{height: '860px'}}>
-              <iframe
-                src="/leucare-prototype/index.html"
-                className="w-full h-full border-0"
-                title="Prototype LeuCare interactif"
-                allow="fullscreen"
-              />
-            </div>
-            <p className="text-sm text-dark/50 mt-3 text-center">
-              Prototype haute fidélité —
-              conçu avec Claude Design · Anthropic
-            </p>
           </div>
 
           {/* Section 06 — Résultats */}

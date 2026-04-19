@@ -29,15 +29,8 @@ export default function LeuCarePage() {
             <p className="text-xl text-dark/70 mb-8">Product Designer · Conception UX from scratch · Application mobile · Santé · Kinshasa, RDC</p>
 
             {/* Image principale */}
-            <div className="w-full h-[400px] lg:h-[600px] bg-slate-50 rounded-2xl overflow-hidden flex items-center justify-center">
-              <Image
-                src="/images/leucare-splash.png"
-                alt="LeuCare — Application mobile de suivi leucémie"
-                width={1200}
-                height={800}
-                className="w-full h-full object-contain bg-slate-50"
-                priority
-              />
+            <div className="w-full h-[400px] lg:h-[600px] bg-blue-50 rounded-2xl overflow-hidden flex items-center justify-center">
+              <p className="text-xl text-dark/60 font-medium text-center px-8">LeuCare — Prototype interactif disponible ci-dessous</p>
             </div>
           </div>
 
@@ -382,29 +375,6 @@ export default function LeuCarePage() {
           {/* Section 05 — Solution */}
           <div id="solution" className="fade-in-section mb-16 scroll-mt-32">
             <h2 className="text-h2 text-orange mb-6">05. La solution — 4 profils, 5 modules</h2>
-
-            <h3 className="text-2xl font-bold text-navy mb-6">L&apos;application en images</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-              {[
-                { src: '/images/leucare-splash.png', alt: 'Splash screen LeuCare', caption: 'Splash screen — identité LeuCare' },
-                { src: '/images/leucare-onboarding.png', alt: 'Mascotte Léa onboarding', caption: 'Mascotte Léa — onboarding humanisé' },
-                { src: '/images/leucare-prenom.png', alt: 'Saisie prénom', caption: 'Étape 1 — Saisie du prénom' },
-                { src: '/images/leucare-email.png', alt: 'Adresse email', caption: 'Étape 2 — Adresse email' },
-                { src: '/images/leucare-password.png', alt: 'Création mot de passe', caption: 'Étape 3 — Création mot de passe sécurisé' },
-                { src: '/images/leucare-infos.png', alt: 'Informations personnelles', caption: 'Étape 4 — Informations personnelles (Congo RDC · Kinshasa)' },
-                { src: '/images/leucare-profil.png', alt: 'Sélection profil', caption: 'Sélection du profil — 4 types d\'utilisateurs' },
-                { src: '/images/leucare-dashboard.png', alt: 'Dashboard LeuCare', caption: 'Dashboard — actualités, témoignages, communauté' },
-                { src: '/images/leucare-traitement.png', alt: 'Suivi traitement', caption: 'Suivi traitement — médicaments et rendez-vous Mama Yemo' },
-                { src: '/images/leucare-douleurs.png', alt: 'Journal douleurs', caption: 'Journal douleurs — body map et historique' },
-              ].map((img) => (
-                <div key={img.src}>
-                  <div className="bg-dark/5 rounded-xl overflow-hidden">
-                    <ImageZoom src={img.src} alt={img.alt} width={800} height={600} className="w-full h-auto" />
-                  </div>
-                  <p className="text-sm text-dark/60 mt-2 text-center">{img.caption}</p>
-                </div>
-              ))}
-            </div>
 
             <div className="space-y-6">
               <div className="bg-navy/5 rounded-xl p-6">

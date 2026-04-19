@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { Navigation, Footer } from '@/components/layout';
-import { Button, Verbatim, ScrollAnimationInit, ImageZoom } from '@/components/ui';
+import { Button, Verbatim, ScrollAnimationInit } from '@/components/ui';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'LeuCare — Application mobile leucémie Kinshasa | Belondjo',
@@ -307,16 +306,6 @@ export default function LeuCarePage() {
                   avec une question par écran. Création de la mascotte &quot;Léa&quot; — personnage féminin aux traits
                   africains — pour humaniser le parcours et créer un lien de confiance.
                 </p>
-                <div className="bg-dark/5 rounded-xl overflow-hidden mb-2">
-                  <ImageZoom
-                    src="/images/leucare-onboarding.png"
-                    alt="Mascotte Léa — onboarding LeuCare"
-                    width={800}
-                    height={600}
-                    className="w-full h-auto"
-                  />
-                </div>
-                <p className="text-sm text-dark/60 mt-2 text-center">Mascotte Léa — personnage aux traits africains pour humaniser l&apos;application</p>
               </div>
 
               {/* Étape 4 */}

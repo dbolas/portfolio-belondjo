@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>LeuCare — Prototype</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/leucare.css"/>
+<style>
+  html, body { height: 100%; }
+  body {
+    background: #221c15;
+    background-image:
+      radial-gradient(ellipse 60% 50% at 30% 20%, #3a2e22 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 80% 90%, #2d2417 0%, transparent 60%);
+    overflow: auto;
+  }
+  .stage {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .side-label {
+    color: #cfbfa4;
+    font-family: 'DM Serif Display', serif;
+    max-width: 380px;
+  }
+  .side-label h1 { margin: 0; font-size: 52px; line-height: 1; letter-spacing: -0.02em; color:#f4e8d1; }
+  .side-label h1 em { font-style: italic; color: #e5a579; }
+  .side-label p { font-family: 'DM Sans', sans-serif; font-size: 14px; line-height: 1.55; color:#a89576; margin-top: 12px; }
+  .side-label .meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+    color: #786651; text-transform: uppercase; letter-spacing: 0.18em;
+    margin-top: 20px;
+  }
+  .tweaks-panel {
+    position: fixed; bottom: 20px; right: 20px;
+    width: 280px;
+    background: #1b1610;
+    border: 1px solid #3a2f22;
+    border-radius: 16px;
+    padding: 14px;
+    color: #e6d5b8;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    display: none;
+    z-index: 50;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+  .tweaks-panel.open { display: block; }
+  .tweaks-panel h3 {
+    margin: 0 0 10px; font-family: 'DM Serif Display', serif; font-size: 16px; font-weight: 400;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .tweaks-panel .row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .tweaks-panel button {
+    background: #2a2118; color: #cfbfa4; border: 1px solid #3a2f22;
+    padding: 5px 10px; font-size: 11px; border-radius: 100px; cursor: pointer;
+    font-family: inherit;
+  }
+  .tweaks-panel button.on { background: #e5a579; color: #1b1610; border-color: transparent; }
+  .tweaks-panel label { display: block; margin-bottom: 4px; text-transform: uppercase; font-size: 10px; letter-spacing: 0.1em; color: #786651; }
+  .tweaks-toggle {
+    position: fixed; bottom: 20px; right: 20px;
+    width: 44px; height: 44px; border-radius: 100px;
+    background: #e5a579; color: #1b1610; border: none; cursor: pointer;
+    font-size: 18px; box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    z-index: 49;
+    display: flex; align-items: center; justify-content: center;
+  }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script src="components/i18n.js"></script>
+  <script type="text/babel" src="components/icons.jsx"></script>
+  <script type="text/babel" src="components/shell.jsx"></script>
+  <script type="text/babel" src="components/screen-home.jsx"></script>
+  <script type="text/babel" src="components/screen-treat-pain.jsx"></script>
+  <script type="text/babel" src="components/screen-other.jsx"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    const TWEAKS_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "language": "fr",
+      "palette": "warm",
+      "density": "regular",
+      "pattern": 0.08,
+      "online": true
+    }/*EDITMODE-END*/;
+
+    // ─── SEED STATE ────────────────────────────────────────────
+    const seedMeds = [
+      { id:1, name:'6-Mercaptopurine', dose:'50 mg', time:'08:00', status:'taken', withFood:false },
+      { id:2, name:'Méthotrexate', dose:'15 mg', time:'12:00', status:'due', withFood:true },
+      { id:3, name:'Bactrim', dose:'1 cuillère', time:'19:00', status:'due', withFood:true },
+      { id:4, name:'Ondansetron', dose:'4 mg', time:'Si vomissements', status:'late', withFood:false },
+    ];
+    const seedPain = [
+      { level:3, where:'Jambes', when:'Hier soir', note:'Après la chimio d\'hier. Il pleurait en marchant.', offline:false },
+      { level:5, where:'Bouche', when:'Hier matin', note:'Ne veut plus manger. Mucite ?', offline:false },
+      { level:2, where:'Ventre', when:'Mardi', note:'Léger, 30 min après la 6-MP.', offline:true },
+      { level:7, where:'Jambes', when:'Lundi nuit', note:'Réveil 2h du matin, Doliprane donné.', offline:false },
+    ];
+
+    function LeuCare() {
+      const [tweaks, setTweaks] = useState(TWEAKS_DEFAULTS);
+      const [tweaksOpen, setTweaksOpen] = useState(false);
+      const [tweaksEnabled, setTweaksEnabled] = useState(false);
+      const [onboarded, setOnboarded] = useState(localStorage.getItem('lc-onb') === '1');
+      const [onbStep, setOnbStep] = useState(0);
+      const [tab, setTab] = useState('home');
+      const [stack, setStack] = useState([]); // modal-ish
+      const [state, setState] = useState({
+        todayMood: 2,
+        meds: seedMeds,
+        painEntries: seedPain,
+      });
+
+      const lang = tweaks.language;
+      const t = window.LC_STRINGS[lang];
+      const online = tweaks.online;
+
+      // Edit-mode protocol
+      useEffect(() => {
+        const onMsg = (e) => {
+          if (e.data?.type === '__activate_edit_mode') setTweaksEnabled(true);
+          else if (e.data?.type === '__deactivate_edit_mode') { setTweaksEnabled(false); setTweaksOpen(false); }
+        };
+        window.addEventListener('message', onMsg);
+        window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+        return () => window.removeEventListener('message', onMsg);
+      }, []);
+
+      const updateTweak = (k, v) => {
+        const next = { ...tweaks, [k]: v };
+        setTweaks(next);
+        window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [k]: v } }, '*');
+      };
+
+      const rootAttrs = {
+        'data-palette': tweaks.palette === 'warm' ? undefined : tweaks.palette,
+        'data-density': tweaks.density === 'compact' ? 'compact' : undefined,
+        style: { '--lc-pattern-intensity': tweaks.pattern },
+      };
+
+      const nav = (t) => setTab(t);
+
+      const renderScreen = () => {
+        if (!onboarded) {
+          return (
+            <div className="lc-screen">
+              <StatusBar time="08:42" online={true} dark={onbStep===0}/>
+              <OnboardingScreen t={t} lang={lang} setLang={l=>updateTweak('language', l)}
+                                step={onbStep} setStep={setOnbStep}
+                                onDone={()=>{ localStorage.setItem('lc-onb','1'); setOnboarded(true); }}/>
+            </div>
+          );
+        }
+
+        if (tab === 'pain-new') {
+          return (
+            <div className="lc-screen">
+              <StatusBar online={online} />
+              <SyncBanner online={online} pending={!online} t={t} />
+              <AppBar title={t.pain.newEntry} back onBack={()=>setTab('pain')} />
+              <PainNewScreen t={t} lang={lang} state={state} setState={setState} nav={nav} online={online} />
+            </div>
+          );
+        }
+
+        const titles = {
+          home: t.appName,
+          treat: t.treatment.title,
+          pain: t.pain.title,
+          community: t.community.title,
+          more: t.profile.title,
+          resources: t.resources.title,
+          messages: t.messages.title,
+          calendar: t.calendar.title,
+        };
+        const mainTab = ['home','treat','pain','community','more'].includes(tab);
+
+        return (
+          <div className="lc-screen">
+            <StatusBar online={online}/>
+            <SyncBanner online={online} pending={!online} t={t}/>
+            <AppBar title={titles[tab]} back={!mainTab} onBack={()=>setTab('more')}
+              right={mainTab ? (
+                <button className="icon-btn ghost" style={{ color:'var(--lc-ink-mute)' }}>
+                  <Icons.Bell size={18} />
+                </button>
+              ) : null}
+            />
+            {tab==='home' && <HomeScreen t={t} lang={lang} state={state} setState={setState} nav={nav}/>}
+            {tab==='treat' && <TreatmentScreen t={t} lang={lang} state={state} setState={setState} nav={nav}/>}
+            {tab==='pain' && <PainScreen t={t} lang={lang} state={state} setState={setState} nav={nav}/>}
+            {tab==='community' && <CommunityScreen t={t} lang={lang} state={state} nav={nav}/>}
+            {tab==='more' && <MoreScreen t={t} lang={lang} state={state} nav={nav}/>}
+            {tab==='resources' && <ResourcesScreen t={t} lang={lang} nav={nav}/>}
+            {tab==='messages' && <MessagesScreen t={t} lang={lang} online={online}/>}
+            {tab==='calendar' && <CalendarScreen t={t} lang={lang}/>}
+            {mainTab && <TabBar tab={tab} setTab={setTab} t={t}/>}
+          </div>
+        );
+      };
+
+      return (
+        <div className="stage">
+          <div className="side-label">
+            <div className="meta">Leucar · Prototype Hi-Fi</div>
+            <h1 style={{marginTop:14}}>Leu<em>Care</em></h1>
+            <p>Un carnet de soins et une communauté pour les familles qui traversent la leucémie à Kinshasa. Conçu pour fonctionner même quand le réseau lâche.</p>
+            <p style={{marginTop:10, color:'#786651', fontFamily:'JetBrains Mono, monospace', fontSize:11}}>
+              PERSONA: Maman Kiese, 34 · Jonas, 7 ans · LAL-B phase d'entretien<br/>
+              APPAREIL: Android entrée de gamme 360×760<br/>
+              LANGUE: {lang.toUpperCase()} (FR/LN/SW)<br/>
+              RÉSEAU: {online ? 'En ligne' : 'Hors-ligne — 3 items en attente'}
+            </p>
+            <p style={{marginTop:20}}>
+              <strong style={{color:'#cfbfa4'}}>Flux :</strong> Onboarding (3 étapes) → Accueil → Traitements → Carnet de douleur + nouvelle entrée → Communauté → Plus → Ressources · Messagerie · Calendrier.
+            </p>
+          </div>
+
+          <div className="lc-app-wrap">
+            <div {...rootAttrs} style={{...rootAttrs.style, width:360, height:760, borderRadius:38, padding:8, background:'#0d0a07', boxShadow:'0 40px 100px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.04) inset'}}>
+              <div className="lc-app" style={{ borderRadius:30 }}>
+                {renderScreen()}
+              </div>
+            </div>
+          </div>
+
+          {tweaksEnabled && !tweaksOpen && (
+            <button className="tweaks-toggle" onClick={()=>setTweaksOpen(true)}>⚙</button>
+          )}
+
+          {tweaksEnabled && tweaksOpen && (
+            <div className="tweaks-panel open">
+              <h3>Tweaks <button onClick={()=>setTweaksOpen(false)} style={{background:'none',border:'none',color:'#786651'}}>✕</button></h3>
+
+              <label>Langue</label>
+              <div className="row">
+                {['fr','ln','sw'].map(l => (
+                  <button key={l} className={tweaks.language===l?'on':''} onClick={()=>updateTweak('language',l)}>
+                    {l==='fr'?'Français':l==='ln'?'Lingala':'Swahili'}
+                  </button>
+                ))}
+              </div>
+
+              <label>Palette</label>
+              <div className="row">
+                {[['warm','Chaleureux'],['clinical','Clinique'],['night','Nuit']].map(([v,n]) => (
+                  <button key={v} className={tweaks.palette===v?'on':''} onClick={()=>updateTweak('palette',v)}>{n}</button>
+                ))}
+              </div>
+
+              <label>Densité</label>
+              <div className="row">
+                {[['regular','Standard'],['compact','Compact']].map(([v,n]) => (
+                  <button key={v} className={tweaks.density===v?'on':''} onClick={()=>updateTweak('density',v)}>{n}</button>
+                ))}
+              </div>
+
+              <label>Motifs (intensité)</label>
+              <div className="row">
+                {[[0,'Aucun'],[0.08,'Subtil'],[0.18,'Marqué']].map(([v,n]) => (
+                  <button key={v} className={Math.abs(tweaks.pattern-v)<0.01?'on':''} onClick={()=>updateTweak('pattern',v)}>{n}</button>
+                ))}
+              </div>
+
+              <label>Connexion</label>
+              <div className="row">
+                <button className={tweaks.online?'on':''} onClick={()=>updateTweak('online',true)}>En ligne</button>
+                <button className={!tweaks.online?'on':''} onClick={()=>updateTweak('online',false)}>Hors-ligne</button>
+              </div>
+
+              <label>Écran</label>
+              <div className="row">
+                {[['home','Accueil'],['treat','Soins'],['pain','Carnet'],['community','Famille'],['more','Plus'],['resources','Ressources'],['messages','Messages'],['calendar','Calendrier'],['pain-new','Nouv. douleur']].map(([v,n]) => (
+                  <button key={v} className={tab===v?'on':''} onClick={()=>setTab(v)}>{n}</button>
+                ))}
+              </div>
+
+              <label>Onboarding</label>
+              <div className="row">
+                <button onClick={()=>{localStorage.removeItem('lc-onb'); setOnboarded(false); setOnbStep(0);}}>Rejouer</button>
+                <button onClick={()=>{setOnboarded(true); localStorage.setItem('lc-onb','1');}}>Sauter</button>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<LeuCare/>);
+  </script>
+</body>
+</html>

@@ -121,8 +121,12 @@ export default function Home() {
             </Link>
 
             <Link href="/projets/generateur-factures" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <div className="bg-navy/10 rounded-lg p-4 mb-4 flex items-center justify-center h-48">
-                <FileText size={64} className="text-navy" />
+              {/* TODO: Thumbnail portfolio Générateur de Factures IA — à fournir au format des autres projets (~1200x900) puis remplacer ce bloc par <Image src="/images/generateur-factures-thumbnail.png" ... /> à la manière des autres cards */}
+              <div className="bg-navy/10 rounded-lg p-4 mb-4 flex items-center justify-center h-96">
+                <div className="text-center text-dark/40">
+                  <FileText size={64} className="text-navy mx-auto mb-3" />
+                  <p className="text-sm font-bold">Thumbnail à fournir</p>
+                </div>
               </div>
               <h3 className="text-h3 text-orange mb-3">Générateur de Factures IA</h3>
               <p className="text-dark/70 mb-4">

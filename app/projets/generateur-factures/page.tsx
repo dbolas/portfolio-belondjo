@@ -27,9 +27,9 @@ export default function GenerateurFacturesPage() {
             <h1 className="text-hero text-orange mb-4">Générateur de Factures IA</h1>
             <p className="text-xl text-dark/70 mb-8">Builder · UX Designer — Application web en production</p>
 
-            {/* Image principale */}
+            {/* TODO: Hero shot — screenshot desktop plein cadre de la facture (visuel A à fournir) */}
             <div className="w-full h-[400px] lg:h-[600px] bg-navy/10 rounded-2xl overflow-hidden flex items-center justify-center">
-              <p className="text-dark/40 text-xl font-bold">Mockup Générateur de Factures</p>
+              <p className="text-dark/40 text-xl font-bold">Hero shot — facture desktop (à fournir)</p>
             </div>
           </div>
 
@@ -68,6 +68,8 @@ export default function GenerateurFacturesPage() {
               <li><a href="#solution" className="text-dark hover:text-orange transition-colors font-bold">Solution</a></li>
               <li className="hidden md:block text-dark/30">|</li>
               <li><a href="#resultats" className="text-dark hover:text-orange transition-colors font-bold">Résultats</a></li>
+              <li className="hidden md:block text-dark/30">|</li>
+              <li><a href="#apprentissages" className="text-dark hover:text-orange transition-colors font-bold">Apprentissages</a></li>
             </ul>
           </nav>
 
@@ -98,6 +100,11 @@ export default function GenerateurFacturesPage() {
                 <span>Interface simple utilisable sans formation</span>
               </li>
             </ul>
+
+            {/* TODO: GIF / vidéo assistant vocal — démo de la dictée qui remplit la facture (visuel D à fournir) */}
+            <div className="mt-10 bg-dark/5 rounded-xl p-12 min-h-[280px] flex items-center justify-center">
+              <p className="text-center text-dark/40 text-lg font-bold">Démo assistant vocal — GIF / vidéo (à fournir)</p>
+            </div>
           </div>
 
           {/* Section 02 — Problème */}
@@ -171,6 +178,38 @@ export default function GenerateurFacturesPage() {
                   <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Conditions de paiement personnalisables</span></li>
                 </ul>
               </div>
+
+              <div className="bg-navy/5 rounded-xl p-6">
+                <h4 className="text-xl font-bold text-navy mb-3">Interface responsive et adaptative</h4>
+                <p className="text-dark/80 leading-relaxed mb-4">
+                  Refonte responsive complète : header compact en icônes sur mobile, blocs émetteur/destinataire empilés,
+                  tableau des prestations transformé en cards lisibles sur petit écran, padding adaptatif. Le rendu PDF
+                  reste figé sur le format desktop quel que soit l&apos;appareil utilisé pour exporter.
+                </p>
+
+                {/* TODO: Triptyque responsive — mockups mobile (375px) / tablette (768px) / desktop (1280px) (visuel B à fournir) */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                  <div className="bg-dark/5 rounded-xl p-8 min-h-[260px] flex items-center justify-center">
+                    <p className="text-center text-dark/40 font-bold text-sm">Mockup mobile<br />(375px)</p>
+                  </div>
+                  <div className="bg-dark/5 rounded-xl p-8 min-h-[260px] flex items-center justify-center">
+                    <p className="text-center text-dark/40 font-bold text-sm">Mockup tablette<br />(768px)</p>
+                  </div>
+                  <div className="bg-dark/5 rounded-xl p-8 min-h-[260px] flex items-center justify-center">
+                    <p className="text-center text-dark/40 font-bold text-sm">Mockup desktop<br />(1280px)</p>
+                  </div>
+                </div>
+
+                {/* TODO: Détail items en cards — capture avant/après conversion table → cards sur mobile (visuel C à fournir) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div className="bg-dark/5 rounded-xl p-8 min-h-[220px] flex items-center justify-center">
+                    <p className="text-center text-dark/40 font-bold text-sm">Avant — tableau prestations<br />(à fournir)</p>
+                  </div>
+                  <div className="bg-dark/5 rounded-xl p-8 min-h-[220px] flex items-center justify-center">
+                    <p className="text-center text-dark/40 font-bold text-sm">Après — cards mobile<br />(à fournir)</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -179,27 +218,38 @@ export default function GenerateurFacturesPage() {
             <div className="bg-orange/5 rounded-2xl p-8 md:p-12">
               <h2 className="text-h2 text-orange mb-8">04. Résultats</h2>
 
-              <div className="fade-in-section grid grid-cols-2 md:grid-cols-4 gap-8 bg-cream rounded-2xl p-8 mb-10">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-orange mb-2">En ligne</div>
-                  <div className="text-dark/70">Sur Vercel en production</div>
+              <div className="fade-in-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                <div className="bg-cream rounded-xl p-6">
+                  <div className="text-sm font-bold text-dark/50 uppercase tracking-wide mb-2">Statut</div>
+                  <div className="text-xl font-bold text-orange">En ligne sur Vercel</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-orange mb-2">Gemini</div>
-                  <div className="text-dark/70">3 Pro — IA de génération</div>
+                <div className="bg-cream rounded-xl p-6">
+                  <div className="text-sm font-bold text-dark/50 uppercase tracking-wide mb-2">Modèles IA supportés</div>
+                  <div className="text-xl font-bold text-orange">Gemini 2.5 Flash + Gemini 2.5 Pro</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-orange mb-2">&lt; 2 min</div>
-                  <div className="text-dark/70">Temps de création d&apos;une facture</div>
+                <div className="bg-cream rounded-xl p-6">
+                  <div className="text-sm font-bold text-dark/50 uppercase tracking-wide mb-2">Breakpoints couverts</div>
+                  <div className="text-xl font-bold text-orange">Mobile / Tablette / Desktop</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-orange mb-2">100%</div>
-                  <div className="text-dark/70">Mentions légales françaises incluses</div>
+                <div className="bg-cream rounded-xl p-6">
+                  <div className="text-sm font-bold text-dark/50 uppercase tracking-wide mb-2">Temps moyen dictée → facture</div>
+                  <div className="text-xl font-bold text-orange">&lt; 3 secondes</div>
+                </div>
+                <div className="bg-cream rounded-xl p-6">
+                  <div className="text-sm font-bold text-dark/50 uppercase tracking-wide mb-2">Format export</div>
+                  <div className="text-xl font-bold text-orange">PDF A4 conforme (mention art. L441-10)</div>
                 </div>
               </div>
 
+              <p className="text-lg text-dark/80 leading-relaxed mb-3">
+                Le générateur permet de produire une facture conforme en moins d&apos;une minute depuis n&apos;importe quel appareil.
+              </p>
+              <p className="text-lg text-dark/80 leading-relaxed">
+                La saisie vocale réduit d&apos;environ 70 % le temps de remplissage par rapport à un formulaire classique.
+              </p>
+
               {/* CTA */}
-              <div className="text-center mt-8">
+              <div className="text-center mt-10">
                 <a
                   href="https://invoicegeneratorvrbbl.vercel.app"
                   target="_blank"
@@ -209,6 +259,25 @@ export default function GenerateurFacturesPage() {
                 </a>
               </div>
             </div>
+          </div>
+
+          {/* Section 05 — Apprentissages */}
+          <div id="apprentissages" className="fade-in-section mb-16 bg-orange/5 rounded-2xl p-8 md:p-12 scroll-mt-32">
+            <h2 className="text-h2 text-orange mb-6">05. Apprentissages</h2>
+            <ul className="space-y-4 text-lg text-dark/80">
+              <li className="flex items-start gap-3">
+                <span className="text-orange mt-1">•</span>
+                <span>Travail sur la latence du streaming Gemini pour rendre l&apos;assistant &laquo;&nbsp;vivant&nbsp;&raquo; en restitution.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-orange mt-1">•</span>
+                <span>Choix du print CSS natif plutôt qu&apos;une lib PDF (jsPDF / react-pdf) : bundle plus léger et rendu fidèle au navigateur.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-orange mt-1">•</span>
+                <span>Refonte responsive menée en seconde itération après mise en production — démarche volontairement itérative plutôt que big-bang.</span>
+              </li>
+            </ul>
           </div>
 
           {/* Autres projets */}

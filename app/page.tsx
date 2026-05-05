@@ -121,13 +121,13 @@ export default function Home() {
             </Link>
 
             <Link href="/projets/generateur-factures" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <div className="bg-navy/10 rounded-lg p-0 mb-4 flex items-center justify-center h-96 overflow-hidden">
+              <div className="bg-navy/10 rounded-lg p-4 mb-4 flex items-center justify-center h-96 overflow-hidden">
                 <Image
-                  src="/images/generateur-factures/hero-desktop.png"
-                  alt="Générateur de Factures IA — application web en production"
-                  width={1200}
-                  height={900}
-                  className="w-full h-full object-cover object-top"
+                  src="/images/generateur-factures/mockup-desktop.png"
+                  alt="Générateur de Factures IA — application web en production sur MacBook"
+                  width={1600}
+                  height={1000}
+                  className="w-full h-full object-contain"
                 />
               </div>
               <h3 className="text-h3 text-orange mb-3">Générateur de Factures IA</h3>

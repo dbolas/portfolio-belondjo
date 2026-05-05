@@ -28,7 +28,40 @@ export default function LeuCarePage() {
             <h1 className="text-hero text-orange mb-4">LeuCare — Application mobile de suivi pour enfants atteints de leucémie</h1>
             <p className="text-xl text-dark/70 mb-8">Product Designer · Conception UX from scratch · Application mobile · Santé · Kinshasa, RDC</p>
 
-            {/* Image principale */}
+            {/* Triptyque hero — splash / dashboard / journal-douleurs en cascade */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end mt-8">
+              <div className="md:translate-y-12 flex justify-center">
+                <Image
+                  src="/images/leucare/splash.png"
+                  alt="LeuCare — écran d'accueil de l'application"
+                  width={394}
+                  height={702}
+                  quality={95}
+                  className="w-full h-auto max-w-[260px]"
+                />
+              </div>
+              <div className="md:scale-110 md:z-10 relative flex justify-center">
+                <Image
+                  src="/images/leucare/dashboard.png"
+                  alt="LeuCare — tableau de bord centre de ressources"
+                  width={394}
+                  height={702}
+                  quality={95}
+                  priority
+                  className="w-full h-auto max-w-[280px]"
+                />
+              </div>
+              <div className="md:translate-y-12 flex justify-center">
+                <Image
+                  src="/images/leucare/journal-douleurs.png"
+                  alt="LeuCare — journal des douleurs avec body map interactif"
+                  width={394}
+                  height={702}
+                  quality={95}
+                  className="w-full h-auto max-w-[260px]"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Infos du projet */}
@@ -104,17 +137,31 @@ export default function LeuCarePage() {
           {/* Section 01 — Contexte */}
           <div id="contexte" className="fade-in-section mb-16 bg-orange/5 rounded-2xl p-8 md:p-12 scroll-mt-32">
             <h2 className="text-h2 text-orange mb-6">Le produit et ses objectifs</h2>
-            <p className="text-lg text-dark/80 leading-relaxed mb-6">
-              LeuCare est une application mobile de suivi personnalisé pour les enfants atteints de leucémie
-              et leurs familles à Kinshasa, République Démocratique du Congo. La leucémie est l&apos;un des cancers
-              pédiatriques les plus fréquents en RDC, avec un accès aux soins spécialisés très limité en dehors
-              de quelques établissements comme l&apos;Hôpital Général de Mama Yemo.
-            </p>
-            <p className="text-lg text-dark/80 leading-relaxed mb-6">
-              L&apos;application vise à combler le manque d&apos;outils numériques adaptés au contexte congolais —
-              où la connectivité est intermittente, les smartphones sont majoritairement des appareils
-              entrée de gamme, et les familles ont besoin d&apos;un soutien continu entre les consultations médicales.
-            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-6 items-start">
+              <div className="lg:col-span-2 space-y-6">
+                <p className="text-lg text-dark/80 leading-relaxed">
+                  LeuCare est une application mobile de suivi personnalisé pour les enfants atteints de leucémie
+                  et leurs familles à Kinshasa, République Démocratique du Congo. La leucémie est l&apos;un des cancers
+                  pédiatriques les plus fréquents en RDC, avec un accès aux soins spécialisés très limité en dehors
+                  de quelques établissements comme l&apos;Hôpital Général de Mama Yemo.
+                </p>
+                <p className="text-lg text-dark/80 leading-relaxed">
+                  L&apos;application vise à combler le manque d&apos;outils numériques adaptés au contexte congolais —
+                  où la connectivité est intermittente, les smartphones sont majoritairement des appareils
+                  entrée de gamme, et les familles ont besoin d&apos;un soutien continu entre les consultations médicales.
+                </p>
+              </div>
+              <div className="lg:col-span-1 flex justify-center">
+                <Image
+                  src="/images/leucare/splash.png"
+                  alt="LeuCare — écran de lancement de l'application"
+                  width={394}
+                  height={702}
+                  quality={95}
+                  className="w-full h-auto max-w-[240px]"
+                />
+              </div>
+            </div>
             <p className="text-lg text-dark/80 leading-relaxed mb-6">Objectifs principaux :</p>
             <ul className="space-y-4 text-lg text-dark/80 mb-6">
               <li className="flex items-start gap-3">
@@ -324,12 +371,47 @@ export default function LeuCarePage() {
               {/* Étape 3 */}
               <div>
                 <h3 className="text-2xl font-bold text-navy mb-4">3. Onboarding humanisé — réduire la friction à l&apos;entrée</h3>
-                <p className="text-lg text-dark/80 leading-relaxed mb-4">
+                <p className="text-lg text-dark/80 leading-relaxed mb-6">
                   Pour une application de santé destinée à des familles en situation de stress intense,
                   l&apos;onboarding doit être rassurant et progressif. Conception d&apos;un parcours en 6 étapes
                   avec une question par écran. Création de la mascotte &quot;Léa&quot; — personnage féminin aux traits
                   africains — pour humaniser le parcours et créer un lien de confiance.
                 </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
+                  <div className="flex flex-col items-center">
+                    <Image
+                      src="/images/leucare/onboarding.png"
+                      alt="Onboarding LeuCare avec mascotte Léa"
+                      width={394}
+                      height={702}
+                      quality={95}
+                      className="w-full h-auto max-w-[240px]"
+                    />
+                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Onboarding mascotte</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <Image
+                      src="/images/leucare/profile-selection.png"
+                      alt="Sélection du profil utilisateur (4 profils distincts)"
+                      width={394}
+                      height={702}
+                      quality={95}
+                      className="w-full h-auto max-w-[240px]"
+                    />
+                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Sélection du profil</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <Image
+                      src="/images/leucare/signup-prenom.png"
+                      alt="Étape inscription — prénom de l'enfant"
+                      width={394}
+                      height={702}
+                      quality={95}
+                      className="w-full h-auto max-w-[240px]"
+                    />
+                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Inscription progressive</p>
+                  </div>
+                </div>
               </div>
 
               {/* Étape 4 */}
@@ -389,47 +471,72 @@ export default function LeuCarePage() {
           <div id="solution" className="fade-in-section mb-16 scroll-mt-32">
             <h2 className="text-h2 text-orange mb-6">05. La solution — 4 profils, 5 modules</h2>
 
-            <div className="space-y-6">
-              <div className="bg-navy/5 rounded-xl p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">🤝</span>
-                  <h4 className="text-xl font-bold text-navy">Onboarding progressif et rassurant</h4>
+            <div className="space-y-8">
+              <div className="bg-navy/5 rounded-xl p-6 lg:p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-3xl">🤝</span>
+                      <h4 className="text-xl font-bold text-navy">Onboarding progressif et rassurant</h4>
+                    </div>
+                    <ul className="space-y-2 text-dark/80">
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Une question par écran pour réduire la charge cognitive</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Mascotte Léa aux traits africains pour créer un lien de confiance</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Sélection du profil pour personnaliser l&apos;expérience</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Langage simple et bienveillant</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Mentions de sécurité et confidentialité visibles à chaque étape</span></li>
+                    </ul>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    <Image src="/images/leucare/onboarding.png" alt="Onboarding avec mascotte Léa" width={394} height={702} quality={95} className="w-full h-auto" />
+                    <Image src="/images/leucare/profile-selection.png" alt="Sélection du profil" width={394} height={702} quality={95} className="w-full h-auto" />
+                    <Image src="/images/leucare/signup-prenom.png" alt="Inscription progressive" width={394} height={702} quality={95} className="w-full h-auto" />
+                  </div>
                 </div>
-                <ul className="space-y-2 text-dark/80">
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Une question par écran pour réduire la charge cognitive</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Mascotte Léa aux traits africains pour créer un lien de confiance</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Sélection du profil pour personnaliser l&apos;expérience</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Langage simple et bienveillant</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Mentions de sécurité et confidentialité visibles à chaque étape</span></li>
-                </ul>
               </div>
 
-              <div className="bg-navy/5 rounded-xl p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">💊</span>
-                  <h4 className="text-xl font-bold text-navy">Suivi médical structuré</h4>
+              <div className="bg-navy/5 rounded-xl p-6 lg:p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-3xl">💊</span>
+                      <h4 className="text-xl font-bold text-navy">Suivi médical structuré</h4>
+                    </div>
+                    <ul className="space-y-2 text-dark/80">
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Liste des médicaments du jour avec horaires et statut (Pris / En attente)</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Rappel des vrais médicaments leucémie — Hydroxyurée, Mercaptopurine, Méthotrexate</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Prochain rendez-vous à l&apos;Hôpital Général de Mama Yemo</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Score d&apos;adhérence hebdomadaire (85%)</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Journal des épisodes douloureux avec body map et historique</span></li>
+                    </ul>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <Image src="/images/leucare/traitement.png" alt="Suivi du traitement avec médicaments du jour" width={394} height={702} quality={95} className="w-full h-auto" />
+                    <Image src="/images/leucare/journal-douleurs.png" alt="Journal des douleurs avec body map" width={394} height={702} quality={95} className="w-full h-auto" />
+                  </div>
                 </div>
-                <ul className="space-y-2 text-dark/80">
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Liste des médicaments du jour avec horaires et statut (Pris / En attente)</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Rappel des vrais médicaments leucémie — Hydroxyurée, Mercaptopurine, Méthotrexate</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Prochain rendez-vous à l&apos;Hôpital Général de Mama Yemo</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Score d&apos;adhérence hebdomadaire (85%)</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Journal des épisodes douloureux avec body map et historique</span></li>
-                </ul>
               </div>
 
-              <div className="bg-navy/5 rounded-xl p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">👥</span>
-                  <h4 className="text-xl font-bold text-navy">Ressources et communauté</h4>
+              <div className="bg-navy/5 rounded-xl p-6 lg:p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-3xl">👥</span>
+                      <h4 className="text-xl font-bold text-navy">Ressources et communauté</h4>
+                    </div>
+                    <ul className="space-y-2 text-dark/80">
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Actualités médicales contextualisées (campagnes Mama Yemo, nutrition locale)</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Témoignages de familles ayant vécu la même situation</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Guides pratiques en français</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Agenda des événements médicaux</span></li>
+                      <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Communauté d&apos;entraide modérée — 1,2k membres actifs</span></li>
+                    </ul>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <Image src="/images/leucare/dashboard.png" alt="Tableau de bord — centre de ressources" width={394} height={702} quality={95} className="w-full h-auto" />
+                    <Image src="/images/leucare/communaute.png" alt="Communauté d'entraide LeuCare" width={394} height={702} quality={95} className="w-full h-auto" />
+                  </div>
                 </div>
-                <ul className="space-y-2 text-dark/80">
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Actualités médicales contextualisées (campagnes Mama Yemo, nutrition locale)</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Témoignages de familles ayant vécu la même situation</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Guides pratiques en français</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Agenda des événements médicaux</span></li>
-                  <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Communauté d&apos;entraide modérée — 1,2k membres actifs</span></li>
-                </ul>
               </div>
             </div>
           </div>
@@ -459,7 +566,7 @@ export default function LeuCarePage() {
               </div>
 
               <h3 className="text-2xl font-bold text-navy mb-6">Livrables</h3>
-              <ul className="space-y-3 text-lg text-dark/80">
+              <ul className="space-y-3 text-lg text-dark/80 mb-12">
                 <li className="flex items-start gap-3">
                   <span className="text-orange mt-1">•</span>
                   <span>Prototype Figma interactif complet — 10 écrans couvrant les parcours principaux</span>
@@ -481,6 +588,35 @@ export default function LeuCarePage() {
                   <span>Suivi traitement avec vrais médicaments du protocole leucémie pédiatrique</span>
                 </li>
               </ul>
+
+              <h3 className="text-2xl font-bold text-navy mb-6">Galerie des écrans prototypés</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                {[
+                  { src: 'splash', alt: 'Écran de lancement', label: 'Splash' },
+                  { src: 'onboarding', alt: 'Onboarding mascotte Léa', label: 'Onboarding' },
+                  { src: 'profile-selection', alt: 'Sélection du profil', label: 'Profils' },
+                  { src: 'signup-prenom', alt: 'Inscription — prénom', label: 'Inscription · Prénom' },
+                  { src: 'signup-email', alt: 'Inscription — email', label: 'Inscription · Email' },
+                  { src: 'signup-password', alt: 'Inscription — mot de passe', label: 'Inscription · Mot de passe' },
+                  { src: 'signup-infos', alt: 'Inscription — infos personnelles', label: 'Inscription · Infos' },
+                  { src: 'dashboard', alt: 'Tableau de bord', label: 'Dashboard' },
+                  { src: 'journal-douleurs', alt: 'Journal des douleurs', label: 'Journal douleurs' },
+                  { src: 'traitement', alt: 'Suivi du traitement', label: 'Traitement' },
+                  { src: 'communaute', alt: 'Communauté d\'entraide', label: 'Communauté' },
+                ].map((m) => (
+                  <div key={m.src} className="flex flex-col items-center bg-cream rounded-xl p-3 transition-transform duration-300 hover:-translate-y-1">
+                    <Image
+                      src={`/images/leucare/${m.src}.png`}
+                      alt={`LeuCare — ${m.alt}`}
+                      width={394}
+                      height={702}
+                      quality={90}
+                      className="w-full h-auto"
+                    />
+                    <p className="text-center text-dark/60 font-bold text-xs mt-2">{m.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

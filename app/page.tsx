@@ -100,13 +100,13 @@ export default function Home() {
             </Link>
 
             <Link href="/projets/leucare" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <div className="bg-slate-50 rounded-lg p-0 mb-4 flex items-center justify-center h-96 overflow-hidden">
+              <div className="bg-slate-50 rounded-lg p-4 mb-4 flex items-center justify-center h-96 overflow-hidden">
                 <Image
-                  src="/images/leucare-splash.png"
-                  alt="LeuCare — Application mobile leucémie"
-                  width={1200}
-                  height={900}
-                  className="w-full h-full object-contain bg-slate-50"
+                  src="/images/leucare/splash.png"
+                  alt="LeuCare — Application mobile leucémie sur iPhone"
+                  width={394}
+                  height={702}
+                  className="h-full w-auto object-contain"
                 />
               </div>
               <h3 className="text-h3 text-orange mb-3">LeuCare — Application mobile leucémie</h3>

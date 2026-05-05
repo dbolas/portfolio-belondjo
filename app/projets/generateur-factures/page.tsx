@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Navigation, Footer } from '@/components/layout';
-import { Button, ScrollAnimationInit } from '@/components/ui';
+import { Button, ScrollAnimationInit, ImageZoom } from '@/components/ui';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Générateur de Factures IA — Application web en production | Belondjo',
@@ -27,9 +28,14 @@ export default function GenerateurFacturesPage() {
             <h1 className="text-hero text-orange mb-4">Générateur de Factures IA</h1>
             <p className="text-xl text-dark/70 mb-8">Builder · UX Designer — Application web en production</p>
 
-            {/* TODO: Hero shot — screenshot desktop plein cadre de la facture (visuel A à fournir) */}
-            <div className="w-full h-[400px] lg:h-[600px] bg-navy/10 rounded-2xl overflow-hidden flex items-center justify-center">
-              <p className="text-dark/40 text-xl font-bold">Hero shot — facture desktop (à fournir)</p>
+            <div className="w-full bg-navy/5 rounded-2xl overflow-hidden">
+              <ImageZoom
+                src="/images/generateur-factures/hero-desktop.png"
+                alt="Générateur de Factures IA — vue desktop complète avec assistant vocal et facture générée"
+                width={2400}
+                height={1600}
+                className="w-full h-auto"
+              />
             </div>
           </div>
 
@@ -187,26 +193,55 @@ export default function GenerateurFacturesPage() {
                   reste figé sur le format desktop quel que soit l&apos;appareil utilisé pour exporter.
                 </p>
 
-                {/* TODO: Triptyque responsive — mockups mobile (375px) / tablette (768px) / desktop (1280px) (visuel B à fournir) */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                  <div className="bg-dark/5 rounded-xl p-8 min-h-[260px] flex items-center justify-center">
-                    <p className="text-center text-dark/40 font-bold text-sm">Mockup mobile<br />(375px)</p>
+                {/* Triptyque responsive — mobile (Galaxy S22) / tablette (TODO) / desktop (Asus Zenbook) */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 items-start">
+                  <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
+                    <div className="w-full bg-cream rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/generateur-factures/mockup-mobile.png"
+                        alt="Aperçu mobile (Galaxy S22) — blocs émetteur/destinataire empilés et prestations en cards"
+                        width={600}
+                        height={1200}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Mobile (Galaxy S22)</p>
                   </div>
+                  {/* TODO: Mockup tablette 768px — capture intermédiaire (visuel B tablette à fournir) */}
                   <div className="bg-dark/5 rounded-xl p-8 min-h-[260px] flex items-center justify-center">
-                    <p className="text-center text-dark/40 font-bold text-sm">Mockup tablette<br />(768px)</p>
+                    <p className="text-center text-dark/40 font-bold text-sm">Mockup tablette<br />(768px à fournir)</p>
                   </div>
-                  <div className="bg-dark/5 rounded-xl p-8 min-h-[260px] flex items-center justify-center">
-                    <p className="text-center text-dark/40 font-bold text-sm">Mockup desktop<br />(1280px)</p>
+                  <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
+                    <div className="w-full bg-cream rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/generateur-factures/mockup-desktop.png"
+                        alt="Aperçu desktop (Asus Zenbook) — assistant vocal à gauche, facture à droite"
+                        width={1200}
+                        height={1600}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Desktop (Asus Zenbook)</p>
                   </div>
                 </div>
 
-                {/* TODO: Détail items en cards — capture avant/après conversion table → cards sur mobile (visuel C à fournir) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                {/* Détail items en cards — Avant (TODO) / Après (iPhone 14 Pro) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 items-start">
+                  {/* TODO: Capture &laquo;&nbsp;avant&nbsp;&raquo; — vue desktop du tableau de prestations (visuel C avant à fournir) */}
                   <div className="bg-dark/5 rounded-xl p-8 min-h-[220px] flex items-center justify-center">
-                    <p className="text-center text-dark/40 font-bold text-sm">Avant — tableau prestations<br />(à fournir)</p>
+                    <p className="text-center text-dark/40 font-bold text-sm">Avant — tableau prestations<br />(desktop, à fournir)</p>
                   </div>
-                  <div className="bg-dark/5 rounded-xl p-8 min-h-[220px] flex items-center justify-center">
-                    <p className="text-center text-dark/40 font-bold text-sm">Après — cards mobile<br />(à fournir)</p>
+                  <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
+                    <div className="w-full bg-cream rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/generateur-factures/mockup-mobile-cards.png"
+                        alt="Après — prestations transformées en cards lisibles sur mobile (iPhone 14 Pro)"
+                        width={600}
+                        height={1200}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Après — cards mobile (iPhone 14 Pro)</p>
                   </div>
                 </div>
               </div>

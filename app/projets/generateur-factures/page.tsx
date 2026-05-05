@@ -106,11 +106,6 @@ export default function GenerateurFacturesPage() {
                 <span>Interface simple utilisable sans formation</span>
               </li>
             </ul>
-
-            {/* TODO: GIF / vidéo assistant vocal — démo de la dictée qui remplit la facture (visuel D à fournir) */}
-            <div className="mt-10 bg-dark/5 rounded-xl p-12 min-h-[280px] flex items-center justify-center">
-              <p className="text-center text-dark/40 text-lg font-bold">Démo assistant vocal — GIF / vidéo (à fournir)</p>
-            </div>
           </div>
 
           {/* Section 02 — Problème */}
@@ -207,9 +202,17 @@ export default function GenerateurFacturesPage() {
                     </div>
                     <p className="text-center text-dark/60 font-bold text-xs mt-3">Mobile (Galaxy S22)</p>
                   </div>
-                  {/* TODO: Mockup tablette 768px — capture intermédiaire (visuel B tablette à fournir) */}
-                  <div className="bg-dark/5 rounded-xl p-8 min-h-[260px] flex items-center justify-center">
-                    <p className="text-center text-dark/40 font-bold text-sm">Mockup tablette<br />(768px à fournir)</p>
+                  <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
+                    <div className="w-full bg-cream rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/generateur-factures/mockup-tablet.png"
+                        alt="Aperçu tablette (768px) — facture en colonne unique avec tableau des prestations conservé"
+                        width={768}
+                        height={1024}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Tablette (768px)</p>
                   </div>
                   <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
                     <div className="w-full bg-cream rounded-lg overflow-hidden">
@@ -225,11 +228,19 @@ export default function GenerateurFacturesPage() {
                   </div>
                 </div>
 
-                {/* Détail items en cards — Avant (TODO) / Après (iPhone 14 Pro) */}
+                {/* Comparatif format prestations — Avant (table ≥ 768px) / Après (cards < 768px) */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 items-start">
-                  {/* TODO: Capture &laquo;&nbsp;avant&nbsp;&raquo; — vue desktop du tableau de prestations (visuel C avant à fournir) */}
-                  <div className="bg-dark/5 rounded-xl p-8 min-h-[220px] flex items-center justify-center">
-                    <p className="text-center text-dark/40 font-bold text-sm">Avant — tableau prestations<br />(desktop, à fournir)</p>
+                  <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
+                    <div className="w-full bg-cream rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/generateur-factures/mockup-tablet.png"
+                        alt="Avant — prestations en tableau classique (description, qté, prix, total) sur tablette et desktop"
+                        width={768}
+                        height={1024}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Avant — tableau prestations (≥ 768px)</p>
                   </div>
                   <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
                     <div className="w-full bg-cream rounded-lg overflow-hidden">
@@ -241,7 +252,7 @@ export default function GenerateurFacturesPage() {
                         className="w-full h-auto"
                       />
                     </div>
-                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Après — cards mobile (iPhone 14 Pro)</p>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Après — cards mobile (&lt; 768px)</p>
                   </div>
                 </div>
               </div>

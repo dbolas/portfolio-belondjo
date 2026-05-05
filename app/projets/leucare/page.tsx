@@ -3,6 +3,7 @@ import { Navigation, Footer } from '@/components/layout';
 import { Button, Verbatim, ScrollAnimationInit } from '@/components/ui';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'LeuCare — Application mobile leucémie Kinshasa | Belondjo',
@@ -555,34 +556,58 @@ export default function LeuCarePage() {
           <section className="fade-in-section mt-24 pt-12 border-t border-dark/10">
             <h2 className="text-h2 text-orange mb-12 text-center">Lisez d&apos;autres études de cas que j&apos;ai réalisées</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <Link
-                href="/projets/moveiq"
-                className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                  <div className="text-center text-dark/30">
-                    <div className="text-4xl mb-2">🏀</div>
-                    <p className="text-sm font-bold">Mockup MoveIQ</p>
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">
-                  MoveIQ — Plateforme coaching basketball
-                </h3>
-              </Link>
-
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Link
                 href="/projets/intranet-interministeriel"
                 className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
               >
-                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                  <div className="text-center text-dark/30">
-                    <div className="text-4xl mb-2">🏛️</div>
-                    <p className="text-sm font-bold">Mockup Intranet</p>
-                  </div>
+                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 overflow-hidden">
+                  <Image
+                    src="/images/mockup-intranet-laptop.png"
+                    alt="Intranet interministériel des Hauts-de-Seine"
+                    width={1200}
+                    height={900}
+                    className="w-full h-full object-cover scale-125"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">
-                  Intranet interministériel Hauts-de-Seine
+                  Intranet interministériel des Hauts-de-Seine
+                </h3>
+              </Link>
+
+              <Link
+                href="/projets/moveiq"
+                className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 overflow-hidden">
+                  <Image
+                    src="/images/moveiq-landing.png"
+                    alt="MoveIQ — Plateforme de coaching basketball"
+                    width={1200}
+                    height={900}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">
+                  MoveIQ — Plateforme de coaching basketball
+                </h3>
+              </Link>
+
+              <Link
+                href="/projets/generateur-factures"
+                className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 overflow-hidden">
+                  <Image
+                    src="/images/generateur-factures/hero-desktop.png"
+                    alt="Générateur de Factures IA — application web en production"
+                    width={1200}
+                    height={900}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">
+                  Générateur de Factures IA
                 </h3>
               </Link>
             </div>

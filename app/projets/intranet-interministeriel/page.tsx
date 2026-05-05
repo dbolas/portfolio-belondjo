@@ -593,54 +593,60 @@ export default function IntranetInterministerielPage() {
 
           {/* Autres projets */}
           <section className="fade-in-section mt-24 pt-12 border-t border-dark/10">
-            <h2 className="text-h2 text-orange mb-12 text-center">Lisez d'autres études de cas que j'ai réalisées</h2>
+            <h2 className="text-h2 text-orange mb-12 text-center">Lisez d&apos;autres études de cas que j&apos;ai réalisées</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {/* Projet 1 - Odd Sox */}
               <Link
-                href="/projets/odd-sox"
+                href="/projets/moveiq"
                 className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
               >
-                <div className="w-full h-64 bg-dark/5 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                  <div className="text-center text-dark/30">
-                    <div className="text-4xl mb-2">💻</div>
-                    <p className="text-sm font-bold">Mockup Odd Sox</p>
-                  </div>
+                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 overflow-hidden">
+                  <Image
+                    src="/images/moveiq-landing.png"
+                    alt="MoveIQ — Plateforme de coaching basketball"
+                    width={1200}
+                    height={900}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">
-                  Odd Sox
+                  MoveIQ — Plateforme de coaching basketball
                 </h3>
               </Link>
 
-              {/* Projet 2 - Jones et Filles */}
               <Link
-                href="/projets/jones-et-filles"
+                href="/projets/leucare"
                 className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
               >
-                <div className="w-full h-64 bg-dark/5 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                  <div className="text-center text-dark/30">
-                    <div className="text-4xl mb-2">💻</div>
-                    <p className="text-sm font-bold">Mockup Jones et Filles</p>
-                  </div>
+                <div className="w-full h-64 bg-slate-50 rounded-xl mb-6 overflow-hidden">
+                  <Image
+                    src="/images/leucare-splash.png"
+                    alt="LeuCare — Application mobile leucémie"
+                    width={1200}
+                    height={900}
+                    className="w-full h-full object-contain bg-slate-50"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">
-                  Jones et Filles
+                  LeuCare — Application mobile leucémie
                 </h3>
               </Link>
 
-              {/* Projet 3 - Le centre des ongles */}
               <Link
-                href="/projets/centre-des-ongles"
+                href="/projets/generateur-factures"
                 className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
               >
-                <div className="w-full h-64 bg-dark/5 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                  <div className="text-center text-dark/30">
-                    <div className="text-4xl mb-2">💻</div>
-                    <p className="text-sm font-bold">Mockup Le centre des ongles</p>
-                  </div>
+                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 overflow-hidden">
+                  <Image
+                    src="/images/generateur-factures/hero-desktop.png"
+                    alt="Générateur de Factures IA — application web en production"
+                    width={1200}
+                    height={900}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">
-                  Le centre des ongles
+                  Générateur de Factures IA
                 </h3>
               </Link>
             </div>

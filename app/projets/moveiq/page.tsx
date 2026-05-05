@@ -664,13 +664,13 @@ export default function MoveIQPage() {
                 href="/projets/generateur-factures"
                 className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
               >
-                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 overflow-hidden">
+                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 overflow-hidden p-3 flex items-center justify-center">
                   <Image
-                    src="/images/generateur-factures/hero-desktop.png"
-                    alt="Générateur de Factures IA — application web en production"
-                    width={1200}
-                    height={900}
-                    className="w-full h-full object-cover object-top"
+                    src="/images/generateur-factures/mockup-desktop.png"
+                    alt="Générateur de Factures IA — application web en production sur MacBook"
+                    width={1600}
+                    height={1000}
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">

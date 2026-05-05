@@ -363,13 +363,13 @@ export default function GenerateurFacturesPage() {
                 href="/projets/moveiq"
                 className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
               >
-                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 overflow-hidden">
+                <div className="w-full h-64 bg-navy/10 rounded-xl mb-6 overflow-hidden p-3 flex items-center justify-center">
                   <Image
-                    src="/images/moveiq-landing.png"
-                    alt="MoveIQ — Plateforme de coaching basketball"
-                    width={1200}
-                    height={900}
-                    className="w-full h-full object-cover object-top"
+                    src="/images/moveiq-laptop.png"
+                    alt="MoveIQ Basket — landing page sur MacBook"
+                    width={1600}
+                    height={1000}
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">

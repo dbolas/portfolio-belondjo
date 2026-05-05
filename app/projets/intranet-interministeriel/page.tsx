@@ -595,7 +595,7 @@ export default function IntranetInterministerielPage() {
           <section className="fade-in-section mt-24 pt-12 border-t border-dark/10">
             <h2 className="text-h2 text-orange mb-12 text-center">Lisez d&apos;autres études de cas que j&apos;ai réalisées</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <Link
                 href="/projets/moveiq"
                 className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
@@ -611,24 +611,6 @@ export default function IntranetInterministerielPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">
                   MoveIQ — Plateforme de coaching basketball
-                </h3>
-              </Link>
-
-              <Link
-                href="/projets/leucare"
-                className="project-card group bg-cream border-2 border-orange/20 rounded-2xl p-6 transition-all duration-300 hover:border-orange hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <div className="w-full h-64 bg-slate-50 rounded-xl mb-6 overflow-hidden">
-                  <Image
-                    src="/images/leucare-splash.png"
-                    alt="LeuCare — Application mobile leucémie"
-                    width={1200}
-                    height={900}
-                    className="w-full h-full object-contain bg-slate-50"
-                  />
-                </div>
-                <h3 className="text-2xl font-bold text-navy text-center group-hover:text-orange transition-colors">
-                  LeuCare — Application mobile leucémie
                 </h3>
               </Link>
 

@@ -99,7 +99,8 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/projets/leucare" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
+            {/* LeuCare masqué de la liste publique — la page reste accessible via /projets/leucare */}
+            {/* <Link href="/projets/leucare" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="bg-slate-50 rounded-lg p-4 mb-4 flex items-center justify-center h-96 overflow-hidden">
                 <Image
                   src="/images/leucare/splash.png"
@@ -118,7 +119,7 @@ export default function Home() {
                   <span key={tag} className="text-xs border border-orange text-orange rounded-full px-3 py-1">{tag}</span>
                 ))}
               </div>
-            </Link>
+            </Link> */}
 
             <Link href="/projets/generateur-factures" className="bg-cream border-2 border-orange rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="bg-navy/10 rounded-lg p-4 mb-4 flex items-center justify-center h-96 overflow-hidden">

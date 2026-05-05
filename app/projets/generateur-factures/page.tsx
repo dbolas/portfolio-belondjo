@@ -188,71 +188,81 @@ export default function GenerateurFacturesPage() {
                   reste figé sur le format desktop quel que soit l&apos;appareil utilisé pour exporter.
                 </p>
 
-                {/* Triptyque responsive — mobile (Galaxy S22) / tablette (TODO) / desktop (Asus Zenbook) */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 items-start">
-                  <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
-                    <div className="w-full bg-cream rounded-lg overflow-hidden">
+                {/* Triptyque responsive — mobile (Galaxy S22) / tablette (img-768-1024) / desktop (Asus Zenbook) */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 items-start">
+                  <div className="bg-dark/5 rounded-xl p-6 flex flex-col items-center">
+                    <div className="w-full max-w-[260px] bg-cream rounded-lg overflow-hidden shadow-sm">
                       <Image
                         src="/images/generateur-factures/mockup-mobile.png"
                         alt="Aperçu mobile (Galaxy S22) — blocs émetteur/destinataire empilés et prestations en cards"
                         width={600}
                         height={1200}
+                        quality={95}
+                        sizes="(max-width: 768px) 80vw, 260px"
                         className="w-full h-auto"
                       />
                     </div>
-                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Mobile (Galaxy S22)</p>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-4">Mobile (Galaxy S22)</p>
                   </div>
-                  <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
-                    <div className="w-full bg-cream rounded-lg overflow-hidden">
+                  <div className="bg-dark/5 rounded-xl p-6 flex flex-col items-center">
+                    <div className="w-full max-w-[320px] bg-cream rounded-lg overflow-hidden shadow-sm">
                       <Image
                         src="/images/generateur-factures/mockup-tablet.png"
                         alt="Aperçu tablette (768px) — facture en colonne unique avec tableau des prestations conservé"
                         width={768}
                         height={1024}
+                        quality={95}
+                        sizes="(max-width: 768px) 80vw, 320px"
                         className="w-full h-auto"
                       />
                     </div>
-                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Tablette (768px)</p>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-4">Tablette (768px)</p>
                   </div>
-                  <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
-                    <div className="w-full bg-cream rounded-lg overflow-hidden">
+                  <div className="bg-dark/5 rounded-xl p-6 flex flex-col items-center">
+                    <div className="w-full max-w-[420px] bg-cream rounded-lg overflow-hidden shadow-sm">
                       <Image
                         src="/images/generateur-factures/mockup-desktop.png"
                         alt="Aperçu desktop (Asus Zenbook) — assistant vocal à gauche, facture à droite"
                         width={1200}
                         height={1600}
+                        quality={95}
+                        sizes="(max-width: 768px) 80vw, 420px"
                         className="w-full h-auto"
                       />
                     </div>
-                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Desktop (Asus Zenbook)</p>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-4">Desktop (Asus Zenbook)</p>
                   </div>
                 </div>
 
                 {/* Comparatif format prestations — Avant (table ≥ 768px) / Après (cards < 768px) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 items-start">
-                  <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
-                    <div className="w-full bg-cream rounded-lg overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 items-start">
+                  <div className="bg-dark/5 rounded-xl p-6 flex flex-col items-center">
+                    <div className="w-full max-w-[380px] bg-cream rounded-lg overflow-hidden shadow-sm">
                       <Image
                         src="/images/generateur-factures/mockup-tablet.png"
                         alt="Avant — prestations en tableau classique (description, qté, prix, total) sur tablette et desktop"
                         width={768}
                         height={1024}
+                        quality={95}
+                        sizes="(max-width: 768px) 90vw, 380px"
                         className="w-full h-auto"
                       />
                     </div>
-                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Avant — tableau prestations (≥ 768px)</p>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-4">Avant — tableau prestations (≥ 768px)</p>
                   </div>
-                  <div className="bg-dark/5 rounded-xl p-4 flex flex-col items-center">
-                    <div className="w-full bg-cream rounded-lg overflow-hidden">
+                  <div className="bg-dark/5 rounded-xl p-6 flex flex-col items-center">
+                    <div className="w-full max-w-[300px] bg-cream rounded-lg overflow-hidden shadow-sm">
                       <Image
                         src="/images/generateur-factures/mockup-mobile-cards.png"
                         alt="Après — prestations transformées en cards lisibles sur mobile (iPhone 14 Pro)"
                         width={600}
                         height={1200}
+                        quality={95}
+                        sizes="(max-width: 768px) 80vw, 300px"
                         className="w-full h-auto"
                       />
                     </div>
-                    <p className="text-center text-dark/60 font-bold text-xs mt-3">Après — cards mobile (&lt; 768px)</p>
+                    <p className="text-center text-dark/60 font-bold text-xs mt-4">Après — cards mobile (&lt; 768px)</p>
                   </div>
                 </div>
               </div>

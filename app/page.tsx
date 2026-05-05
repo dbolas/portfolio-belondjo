@@ -87,13 +87,13 @@ export default function Home() {
                     Plateforme de suivi de progression pour jeunes joueurs (6-18 ans). Conçue et développée en solo avec Claude Code.
                   </p>
                 </div>
-                <div className="bg-navy/5 rounded-2xl overflow-hidden order-1 md:order-2 transition-transform duration-500 group-hover:scale-[1.02]">
+                <div className="bg-navy/5 rounded-2xl overflow-hidden p-4 order-1 md:order-2 transition-transform duration-500 group-hover:scale-[1.02]">
                   <Image
-                    src="/images/moveiq-landing.png"
-                    alt="MoveIQ — Plateforme de coaching basketball"
-                    width={1200}
-                    height={900}
-                    className="w-full h-auto object-cover object-top"
+                    src="/images/moveiq-laptop.png"
+                    alt="MoveIQ Basket — landing page sur MacBook"
+                    width={1600}
+                    height={1000}
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               </div>

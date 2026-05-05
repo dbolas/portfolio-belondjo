@@ -13,7 +13,7 @@ export default function Home() {
       <section className="bg-cream pt-48 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <p className="text-lg text-dark/60 mb-4 animate-fade-in">Salut&nbsp;!</p>
-          <h1 className="text-hero text-orange mb-6 animate-fade-in">
+          <h1 className="text-hero text-orange mb-6 text-center animate-fade-in">
             Je suis Belondjo,<br />Product Designer &amp; Builder
           </h1>
           <div className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 rounded-full px-4 py-2 mb-10 animate-slide-up">

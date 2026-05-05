@@ -28,9 +28,9 @@ export default function LeuCarePage() {
             <h1 className="text-hero text-orange mb-4">LeuCare — Application mobile de suivi pour enfants atteints de leucémie</h1>
             <p className="text-xl text-dark/70 mb-8">Product Designer · Conception UX from scratch · Application mobile · Santé · Kinshasa, RDC</p>
 
-            {/* Triptyque hero — splash / dashboard / journal-douleurs en cascade */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end mt-8">
-              <div className="md:translate-y-12 flex justify-center">
+            {/* Triptyque hero — splash / dashboard / journal-douleurs alignés au centre */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mt-8">
+              <div className="flex justify-center">
                 <Image
                   src="/images/leucare/splash.png"
                   alt="LeuCare — écran d'accueil de l'application"
@@ -40,7 +40,7 @@ export default function LeuCarePage() {
                   className="w-full h-auto max-w-[260px]"
                 />
               </div>
-              <div className="md:scale-110 md:z-10 relative flex justify-center">
+              <div className="flex justify-center md:-mt-4">
                 <Image
                   src="/images/leucare/dashboard.png"
                   alt="LeuCare — tableau de bord centre de ressources"
@@ -48,10 +48,10 @@ export default function LeuCarePage() {
                   height={702}
                   quality={95}
                   priority
-                  className="w-full h-auto max-w-[280px]"
+                  className="w-full h-auto max-w-[300px]"
                 />
               </div>
-              <div className="md:translate-y-12 flex justify-center">
+              <div className="flex justify-center">
                 <Image
                   src="/images/leucare/journal-douleurs.png"
                   alt="LeuCare — journal des douleurs avec body map interactif"
@@ -385,7 +385,7 @@ export default function LeuCarePage() {
                       width={394}
                       height={702}
                       quality={95}
-                      className="w-full h-auto max-w-[240px]"
+                      className="w-full h-auto max-w-[200px]"
                     />
                     <p className="text-center text-dark/60 font-bold text-xs mt-3">Onboarding mascotte</p>
                   </div>
@@ -396,7 +396,7 @@ export default function LeuCarePage() {
                       width={394}
                       height={702}
                       quality={95}
-                      className="w-full h-auto max-w-[240px]"
+                      className="w-full h-auto max-w-[200px]"
                     />
                     <p className="text-center text-dark/60 font-bold text-xs mt-3">Sélection du profil</p>
                   </div>
@@ -407,7 +407,7 @@ export default function LeuCarePage() {
                       width={394}
                       height={702}
                       quality={95}
-                      className="w-full h-auto max-w-[240px]"
+                      className="w-full h-auto max-w-[200px]"
                     />
                     <p className="text-center text-dark/60 font-bold text-xs mt-3">Inscription progressive</p>
                   </div>
@@ -487,10 +487,9 @@ export default function LeuCarePage() {
                       <li className="flex items-start gap-3"><span className="text-orange mt-1">•</span><span>Mentions de sécurité et confidentialité visibles à chaque étape</span></li>
                     </ul>
                   </div>
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-2 gap-4">
                     <Image src="/images/leucare/onboarding.png" alt="Onboarding avec mascotte Léa" width={394} height={702} quality={95} className="w-full h-auto" />
                     <Image src="/images/leucare/profile-selection.png" alt="Sélection du profil" width={394} height={702} quality={95} className="w-full h-auto" />
-                    <Image src="/images/leucare/signup-prenom.png" alt="Inscription progressive" width={394} height={702} quality={95} className="w-full h-auto" />
                   </div>
                 </div>
               </div>
@@ -590,7 +589,7 @@ export default function LeuCarePage() {
               </ul>
 
               <h3 className="text-2xl font-bold text-navy mb-6">Galerie des écrans prototypés</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 {[
                   { src: 'splash', alt: 'Écran de lancement', label: 'Splash' },
                   { src: 'onboarding', alt: 'Onboarding mascotte Léa', label: 'Onboarding' },
@@ -604,7 +603,7 @@ export default function LeuCarePage() {
                   { src: 'traitement', alt: 'Suivi du traitement', label: 'Traitement' },
                   { src: 'communaute', alt: 'Communauté d\'entraide', label: 'Communauté' },
                 ].map((m) => (
-                  <div key={m.src} className="flex flex-col items-center bg-cream rounded-xl p-3 transition-transform duration-300 hover:-translate-y-1">
+                  <div key={m.src} className="flex flex-col items-center bg-cream rounded-xl p-3 transition-transform duration-300 hover:-translate-y-1 w-[140px] sm:w-[170px] lg:w-[190px]">
                     <Image
                       src={`/images/leucare/${m.src}.png`}
                       alt={`LeuCare — ${m.alt}`}

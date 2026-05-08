@@ -15,7 +15,7 @@ export default function AboutPage() {
               <div className="w-full max-w-md">
                 <img
                   src="/images/about-portrait.png"
-                  alt="Belondjo - Product Designer"
+                  alt="Belondjo - UX/UI Designer"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
               </div>
@@ -25,7 +25,7 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-h2 text-orange">À propos de Moi</h2>
               <p className="text-xl text-dark/90 leading-relaxed">
-                Product Designer avec 11 ans d&apos;expérience dans le numérique, dont 4 ans de spécialisation en UX/UI. Mon parcours en scénographie et architecture intérieure m&apos;a donné une approche singulière du design : je pense l&apos;espace avant de penser l&apos;interface. Je conçois des produits centrés utilisateur et je les construis — de la research au produit fonctionnel — grâce à mon stack Claude Code, Google Stitch, n8n et Figma. Fondateur de MoveIQ (SaaS coaching basketball) et Compta Concept (automatisation comptable IA).
+                UX/UI Designer avec 11 ans d&apos;expérience dans le numérique, dont 4 ans de spécialisation en UX/UI. Mon parcours en scénographie et architecture intérieure m&apos;a donné une approche singulière du design : je pense l&apos;espace avant de penser l&apos;interface. Je conçois des produits centrés utilisateur et je les prototype en code — de la research au produit fonctionnel. Fondateur de MoveIQ (SaaS coaching basketball) et Compta Concept (automatisation comptable IA).
               </p>
               <a
                 href="/cv/CV-Belondjo.pdf"

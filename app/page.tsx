@@ -13,11 +13,11 @@ export default function Home() {
       <section className="bg-cream pt-48 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <h1 className="text-hero text-orange mb-6 text-center animate-fade-in">
-            Belondjo, Product Designer<br />qui code ses produits.
+            Belondjo, UX/UI Designer<br />qui prototype en code.
           </h1>
           <div className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 rounded-full px-4 py-2 mb-10 animate-slide-up">
             <span className="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
-            <span className="text-sm text-dark/80 font-bold">Product Designer · 11 ans d&apos;expérience</span>
+            <span className="text-sm text-dark/80 font-bold">UX/UI Designer · 11 ans d&apos;expérience</span>
           </div>
           <p className="text-xl text-dark/80 mb-12 max-w-2xl mx-auto animate-slide-up leading-relaxed">
             Je conçois et je développe des produits numériques. De la recherche utilisateur jusqu&apos;au déploiement, en autonomie.
@@ -141,7 +141,7 @@ export default function Home() {
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/hero.jpeg"
-                alt="Belondjo Bolankoko, Product Designer"
+                alt="Belondjo Bolankoko, UX/UI Designer"
                 width={800}
                 height={1000}
                 className="w-full h-auto"

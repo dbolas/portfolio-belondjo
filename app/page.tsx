@@ -12,16 +12,15 @@ export default function Home() {
       {/* Hero Section — centré, minimaliste */}
       <section className="bg-cream pt-48 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-          <p className="text-lg text-dark/60 mb-4 animate-fade-in">Salut&nbsp;!</p>
           <h1 className="text-hero text-orange mb-6 text-center animate-fade-in">
-            Je suis Belondjo,<br />Product Designer &amp; Builder
+            Belondjo, Product Designer<br />qui code ses produits.
           </h1>
           <div className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 rounded-full px-4 py-2 mb-10 animate-slide-up">
             <span className="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
-            <span className="text-sm text-dark/80 font-bold">11 ans d&apos;expérience · Solo Builder · IA</span>
+            <span className="text-sm text-dark/80 font-bold">Product Designer · 11 ans d&apos;expérience</span>
           </div>
           <p className="text-xl text-dark/80 mb-12 max-w-2xl mx-auto animate-slide-up leading-relaxed">
-            Je conçois des interfaces centrées utilisateur et je les construis — de la recherche au produit fonctionnel, sans dépendance à une équipe de développement.
+            Je conçois et je développe des produits numériques. De la recherche utilisateur jusqu&apos;au déploiement, en autonomie.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
             <a
@@ -46,8 +45,7 @@ export default function Home() {
       <section className="py-24 bg-cream">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-20">
-            <p className="text-sm text-dark/50 uppercase tracking-wider mb-3">Mes réalisations</p>
-            <h2 className="text-h2 text-orange">Études de cas sélectionnées</h2>
+            <h2 className="text-h2 text-orange">Études de cas</h2>
           </div>
 
           <div className="space-y-32">
@@ -84,7 +82,7 @@ export default function Home() {
                     MoveIQ — Plateforme de coaching basketball
                   </h3>
                   <p className="text-lg text-dark/70 leading-relaxed">
-                    Plateforme de suivi de progression pour jeunes joueurs (6-18 ans). Conçue et développée en solo avec Claude Code.
+                    Plateforme de suivi de progression pour jeunes joueurs (6-18 ans). Conçue et développée en solo, du Figma au code.
                   </p>
                 </div>
                 <div className="bg-navy/5 rounded-2xl overflow-hidden p-4 order-1 md:order-2 transition-transform duration-500 group-hover:scale-[1.02]">
@@ -117,7 +115,7 @@ export default function Home() {
                     Générateur de Factures IA
                   </h3>
                   <p className="text-lg text-dark/70 leading-relaxed">
-                    Application web en production — création de factures par dictée vocale ou texte avec Gemini 3 Pro.
+                    Application web en production. Création de factures par dictée vocale ou texte.
                   </p>
                 </div>
               </div>
@@ -132,12 +130,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
               <p className="text-sm text-dark/50 uppercase tracking-wider mb-3">À propos</p>
-              <h2 className="text-h2 text-orange mb-6">Ravi de te rencontrer&nbsp;!</h2>
-              <p className="text-lg text-dark/80 leading-relaxed mb-6">
-                Product Designer avec 11 ans d&apos;expérience dans le numérique. Passionné par la rencontre entre l&apos;UX research et la construction de produits, je conçois ET je build — grâce à l&apos;IA et aux outils modernes, je transforme une idée en produit fonctionnel sans dépendance à une équipe de dev.
-              </p>
+              <h2 className="text-h2 text-orange mb-6">Designer + développeur,<br />en autonomie.</h2>
               <p className="text-lg text-dark/80 leading-relaxed mb-8">
-                Mon approche&nbsp;: comprendre les utilisateurs, prototyper rapidement, livrer des produits que les gens utilisent vraiment.
+                Je viens de l&apos;UX research et j&apos;ai appris à coder pour livrer mes designs. Aujourd&apos;hui, je transforme une idée en produit fonctionnel : recherche utilisateurs, prototype, code, déploiement. Mon approche : comprendre les utilisateurs avant tout, livrer vite, itérer.
               </p>
               <Link href="/contact">
                 <Button size="lg" iconAfter={<ArrowRight />}>Discutons</Button>

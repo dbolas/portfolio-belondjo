@@ -13,14 +13,14 @@ export default function Home() {
       <section className="bg-cream pt-48 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <h1 className="text-hero text-orange mb-6 text-center animate-fade-in">
-            Belondjo, UX/UI Designer<br />qui prototype en code.
+            Belondjo,<br />UX/UI Designer.
           </h1>
           <div className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 rounded-full px-4 py-2 mb-10 animate-slide-up">
             <span className="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
             <span className="text-sm text-dark/80 font-bold">UX/UI Designer · 11 ans d&apos;expérience</span>
           </div>
           <p className="text-xl text-dark/80 mb-12 max-w-2xl mx-auto animate-slide-up leading-relaxed">
-            Je conçois et je développe des produits numériques. De la recherche utilisateur jusqu&apos;au déploiement, en autonomie.
+            Je conçois des produits centrés utilisateur. De l&apos;interview terrain jusqu&apos;à l&apos;interface livrée.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
             <a
@@ -130,9 +130,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
               <p className="text-sm text-dark/50 uppercase tracking-wider mb-3">À propos</p>
-              <h2 className="text-h2 text-orange mb-6">De la recherche<br />au prototype fonctionnel.</h2>
+              <h2 className="text-h2 text-orange mb-6">Le design commence<br />par l&apos;utilisateur.</h2>
               <p className="text-lg text-dark/80 leading-relaxed mb-8">
-                Issu de l&apos;UX research, je conçois des produits centrés utilisateur et je les prototype en code pour les tester en conditions réelles. De l&apos;interview terrain à l&apos;interface livrée, en autonomie. Mon approche : comprendre les utilisateurs avant tout, prototyper vite, itérer.
+                Issu de l&apos;UX research, je conçois des produits centrés utilisateur, de l&apos;interview terrain à l&apos;interface livrée. Mon approche : comprendre avant de dessiner, prototyper vite, itérer.
               </p>
               <Link href="/contact">
                 <Button size="lg" iconAfter={<ArrowRight />}>Discutons</Button>

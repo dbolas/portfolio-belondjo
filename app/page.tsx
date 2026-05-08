@@ -130,9 +130,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
               <p className="text-sm text-dark/50 uppercase tracking-wider mb-3">À propos</p>
-              <h2 className="text-h2 text-orange mb-6">Designer + développeur,<br />en autonomie.</h2>
+              <h2 className="text-h2 text-orange mb-6">De la recherche<br />au prototype fonctionnel.</h2>
               <p className="text-lg text-dark/80 leading-relaxed mb-8">
-                Je viens de l&apos;UX research et j&apos;ai appris à coder pour livrer mes designs. Aujourd&apos;hui, je transforme une idée en produit fonctionnel : recherche utilisateurs, prototype, code, déploiement. Mon approche : comprendre les utilisateurs avant tout, livrer vite, itérer.
+                Issu de l&apos;UX research, je conçois des produits centrés utilisateur et je les prototype en code pour les tester en conditions réelles. De l&apos;interview terrain à l&apos;interface livrée, en autonomie. Mon approche : comprendre les utilisateurs avant tout, prototyper vite, itérer.
               </p>
               <Link href="/contact">
                 <Button size="lg" iconAfter={<ArrowRight />}>Discutons</Button>

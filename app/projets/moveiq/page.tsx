@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Navigation, Footer } from '@/components/layout';
 import { Button, Verbatim, ScrollAnimationInit, ImageZoom } from '@/components/ui';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -72,20 +72,22 @@ export default function MoveIQPage() {
           </div>
 
           {/* Boutons CTA */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row sm:items-stretch justify-center gap-4 mb-16">
             <a
               href="https://www.figma.com/proto/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=2-165&t=U4mwBVYwHHCCIEge-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A165"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex"
             >
-              <Button size="lg">Voir le prototype Figma →</Button>
+              <Button size="lg" iconAfter={<ArrowRight />}>Voir le prototype Figma</Button>
             </a>
             <a
               href="https://moveiq-basket.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex"
             >
-              <Button size="lg" variant="secondary">Voir le produit en ligne →</Button>
+              <Button size="lg" variant="secondary" iconAfter={<ArrowRight />}>Voir le produit en ligne</Button>
             </a>
           </div>
 

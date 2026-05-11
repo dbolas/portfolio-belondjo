@@ -21,7 +21,7 @@ export default function IntranetInterministerielPage() {
           {/* Hero du projet */}
           <div className="mb-16">
             <h1 className="text-hero text-orange mb-4">Intranet interministériel des Hauts-de-Seine</h1>
-            <p className="text-xl text-dark/70 mb-8">UX Designer • Recherche utilisateur • Architecture de l'information</p>
+            <p className="text-xl text-dark/70 mb-8">UX/UI Designer • Recherche utilisateur • Architecture de l'information</p>
 
             {/* Image principale */}
             <div className="w-full h-[400px] lg:h-[600px] bg-navy/10 rounded-2xl overflow-hidden flex items-center justify-center">
@@ -61,6 +61,8 @@ export default function IntranetInterministerielPage() {
               <li className="hidden md:block text-dark/30">|</li>
               <li><a href="#processus" className="text-dark hover:text-orange transition-colors font-bold">Processus</a></li>
               <li className="hidden md:block text-dark/30">|</li>
+              <li><a href="#evolution" className="text-dark hover:text-orange transition-colors font-bold">Visuels</a></li>
+              <li className="hidden md:block text-dark/30">|</li>
               <li><a href="#resultats" className="text-dark hover:text-orange transition-colors font-bold">Résultats</a></li>
               <li className="hidden md:block text-dark/30">|</li>
               <li><a href="#apprentissages" className="text-dark hover:text-orange transition-colors font-bold">Apprentissages</a></li>
@@ -69,9 +71,9 @@ export default function IntranetInterministerielPage() {
 
           {/* Section - Le produit et ses objectifs */}
           <div id="produit" className="fade-in-section mb-16 bg-orange/5 rounded-2xl p-8 md:p-12 scroll-mt-32">
-            <h2 className="text-h2 text-orange mb-6">Le produit et ses objectifs</h2>
+            <h2 className="text-h2 text-orange mb-6">01. Le produit et ses objectifs</h2>
             <p className="text-lg text-dark/80 leading-relaxed mb-6">
-              L'intranet sert quotidiennement <strong>plusieurs centaines d'agents</strong> répartis dans une dizaine de services.
+              L'intranet sert quotidiennement <strong>400 agents</strong> répartis dans <strong>11 services de l'État</strong>.
               Ses objectifs principaux :
             </p>
             <ul className="space-y-4 text-lg text-dark/80">
@@ -243,7 +245,7 @@ export default function IntranetInterministerielPage() {
           </div>
 
           {/* Section - Visuels du projet */}
-          <div className="mb-16">
+          <div id="evolution" className="fade-in-section mb-16 scroll-mt-32">
             <h2 className="text-h2 text-orange mb-8">Évolution visuelle du projet</h2>
 
             {/* 1. Avant / Après : Page d'accueil */}
@@ -382,24 +384,10 @@ export default function IntranetInterministerielPage() {
                 />
               </div>
 
-              {/* Bouton prototype Figma */}
-              <div className="mt-8 flex justify-center">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 border-2 border-orange rounded-[50px] text-orange font-bold transition-all duration-300 hover:bg-orange hover:text-cream"
-                >
-                  <svg width="20" height="20" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z" fill="currentColor"/>
-                    <path d="M0 47.5C0 44.9804 1.00089 42.5641 2.78249 40.7825C4.56408 39.0009 6.98044 38 9.5 38H19V47.5C19 50.0196 17.9991 52.4359 16.2175 54.2175C14.4359 55.9991 12.0196 57 9.5 57C6.98044 57 4.56408 55.9991 2.78249 54.2175C1.00089 52.4359 0 50.0196 0 47.5Z" fill="currentColor"/>
-                    <path d="M19 0V19H28.5C31.0196 19 33.4359 17.9991 35.2175 16.2175C36.9991 14.4359 38 12.0196 38 9.5C38 6.98044 36.9991 4.56408 35.2175 2.78249C33.4359 1.00089 31.0196 0 28.5 0H19Z" fill="currentColor"/>
-                    <path d="M0 9.5C0 12.0196 1.00089 14.4359 2.78249 16.2175C4.56408 17.9991 6.98044 19 9.5 19H19V0H9.5C6.98044 0 4.56408 1.00089 2.78249 2.78249C1.00089 4.56408 0 6.98044 0 9.5Z" fill="currentColor"/>
-                    <path d="M0 28.5C0 31.0196 1.00089 33.4359 2.78249 35.2175C4.56408 36.9991 6.98044 38 9.5 38H19V19H9.5C6.98044 19 4.56408 20.0009 2.78249 21.7825C1.00089 23.5641 0 25.9804 0 28.5Z" fill="currentColor"/>
-                  </svg>
-                  Voir le prototype sur Figma
-                </a>
-              </div>
+              {/* Mention confidentialité */}
+              <p className="mt-8 text-center text-sm text-dark/60 italic">
+                Prototype et fichiers de conception non publics (intranet de l&apos;État, contenus confidentiels).
+              </p>
             </div>
           </div>
 
@@ -457,7 +445,7 @@ export default function IntranetInterministerielPage() {
                 <div>
                   <h4 className="text-xl font-bold text-dark mb-3">Satisfaction utilisateur</h4>
                   <p className="text-lg text-dark/80 leading-relaxed mb-4">
-                    Enquête informelle auprès de <strong>25 agents</strong>, 2 mois après le déploiement :
+                    Enquête post-déploiement auprès de <strong>25 agents</strong>, 2 mois après mise en ligne :
                   </p>
                   <ul className="space-y-2 text-lg text-dark/80">
                     <li className="flex items-start gap-3">
@@ -477,27 +465,7 @@ export default function IntranetInterministerielPage() {
               </div>
             </div>
 
-            {/* C. Statistiques techniques */}
-            <div className="fade-in-section grid grid-cols-2 md:grid-cols-4 gap-8 bg-navy/5 rounded-2xl p-8 mb-10">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange mb-2">100%</div>
-                <div className="text-dark/70">Taux accessibilité</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange mb-2">95%</div>
-                <div className="text-dark/70">Performance</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange mb-2">2s</div>
-                <div className="text-dark/70">Temps de chargement</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange mb-2">100%</div>
-                <div className="text-dark/70">Mobile-friendly</div>
-              </div>
-            </div>
-
-            {/* D. Retours utilisateurs */}
+            {/* C. Retours utilisateurs */}
             <div>
               <h3 className="text-2xl font-bold text-navy mb-6">Retours utilisateurs</h3>
               <div className="fade-in-section grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -523,7 +491,7 @@ export default function IntranetInterministerielPage() {
 
           {/* Section 05 - Apprentissages et suite */}
           <div id="apprentissages" className="fade-in-section mb-16 bg-orange/5 rounded-2xl p-8 md:p-12 scroll-mt-32">
-            <h2 className="text-h2 text-orange mb-8">Apprentissages et suite</h2>
+            <h2 className="text-h2 text-orange mb-8">05. Apprentissages et suite</h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Ce que j'ai appris */}

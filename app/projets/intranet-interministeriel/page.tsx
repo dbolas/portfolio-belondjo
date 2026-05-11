@@ -141,11 +141,11 @@ export default function IntranetInterministerielPage() {
             <div className="fade-in-section grid grid-cols-1 md:grid-cols-2 gap-6">
               <Verbatim
                 citation="Je cherche pendant 10 minutes, je ne trouve pas, alors j'appelle ma collègue. C'est plus rapide que de continuer à cliquer partout."
-                auteur="Agent DDPP lors des entretiens initiaux"
+                auteur="Agent — service Protection des populations · entretiens initiaux"
               />
               <Verbatim
                 citation="Les PDF qui s'ouvrent dans la même page, c'est l'horreur. Je perds ma navigation à chaque fois et je dois tout recommencer."
-                auteur="Agent DDFiP lors des entretiens initiaux"
+                auteur="Agent — service Finances publiques · entretiens initiaux"
               />
             </div>
           </div>
@@ -238,7 +238,7 @@ export default function IntranetInterministerielPage() {
 
                 <Verbatim
                   citation="Le titre 'Ressources UD-DRIEAT', ça ne me parle pas. Moi je cherche juste 'Mes outils' ou 'Mes documents', vous voyez ?"
-                  auteur="Agent UD-DRIEAT lors des tests de wireframes"
+                  auteur="Agent — service Environnement & transports · tests de wireframes"
                 />
               </div>
             </div>
@@ -252,7 +252,7 @@ export default function IntranetInterministerielPage() {
             <div className="mb-12">
               {/* Avant */}
               <div className="fade-in-section mb-8">
-                <h4 className="text-3xl font-bold text-orange mb-6">Avant</h4>
+                <h3 className="text-2xl font-bold text-navy mb-6">Avant</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
                   {/* Première ligne - 3 images */}
                   <div className="bg-dark/5 rounded-xl overflow-hidden">
@@ -308,7 +308,7 @@ export default function IntranetInterministerielPage() {
 
               {/* Après */}
               <div className="fade-in-section">
-                <h4 className="text-3xl font-bold text-orange mb-6">Après</h4>
+                <h3 className="text-2xl font-bold text-navy mb-6">Après</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
                   {/* Première ligne - 3 images */}
                   <div className="bg-dark/5 rounded-xl overflow-hidden">
@@ -471,19 +471,19 @@ export default function IntranetInterministerielPage() {
               <div className="fade-in-section grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Verbatim
                   citation="Maintenant je trouve mes documents en 30 secondes au lieu de 5 minutes. C'est le jour et la nuit."
-                  auteur="Agent SGCD, 2 mois après le déploiement"
+                  auteur="Agent — secrétariat général · 2 mois après mise en ligne"
                 />
                 <Verbatim
                   citation="C'est enfin clair où cliquer. Avant, je ne savais même pas que certains mots étaient des liens."
-                  auteur="Agent DSDEN, 2 mois après le déploiement"
+                  auteur="Agent — service Éducation · 2 mois après mise en ligne"
                 />
                 <Verbatim
                   citation="Je n'ai plus besoin d'appeler mon collègue pour savoir où est la procédure de validation budgétaire. Je vais directement dans 'Mes outils' et c'est là."
-                  auteur="Agent DDFiP, 2 mois après le déploiement"
+                  auteur="Agent — service Finances publiques · 2 mois après mise en ligne"
                 />
                 <Verbatim
                   citation="L'ouverture des PDF dans un nouvel onglet, ça change tout. Je peux consulter plusieurs documents sans perdre ma place."
-                  auteur="Agent DTSP, 2 mois après le déploiement"
+                  auteur="Agent — service Sécurité publique · 2 mois après mise en ligne"
                 />
               </div>
             </div>
@@ -561,7 +561,7 @@ export default function IntranetInterministerielPage() {
 
           {/* Autres projets */}
           <section className="fade-in-section mt-24 pt-12 border-t border-dark/10">
-            <h2 className="text-h2 text-orange mb-12 text-center">Lisez d&apos;autres études de cas que j&apos;ai réalisées</h2>
+            <h2 className="text-h2 text-orange mb-12 text-center">Autres études de cas</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <Link

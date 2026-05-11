@@ -26,10 +26,10 @@ export default function MoveIQPage() {
           {/* Hero du projet */}
           <div className="mb-16">
             <h1 className="text-hero text-orange mb-4">MoveIQ — Plateforme de suivi de progression pour jeunes basketteurs</h1>
-            <p className="text-xl text-dark/70 mb-8">Fondateur · Product Designer · Builder — De l&apos;insight terrain au produit fonctionnel</p>
+            <p className="text-xl text-dark/70 mb-8">Fondateur &amp; UX/UI Designer — De la recherche utilisateur au design system livré</p>
 
             {/* Statut */}
-            <p className="text-sm font-bold text-dark/50 mb-8 tracking-wide">Produit fonctionnel · 3 interfaces · Déployé sur Vercel</p>
+            <p className="text-sm font-bold text-dark/50 mb-8 tracking-wide">Prototype haute fidélité · 3 interfaces · Design system documenté</p>
 
             {/* Image principale */}
             <div className="w-full h-[400px] lg:h-[600px] rounded-2xl overflow-hidden">
@@ -49,8 +49,7 @@ export default function MoveIQPage() {
             <div>
               <h3 className="text-h3 text-navy mb-4">Rôle</h3>
               <p className="text-dark/80">Fondateur</p>
-              <p className="text-dark/80">Product Designer</p>
-              <p className="text-dark/80">Builder</p>
+              <p className="text-dark/80">UX/UI Designer</p>
             </div>
             <div>
               <h3 className="text-h3 text-navy mb-4">Contexte</h3>
@@ -63,11 +62,11 @@ export default function MoveIQPage() {
               <p className="text-dark/80">Prototype avancé · Design system complet · En phase de finalisation</p>
             </div>
             <div>
-              <h3 className="text-h3 text-navy mb-4">Stack</h3>
-              <p className="text-dark/80">Figma</p>
-              <p className="text-dark/80">TypeScript / Next.js</p>
-              <p className="text-dark/80">Claude Code</p>
-              <p className="text-dark/80">RGPD mineurs</p>
+              <h3 className="text-h3 text-navy mb-4">Méthodes &amp; outils</h3>
+              <p className="text-dark/80">Figma · Design System</p>
+              <p className="text-dark/80">User research &amp; interviews</p>
+              <p className="text-dark/80">Tests utilisateurs</p>
+              <p className="text-dark/80">Conformité RGPD mineurs</p>
             </div>
           </div>
 
@@ -102,15 +101,19 @@ export default function MoveIQPage() {
               <li className="hidden md:block text-dark/30">|</li>
               <li><a href="#processus" className="text-dark hover:text-orange transition-colors font-bold">Processus</a></li>
               <li className="hidden md:block text-dark/30">|</li>
+              <li><a href="#apercu" className="text-dark hover:text-orange transition-colors font-bold">Visuels</a></li>
+              <li className="hidden md:block text-dark/30">|</li>
               <li><a href="#solution" className="text-dark hover:text-orange transition-colors font-bold">Solution</a></li>
               <li className="hidden md:block text-dark/30">|</li>
               <li><a href="#resultats" className="text-dark hover:text-orange transition-colors font-bold">Résultats</a></li>
+              <li className="hidden md:block text-dark/30">|</li>
+              <li><a href="#apprentissages" className="text-dark hover:text-orange transition-colors font-bold">Apprentissages</a></li>
             </ul>
           </nav>
 
           {/* Section 01 — Contexte */}
           <div id="contexte" className="fade-in-section mb-16 bg-orange/5 rounded-2xl p-8 md:p-12 scroll-mt-32">
-            <h2 className="text-h2 text-orange mb-6">Le produit et ses objectifs</h2>
+            <h2 className="text-h2 text-orange mb-6">01. Contexte</h2>
             <p className="text-lg text-dark/80 leading-relaxed mb-6">
               MoveIQ est une plateforme SaaS de suivi de progression pour jeunes basketteurs de 6 à 18 ans. Elle s&apos;adresse
               à trois utilisateurs distincts — le joueur, le coach et le parent — avec une interface dédiée à chacun.
@@ -135,7 +138,7 @@ export default function MoveIQPage() {
               </li>
             </ul>
             <p className="text-lg text-dark/80 leading-relaxed font-bold">
-              Produit conçu, designé et développé en solo via Claude Code.
+              De la recherche terrain au design system livré, en autonomie totale.
             </p>
           </div>
 
@@ -255,7 +258,7 @@ export default function MoveIQPage() {
           <div id="processus" className="fade-in-section mb-16 scroll-mt-32">
             <h2 className="text-h2 text-orange mb-6">04. Processus de conception</h2>
             <p className="text-lg text-dark/80 leading-relaxed mb-8">
-              J&apos;ai structuré le projet en 6 phases, de la research terrain jusqu&apos;au développement avec Claude Code.
+              J&apos;ai structuré le projet en 6 phases, de la research terrain jusqu&apos;à la mise en production.
             </p>
 
             <div className="space-y-10">
@@ -312,9 +315,6 @@ export default function MoveIQPage() {
                   Exploration rapide des 3 parcours utilisateurs sur papier puis Figma. Priorité : le parcours coach
                   (évaluation en moins de 3 minutes) et le dashboard joueur (progression visible en un coup d&apos;œil).
                 </p>
-                <div className="bg-dark/5 rounded-xl p-12 min-h-[200px] flex items-center justify-center">
-                  <p className="text-center text-dark/40 text-lg font-bold">Wireframes basse fidélité — Figma</p>
-                </div>
               </div>
 
               {/* Étape 4 */}
@@ -367,23 +367,20 @@ export default function MoveIQPage() {
 
               {/* Étape 6 */}
               <div>
-                <h3 className="text-2xl font-bold text-navy mb-4">6. Développement avec Claude Code</h3>
+                <h3 className="text-2xl font-bold text-navy mb-4">6. Mise en production</h3>
                 <p className="text-lg text-dark/80 leading-relaxed mb-4">
-                  Implémentation TypeScript/Next.js via Claude Code : diagnostic automatisé, gamification, dashboard temps réel,
-                  conformité RGPD mineurs. Développé en solo via Claude Code.
+                  Le produit a été déployé en conditions réelles pour permettre des tests utilisateurs sur les flows complets :
+                  diagnostic, gamification, dashboards, conformité RGPD pour mineurs.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
-                    <span className="text-orange font-bold">TypeScript / Next.js</span>
-                  </div>
-                  <div className="bg-orange/10 rounded-lg px-4 py-2">
-                    <span className="text-orange font-bold">Claude Code</span>
+                    <span className="text-orange font-bold">Authentification Google &amp; Apple</span>
                   </div>
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
                     <span className="text-orange font-bold">RGPD mineurs</span>
                   </div>
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
-                    <span className="text-orange font-bold">Développé en solo via Claude Code</span>
+                    <span className="text-orange font-bold">3 interfaces distinctes</span>
                   </div>
                 </div>
               </div>
@@ -391,7 +388,7 @@ export default function MoveIQPage() {
           </div>
 
           {/* Section — Aperçu du produit */}
-          <div className="fade-in-section mb-16">
+          <div id="apercu" className="fade-in-section mb-16 scroll-mt-32">
             <h2 className="text-h2 text-orange mb-10">Aperçu du produit — interfaces réelles</h2>
 
             {/* Encart prototype Figma */}
@@ -406,7 +403,7 @@ export default function MoveIQPage() {
                 rel="noopener noreferrer"
                 className="shrink-0"
               >
-                <Button>Voir le prototype →</Button>
+                <Button iconAfter={<ArrowRight />}>Voir le prototype</Button>
               </a>
             </div>
 
@@ -535,8 +532,8 @@ export default function MoveIQPage() {
                   <div className="text-dark/70">Interviews terrain</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-orange mb-2">Solo</div>
-                  <div className="text-dark/70">Développé via Claude Code</div>
+                  <div className="text-4xl font-bold text-orange mb-2">4</div>
+                  <div className="text-dark/70">Coaches testeurs</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">3</div>
@@ -560,15 +557,11 @@ export default function MoveIQPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-orange mt-1">•</span>
-                  <span>Codebase TypeScript/Next.js via Claude Code</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-orange mt-1">•</span>
                   <span>Conformité RGPD mineurs intégrée dès la conception</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-orange mt-1">•</span>
-                  <span>Application déployée sur Vercel — authentification Google/Apple, RGPD mineurs, 3 interfaces distinctes joueur · coach · parent</span>
+                  <span>Application déployée en production — authentification Google/Apple, 3 interfaces distinctes joueur · coach · parent</span>
                 </li>
               </ul>
             </div>
@@ -576,11 +569,12 @@ export default function MoveIQPage() {
 
           {/* Section — Apprentissages */}
           <div id="apprentissages" className="fade-in-section mb-16 bg-orange/5 rounded-2xl p-8 md:p-12 scroll-mt-32">
-            <h2 className="text-h2 text-orange mb-8">Ce que ce projet m&apos;a appris</h2>
+            <h2 className="text-h2 text-orange mb-8">07. Apprentissages</h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Apprentissages */}
               <div>
+                <h3 className="text-2xl font-bold text-navy mb-6">Ce que ce projet m&apos;a appris</h3>
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-xl font-bold text-dark mb-3">Concevoir pour 3 personas simultanément</h4>
@@ -591,10 +585,11 @@ export default function MoveIQPage() {
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-bold text-dark mb-3">Claude Code change le métier de designer</h4>
+                    <h4 className="text-xl font-bold text-dark mb-3">Tester en conditions réelles, pas sur prototype</h4>
                     <p className="text-dark/80 leading-relaxed">
-                      Implémenter directement les features que je conçois élimine les frictions entre design et delivery.
-                      Je teste en conditions réelles, pas sur des prototypes statiques.
+                      Aller jusqu&apos;à un produit fonctionnel a permis de tester les parcours avec de vrais utilisateurs,
+                      dans des conditions d&apos;usage authentiques. Les feedbacks recueillis ont été nettement plus précis
+                      que ceux issus des tests sur prototypes statiques.
                     </p>
                   </div>
 
@@ -641,7 +636,7 @@ export default function MoveIQPage() {
 
           {/* Autres projets */}
           <section className="fade-in-section mt-24 pt-12 border-t border-dark/10">
-            <h2 className="text-h2 text-orange mb-12 text-center">Lisez d&apos;autres études de cas que j&apos;ai réalisées</h2>
+            <h2 className="text-h2 text-orange mb-12 text-center">Autres études de cas</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <Link

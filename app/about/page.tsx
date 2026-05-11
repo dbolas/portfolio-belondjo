@@ -25,7 +25,7 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-h2 text-orange">À propos de moi</h2>
               <p className="text-xl text-dark/90 leading-relaxed">
-                UX/UI Designer avec 11 ans d&apos;expérience dans le numérique, dont 4 ans de spécialisation en UX/UI. Mon parcours en scénographie et architecture intérieure m&apos;a donné une approche singulière du design : je pense l&apos;espace avant de penser l&apos;interface. Je conçois des produits centrés utilisateur, de la recherche terrain à l&apos;interface livrée. Fondateur de MoveIQ (SaaS de coaching basketball) et Compta Concept (SaaS pour freelances).
+                UX/UI Designer avec 11 ans d&apos;expérience dans le numérique, dont 4 ans de spécialisation en UX/UI. Mon parcours en scénographie et architecture intérieure m&apos;a donné une approche singulière du design : je pense l&apos;espace avant de penser l&apos;interface. Je conçois des produits centrés utilisateur, de la recherche terrain à l&apos;interface livrée.
               </p>
               <a
                 href="/cv/CV-Belondjo.pdf"

@@ -23,9 +23,9 @@ export default function AboutPage() {
 
             {/* Présentation */}
             <div className="space-y-6">
-              <h2 className="text-h2 text-orange">À propos de Moi</h2>
+              <h2 className="text-h2 text-orange">À propos de moi</h2>
               <p className="text-xl text-dark/90 leading-relaxed">
-                UX/UI Designer avec 11 ans d&apos;expérience dans le numérique, dont 4 ans de spécialisation en UX/UI. Mon parcours en scénographie et architecture intérieure m&apos;a donné une approche singulière du design : je pense l&apos;espace avant de penser l&apos;interface. Je conçois des produits centrés utilisateur et je les prototype en code — de la research au produit fonctionnel. Fondateur de MoveIQ (SaaS coaching basketball) et Compta Concept (automatisation comptable IA).
+                UX/UI Designer avec 11 ans d&apos;expérience dans le numérique, dont 4 ans de spécialisation en UX/UI. Mon parcours en scénographie et architecture intérieure m&apos;a donné une approche singulière du design : je pense l&apos;espace avant de penser l&apos;interface. Je conçois des produits centrés utilisateur, de la recherche terrain à l&apos;interface livrée. Fondateur de MoveIQ (SaaS de coaching basketball) et Compta Concept (SaaS pour freelances).
               </p>
               <a
                 href="/cv/CV-Belondjo.pdf"
@@ -54,11 +54,11 @@ export default function AboutPage() {
               </div>
 
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-1">Product Designer &amp; Builder No-Code</h3>
+                <h3 className="text-h3 text-navy mb-1">Product Designer freelance</h3>
                 <p className="text-dark/70 text-lg mb-1">Freelance</p>
                 <p className="text-dark/50 text-sm mb-3">Janvier 2023 – Août 2025 · Paris · Remote</p>
                 <p className="text-dark/80">
-                  10+ projets livrés de la discovery au déploiement. Intégration d&apos;automatisations IA (n8n, Claude API) dans les workflows clients. Design systems documentés transmis aux équipes.
+                  10+ projets livrés de la discovery au déploiement. Design systems documentés transmis aux équipes clients. Recherche utilisateur, prototypage Figma et tests d&apos;usage.
                 </p>
               </div>
 
@@ -105,7 +105,7 @@ export default function AboutPage() {
               </div>
 
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-1">Licence en Architecture d&apos;Intérieure</h3>
+                <h3 className="text-h3 text-navy mb-1">Licence en Architecture d&apos;intérieur</h3>
                 <p className="text-dark/70 text-lg mb-1">Académie des Beaux-Arts de Kinshasa</p>
                 <p className="text-dark/50 text-sm">2011</p>
               </div>
@@ -115,7 +115,7 @@ export default function AboutPage() {
           {/* Compétences */}
           <div className="mt-20">
             <h2 className="text-h2 text-orange mb-8">Compétences</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-3">Product &amp; Discovery</h3>
                 <p className="text-dark/80">UX Research · Interviews · Personas · Journey Mapping · UX Audit · Problem Definition</p>
@@ -123,17 +123,7 @@ export default function AboutPage() {
 
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-3">Design &amp; Prototypage</h3>
-                <p className="text-dark/80">Figma (expert) · Google Stitch · Design System · Atomic Design · Tokens · Wireframes · Prototypes · WCAG 2.1 · DSFR</p>
-              </div>
-
-              <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-3">IA &amp; Automatisation</h3>
-                <p className="text-dark/80">Claude Code · Claude API · n8n · Prompt Engineering · OCR automatisé · Workflows LLM</p>
-              </div>
-
-              <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-3">Build &amp; Intégration</h3>
-                <p className="text-dark/80">Webflow (avancé) · HTML5/CSS3 · TypeScript/Next.js (notions) · Joomla · APIs REST · CMS</p>
+                <p className="text-dark/80">Figma (expert) · Design System · Atomic Design · Tokens · Wireframes · Prototypes · WCAG 2.1 · DSFR</p>
               </div>
 
               <div className="border-l-4 border-orange pl-6">

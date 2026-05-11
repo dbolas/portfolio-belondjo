@@ -17,7 +17,7 @@ export default function Home() {
           </h1>
           <div className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 rounded-full px-4 py-2 mb-10 animate-slide-up">
             <span className="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
-            <span className="text-sm text-dark/80 font-bold">UX/UI Designer · 11 ans d&apos;expérience</span>
+            <span className="text-sm text-dark/80 font-bold">11 ans dans le numérique · Strasbourg</span>
           </div>
           <p className="text-xl text-dark/80 mb-12 max-w-2xl mx-auto animate-slide-up leading-relaxed">
             Je conçois des produits centrés utilisateur. De l&apos;interview terrain jusqu&apos;à l&apos;interface livrée.
@@ -82,7 +82,7 @@ export default function Home() {
                     MoveIQ — Plateforme de coaching basketball
                   </h3>
                   <p className="text-lg text-dark/70 leading-relaxed">
-                    Plateforme de suivi de progression pour jeunes joueurs (6-18 ans). Conçue et développée en solo, du Figma au code.
+                    Plateforme de suivi de progression pour jeunes joueurs (6-18 ans). De la recherche utilisateur au design system livré.
                   </p>
                 </div>
                 <div className="bg-navy/5 rounded-2xl overflow-hidden p-4 order-1 md:order-2 transition-transform duration-500 group-hover:scale-[1.02]">

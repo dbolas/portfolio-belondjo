@@ -17,7 +17,7 @@ export default function Home() {
           </h1>
           <div className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 rounded-full px-4 py-2 mb-10 animate-slide-up">
             <span className="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
-            <span className="text-sm text-dark/80 font-bold">11 ans dans le numérique · Strasbourg</span>
+            <span className="text-sm text-dark/80 font-bold">Disponible à partir de septembre 2026</span>
           </div>
           <p className="text-xl text-dark/80 mb-12 max-w-2xl mx-auto animate-slide-up leading-relaxed">
             Je conçois des produits centrés utilisateur. De l&apos;interview terrain jusqu&apos;à l&apos;interface livrée.

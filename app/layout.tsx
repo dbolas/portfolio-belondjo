@@ -10,8 +10,8 @@ const courierPrime = Courier_Prime({
 });
 
 export const metadata: Metadata = {
-  title: "Belondjo Bolankoko — UX/UI Designer",
-  description: "Portfolio de Belondjo Bolankoko, UX/UI Designer qui prototype en code, basé à Strasbourg. Spécialisé en UX Research, Design System et outillage IA moderne.",
+  title: "Belondjo Bolankoko — Product Designer & AI Builder",
+  description: "Portfolio de Belondjo Bolankoko, Product Designer & AI Builder basé à Strasbourg. De la recherche terrain à la mise en production — Design System, Claude Code & n8n.",
 };
 
 export default function RootLayout({

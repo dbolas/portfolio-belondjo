@@ -25,7 +25,7 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-h2 text-orange">À propos de moi</h2>
               <p className="text-xl text-dark/90 leading-relaxed">
-                UX/UI Designer avec 11 ans d&apos;expérience dans le numérique, dont 4 ans de spécialisation en UX/UI. Mon parcours en scénographie et architecture intérieure m&apos;a donné une approche singulière du design : je pense l&apos;espace avant de penser l&apos;interface. Je conçois des produits centrés utilisateur, de la recherche terrain à l&apos;interface livrée.
+                Product Designer avec 11 ans d&apos;expérience dans le numérique, dont 4 ans en UX/UI et une intégration progressive de Claude Code et n8n dans mon workflow depuis 2025. Mon parcours en scénographie et architecture intérieure m&apos;apporte une approche singulière du design : je pense l&apos;espace avant de penser l&apos;interface. Je conçois des produits centrés utilisateur — de la research terrain à la mise en production.
               </p>
               <a
                 href="/cv/CV-Belondjo.pdf"
@@ -45,9 +45,9 @@ export default function AboutPage() {
             <h2 className="text-h2 text-orange mb-8">Expérience</h2>
             <div className="space-y-8">
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-1">UX-UI Designer</h3>
-                <p className="text-dark/70 text-lg mb-1">SGCD — Préfecture des Hauts-de-Seine</p>
-                <p className="text-dark/50 text-sm mb-3">Août 2025 – Septembre 2026 · Nanterre (92)</p>
+                <h3 className="text-h3 text-navy mb-1">Product Designer (UX/UI)</h3>
+                <p className="text-dark/70 text-lg mb-1">Préfecture des Hauts-de-Seine</p>
+                <p className="text-dark/50 text-sm mb-3">Août 2024 – Septembre 2026 · Nanterre (92)</p>
                 <p className="text-dark/80">
                   Refonte de l&apos;intranet interministériel pour 400 agents. Discovery, wireframes, prototypes Figma haute fidélité, ateliers Design Thinking avec 30+ agents, intégration Joomla et Webmaster.
                 </p>
@@ -86,6 +86,18 @@ export default function AboutPage() {
           <div className="mt-20">
             <h2 className="text-h2 text-orange mb-8">Formation</h2>
             <div className="space-y-8">
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Perfectionnement Claude Code &amp; Création de SaaS</h3>
+                <p className="text-dark/70 text-lg mb-1">Codelynx (Melvynx)</p>
+                <p className="text-dark/50 text-sm">2025 – en cours</p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Perfectionnement n8n : Automatisation de A à Z</h3>
+                <p className="text-dark/70 text-lg mb-1">Aurélien Fagioli</p>
+                <p className="text-dark/50 text-sm">2025 – en cours</p>
+              </div>
+
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">Certifications Design Thinking · User Research · Design de Service · UX/UI</h3>
                 <p className="text-dark/70 text-lg mb-1">DThinking Academy</p>
@@ -127,8 +139,18 @@ export default function AboutPage() {
               </div>
 
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-3">Méthodes</h3>
-                <p className="text-dark/80">Agile/Scrum · Design Thinking · Lean Startup · Co-conception · Stakeholder management</p>
+                <h3 className="text-h3 text-navy mb-3">AI-Augmented Build</h3>
+                <p className="text-dark/80">Claude Code · Next.js · Supabase · Prisma · Vercel · Better-Auth</p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-3">Automatisation</h3>
+                <p className="text-dark/80">n8n · Intégrations API REST · Workflows IA · Gemini API · Prompt Engineering</p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-3">Exploration IA &amp; Design</h3>
+                <p className="text-dark/80">Claude Design · Google Stitch · Prototypage IA-first</p>
               </div>
             </div>
           </div>

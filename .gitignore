@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# n8n - fichiers de travail (contiennent des donnees sensibles, ne pas commiter)
+_apec_sample.json
+_basic.txt
+_notion_query.json

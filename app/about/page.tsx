@@ -25,7 +25,7 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-h2 text-orange">À propos de moi</h2>
               <p className="text-xl text-dark/90 leading-relaxed">
-                Product Designer avec 11 ans d&apos;expérience dans le numérique, dont 4 ans en UX/UI et une intégration progressive de Claude Code et n8n dans mon workflow depuis 2025. Mon parcours en scénographie et architecture intérieure m&apos;apporte une approche singulière du design : je pense l&apos;espace avant de penser l&apos;interface. Je conçois des produits centrés utilisateur — de la research terrain à la mise en production.
+                Je conçois et je livre : de la recherche terrain à la mise en production. Dernier chantier — la refonte de l&apos;intranet interministériel de la Préfecture des Hauts-de-Seine : 400 agents, 11 services de l&apos;État, accès aux documents ramené de 5-7 clics à 2-3, et 76 % des agents qui jugent l&apos;outil plus simple. Design system, accessibilité RGAA, prototypage accéléré par Claude Code et n8n. Dix ans de design dont cinq en UX/UI, et une formation de scénographe qui m&apos;a appris à penser l&apos;espace avant l&apos;interface.
               </p>
               <a
                 href="/cv/CV-Belondjo.pdf"
@@ -47,18 +47,18 @@ export default function AboutPage() {
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">Product Designer (UX/UI)</h3>
                 <p className="text-dark/70 text-lg mb-1">Préfecture des Hauts-de-Seine</p>
-                <p className="text-dark/50 text-sm mb-3">Août 2024 – Septembre 2026 · Nanterre (92)</p>
+                <p className="text-dark/50 text-sm mb-3">Août 2024 – Août 2026 · Nanterre (92)</p>
                 <p className="text-dark/80">
                   Refonte de l&apos;intranet interministériel pour 400 agents. Discovery, wireframes, prototypes Figma haute fidélité, ateliers Design Thinking avec 30+ agents, intégration Joomla et Webmaster.
                 </p>
               </div>
 
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-1">Product Designer freelance</h3>
-                <p className="text-dark/70 text-lg mb-1">Freelance</p>
-                <p className="text-dark/50 text-sm mb-3">Janvier 2023 – Août 2025 · Paris · Remote</p>
+                <h3 className="text-h3 text-navy mb-1">Product Designer</h3>
+                <p className="text-dark/70 text-lg mb-1">ICorp</p>
+                <p className="text-dark/50 text-sm mb-3">Janvier 2023 – Août 2025 · Kinshasa, RDC</p>
                 <p className="text-dark/80">
-                  10+ projets livrés de la discovery au déploiement. Design systems documentés transmis aux équipes clients. Recherche utilisateur, prototypage Figma et tests d&apos;usage.
+                  Conception produit d&apos;une solution d&apos;analyse documentaire IA pour Actif Group. Cadrage des besoins et cahier des charges, architecture produit, prototype fonctionnel testé auprès des utilisateurs, présentation à des partenaires et institutions.
                 </p>
               </div>
 
@@ -72,11 +72,20 @@ export default function AboutPage() {
               </div>
 
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-1">Intégrateur Web &amp; Développeur Webflow</h3>
+                <h3 className="text-h3 text-navy mb-1">Intégrateur Web</h3>
                 <p className="text-dark/70 text-lg mb-1">Freelance</p>
-                <p className="text-dark/50 text-sm mb-3">Février 2015 – Janvier 2021</p>
+                <p className="text-dark/50 text-sm mb-3">2019 – 2021 · Strasbourg (67)</p>
                 <p className="text-dark/80">
                   Intégration HTML/CSS conformes W3C, accessibilité, performances web. Création de systèmes de design légers et guidelines d&apos;édition pour clients non-techniques.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Scénographe &amp; directeur artistique</h3>
+                <p className="text-dark/70 text-lg mb-1">Collectif Scénopolis</p>
+                <p className="text-dark/50 text-sm mb-3">2016 – 2019 · Strasbourg (67)</p>
+                <p className="text-dark/80">
+                  Direction artistique et conception scénographique — mise en espace, parcours de visite, dispositifs de médiation.
                 </p>
               </div>
             </div>
@@ -87,21 +96,15 @@ export default function AboutPage() {
             <h2 className="text-h2 text-orange mb-8">Formation</h2>
             <div className="space-y-8">
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-1">Perfectionnement Claude Code &amp; Création de SaaS</h3>
-                <p className="text-dark/70 text-lg mb-1">Codelynx (Melvynx)</p>
-                <p className="text-dark/50 text-sm">2025 – en cours</p>
-              </div>
-
-              <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-1">Perfectionnement n8n : Automatisation de A à Z</h3>
-                <p className="text-dark/70 text-lg mb-1">Aurélien Fagioli</p>
-                <p className="text-dark/50 text-sm">2025 – en cours</p>
+                <h3 className="text-h3 text-navy mb-1">Formation continue</h3>
+                <p className="text-dark/70 text-lg mb-1">Claude Code &amp; création de SaaS (Codelynx) · n8n : automatisation de A à Z</p>
+                <p className="text-dark/50 text-sm">2025</p>
               </div>
 
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">Certifications Design Thinking · User Research · Design de Service · UX/UI</h3>
                 <p className="text-dark/70 text-lg mb-1">DThinking Academy</p>
-                <p className="text-dark/50 text-sm">2023 – 2024</p>
+                <p className="text-dark/50 text-sm">2023</p>
               </div>
 
               <div className="border-l-4 border-orange pl-6">
@@ -135,7 +138,7 @@ export default function AboutPage() {
 
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-3">Design &amp; Prototypage</h3>
-                <p className="text-dark/80">Figma (expert) · Design System · Atomic Design · Tokens · Wireframes · Prototypes · WCAG 2.1 · DSFR</p>
+                <p className="text-dark/80">Figma (expert) · Design System · Atomic Design · Tokens · Wireframes · Prototypes · WCAG 2.1 · RGAA · DSFR</p>
               </div>
 
               <div className="border-l-4 border-orange pl-6">

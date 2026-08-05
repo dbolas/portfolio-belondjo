@@ -13,14 +13,14 @@ export default function Home() {
       <section className="bg-cream pt-48 pb-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <h1 className="text-hero text-orange mb-6 text-center animate-fade-in">
-            Belondjo,<br />Product Designer &amp; AI Builder.
+            Belondjo,<br />Product Designer (UX/UI).
           </h1>
           <div className="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 rounded-full px-4 py-2 mb-10 animate-slide-up">
             <span className="w-2 h-2 rounded-full bg-orange animate-pulse"></span>
             <span className="text-sm text-dark/80 font-bold">Disponible à partir de septembre 2026</span>
           </div>
           <p className="text-xl text-dark/80 mb-12 max-w-2xl mx-auto animate-slide-up leading-relaxed">
-            De la recherche terrain à la mise en production — design system, Claude Code &amp; n8n.
+            AI-Augmented Builder — de la recherche terrain à la mise en production, avec Figma, Claude Code &amp; n8n.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
             <a
@@ -77,7 +77,7 @@ export default function Home() {
             <Link href="/projets/moveiq" className="block group">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="text-center md:text-left order-2 md:order-1">
-                  <p className="text-sm text-dark/50 uppercase tracking-wider mb-3">SaaS B2C · Sport</p>
+                  <p className="text-sm text-dark/50 uppercase tracking-wider mb-3">Projet personnel · SaaS Sport</p>
                   <h3 className="text-3xl lg:text-4xl text-orange font-bold mb-4 group-hover:underline decoration-2 underline-offset-4">
                     MoveIQ — Plateforme de coaching basketball
                   </h3>
@@ -110,7 +110,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="text-center md:text-left">
-                  <p className="text-sm text-dark/50 uppercase tracking-wider mb-3">App web en production · IA</p>
+                  <p className="text-sm text-dark/50 uppercase tracking-wider mb-3">Projet personnel en production · IA</p>
                   <h3 className="text-3xl lg:text-4xl text-orange font-bold mb-4 group-hover:underline decoration-2 underline-offset-4">
                     Générateur de Factures IA
                   </h3>

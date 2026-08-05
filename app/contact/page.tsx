@@ -1,4 +1,3 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
 import { Navigation, Footer } from '@/components/layout';
 
 export default function ContactPage() {
@@ -27,45 +26,35 @@ export default function ContactPage() {
                 Un projet, une opportunité ou envie d&apos;échanger ? Voici comment me joindre.
               </p>
 
-              <div className="space-y-4">
-                <a
-                  href="mailto:belondjobolankoko@gmail.com"
-                  className="flex items-start gap-4 p-6 rounded-xl border-2 border-orange/20 hover:border-orange hover:-translate-y-1 transition-all duration-300 group"
-                >
-                  <div className="bg-orange/10 p-3 rounded-full flex-shrink-0">
-                    <Mail className="text-orange" size={24} />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="text-sm text-dark/60 mb-1">Email</p>
-                    <span className="font-bold text-dark group-hover:text-orange transition-colors break-words">
-                      belondjobolankoko@gmail.com
-                    </span>
-                  </div>
-                </a>
+              <div className="space-y-8">
+                <div>
+                  <p className="text-sm text-dark/50 uppercase tracking-wider mb-2">Email</p>
+                  <a
+                    href="mailto:belondjobolankoko@gmail.com"
+                    className="text-xl text-dark hover:text-orange transition-colors break-words"
+                  >
+                    belondjobolankoko@gmail.com
+                  </a>
+                </div>
 
-                <a
-                  href="tel:+33768638705"
-                  className="flex items-start gap-4 p-6 rounded-xl border-2 border-orange/20 hover:border-orange hover:-translate-y-1 transition-all duration-300 group"
-                >
-                  <div className="bg-orange/10 p-3 rounded-full flex-shrink-0">
-                    <Phone className="text-orange" size={24} />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="text-sm text-dark/60 mb-1">Téléphone</p>
-                    <span className="font-bold text-dark group-hover:text-orange transition-colors">
-                      +33 7 68 63 87 05
-                    </span>
-                  </div>
-                </a>
+                <div>
+                  <p className="text-sm text-dark/50 uppercase tracking-wider mb-2">Téléphone</p>
+                  <a
+                    href="tel:+33768638705"
+                    className="text-xl text-dark hover:text-orange transition-colors"
+                  >
+                    +33 7 68 63 87 05
+                  </a>
+                </div>
 
-                <div className="flex items-start gap-4 p-6 rounded-xl border-2 border-orange/20">
-                  <div className="bg-orange/10 p-3 rounded-full flex-shrink-0">
-                    <MapPin className="text-orange" size={24} />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="text-sm text-dark/60 mb-1">Localisation</p>
-                    <span className="font-bold text-dark">Strasbourg, France</span>
-                  </div>
+                <div>
+                  <p className="text-sm text-dark/50 uppercase tracking-wider mb-2">Localisation</p>
+                  <p className="text-xl text-dark">Strasbourg (67) · mobilité Paris</p>
+                </div>
+
+                <div>
+                  <p className="text-sm text-dark/50 uppercase tracking-wider mb-2">Disponibilité</p>
+                  <p className="text-xl text-dark">À partir de septembre 2026</p>
                 </div>
               </div>
             </div>

@@ -44,3 +44,9 @@ next-env.d.ts
 _apec_sample.json
 _basic.txt
 _notion_query.json
+
+# Prep entretiens / documents personnels - ne pas commiter
+/_prep/
+
+# Documents de candidature — ne doivent jamais être servis publiquement
+candidatures-privees/

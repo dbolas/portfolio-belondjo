@@ -1,6 +1,6 @@
 import { Navigation, Footer } from '@/components/layout';
 import { Button, Verbatim, ScrollAnimationInit, ImageZoom } from '@/components/ui';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -50,6 +50,18 @@ export default function IntranetInterministerielPage() {
               <p className="text-dark/80">1 Chef de projet</p>
               <p className="text-dark/80">2 Développeurs</p>
             </div>
+          </div>
+
+          {/* Bouton CTA */}
+          <div className="flex justify-center mb-16">
+            <a
+              href="https://www.figma.com/design/9AhJJtrdG7B4E4lVAGtpSl/DSFR---Composants---v1.14?node-id=13489-24287&t=eO4tONbQ67CxaZ8m-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex"
+            >
+              <Button size="lg" iconAfter={<ArrowRight />}>Voir les maquettes Figma</Button>
+            </a>
           </div>
 
           {/* Sommaire de navigation */}
@@ -386,7 +398,8 @@ export default function IntranetInterministerielPage() {
 
               {/* Mention confidentialité */}
               <p className="mt-8 text-center text-sm text-dark/60 italic">
-                Prototype et fichiers de conception non publics (intranet de l&apos;État, contenus confidentiels).
+                Les maquettes sont consultables dans le fichier Figma du projet. Le site déployé
+                et les contenus réels restent internes à l&apos;administration.
               </p>
             </div>
           </div>

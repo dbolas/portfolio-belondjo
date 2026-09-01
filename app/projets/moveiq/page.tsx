@@ -32,13 +32,13 @@ export default function MoveIQPage() {
             <p className="text-sm font-bold text-dark/50 mb-8 tracking-wide">Prototype haute fidélité · 3 interfaces · Design system documenté</p>
 
             {/* Image principale */}
-            <div className="w-full h-[400px] lg:h-[600px] rounded-2xl overflow-hidden">
+            <div className="w-full rounded-2xl overflow-hidden bg-navy">
               <Image
-                src="/images/moveiq-landing.png"
-                alt="MoveIQ - Landing page"
-                width={1200}
-                height={800}
-                className="w-full h-full object-cover"
+                src="/images/moveiq-arsenal.png"
+                alt="MoveIQ Basket — section « L’arsenal complet » : diagnostic, missions, progression"
+                width={1892}
+                height={849}
+                className="w-full h-auto"
                 priority
               />
             </div>
@@ -73,20 +73,20 @@ export default function MoveIQPage() {
           {/* Boutons CTA */}
           <div className="flex flex-col sm:flex-row sm:items-stretch justify-center gap-4 mb-16">
             <a
-              href="https://www.figma.com/proto/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=2-165&t=U4mwBVYwHHCCIEge-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A165"
+              href="https://moveiqbasket.fr/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex"
             >
-              <Button size="lg" iconAfter={<ArrowRight />}>Voir le prototype Figma</Button>
+              <Button size="lg" iconAfter={<ArrowRight />}>Voir le produit en ligne</Button>
             </a>
             <a
-              href="https://moveiq-basket.vercel.app"
+              href="https://www.figma.com/design/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=0-1&t=3rO2ufvnJjZWDYSH-1"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex"
             >
-              <Button size="lg" variant="secondary" iconAfter={<ArrowRight />}>Voir le produit en ligne</Button>
+              <Button size="lg" variant="secondary" iconAfter={<ArrowRight />}>Voir les maquettes Figma</Button>
             </a>
           </div>
 
@@ -391,19 +391,19 @@ export default function MoveIQPage() {
           <div id="apercu" className="fade-in-section mb-16 scroll-mt-32">
             <h2 className="text-h2 text-orange mb-10">Aperçu du produit — interfaces réelles</h2>
 
-            {/* Encart prototype Figma */}
+            {/* Encart maquettes Figma */}
             <div className="bg-orange/5 rounded-xl p-6 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
               <div>
-                <h3 className="text-xl font-bold text-navy mb-2">Prototype interactif Figma</h3>
-                <p className="text-dark/70">Explorez le prototype complet avec toutes les interactions — parcours joueur, coach et parent.</p>
+                <h3 className="text-xl font-bold text-navy mb-2">Maquettes Figma</h3>
+                <p className="text-dark/70">Parcourez l&apos;ensemble des écrans conçus — parcours joueur, coach et parent.</p>
               </div>
               <a
-                href="https://www.figma.com/proto/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=2-165&t=U4mwBVYwHHCCIEge-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A165"
+                href="https://www.figma.com/design/Zz2HRjszmaB01WErIyHsVV/MoveIQ-Basket?node-id=0-1&t=3rO2ufvnJjZWDYSH-1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shrink-0"
               >
-                <Button iconAfter={<ArrowRight />}>Voir le prototype</Button>
+                <Button iconAfter={<ArrowRight />}>Voir les maquettes</Button>
               </a>
             </div>
 

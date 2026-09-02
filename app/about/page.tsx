@@ -154,7 +154,7 @@ export default function AboutPage() {
               </div>
 
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-3">AI-Augmented Build</h3>
+                <h3 className="text-h3 text-navy mb-3">Développement assisté par IA</h3>
                 <p className="text-dark/80">Claude Code · Next.js · Supabase · Prisma · Vercel · Better-Auth</p>
               </div>
 

@@ -20,7 +20,7 @@ export default function Home() {
             <span className="text-sm text-dark/80 font-bold">Disponible à partir de septembre 2026</span>
           </div>
           <p className="text-xl text-dark/80 mb-12 max-w-2xl mx-auto animate-slide-up leading-relaxed">
-            AI-Augmented Builder — de la recherche terrain à la mise en production, avec Figma, Claude Code &amp; n8n.
+            De la recherche utilisateur à la mise en ligne. Figma, design system, accessibilité RGAA.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
             <a

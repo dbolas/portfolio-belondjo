@@ -25,7 +25,10 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-h2 text-orange">À propos de moi</h2>
               <p className="text-xl text-dark/90 leading-relaxed">
-                Je conçois et je livre : de la recherche terrain à la mise en production. Dernier chantier — la refonte de l&apos;intranet interministériel de la Préfecture des Hauts-de-Seine : 400 agents, 11 services de l&apos;État, accès aux documents ramené de 5-7 clics à 2-3, et 76 % des agents qui jugent l&apos;outil plus simple. Design system, accessibilité RGAA, prototypage accéléré par Claude Code et n8n. Dix ans de design dont cinq en UX/UI, et une formation de scénographe qui m&apos;a appris à penser l&apos;espace avant l&apos;interface.
+                Je suis Product Designer. Dix ans de design derrière moi, dont cinq en UX/UI, et une formation de scénographe qui m&apos;a appris à penser l&apos;espace avant de penser l&apos;interface.
+              </p>
+              <p className="text-xl text-dark/90 leading-relaxed">
+                Mon dernier chantier est la refonte de l&apos;intranet interministériel de la Préfecture des Hauts-de-Seine, pour 400 agents et 11 services de l&apos;État. L&apos;accès aux documents courants est passé de cinq ou sept clics à deux ou trois, et 76 % des agents jugent aujourd&apos;hui l&apos;outil plus simple. J&apos;y ai construit le design system, mis les pages en conformité RGAA et formé les équipes qui publient.
               </p>
               <a
                 href="/cv/CV-Belondjo.pdf"
@@ -45,18 +48,27 @@ export default function AboutPage() {
             <h2 className="text-h2 text-orange mb-8">Expérience</h2>
             <div className="space-y-8">
               <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Product Designer &amp; Builder</h3>
+                <p className="text-dark/70 text-lg mb-1">Projets personnels — MoveIQ, Générateur de Factures IA</p>
+                <p className="text-dark/50 text-sm mb-3">2025 – en cours · Strasbourg (67)</p>
+                <p className="text-dark/80">
+                  Conception et mise en production de deux plateformes web de bout en bout — discovery, design system, suivi des usages et itérations. Next.js, Supabase, Claude Code.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">Product Designer (UX/UI)</h3>
                 <p className="text-dark/70 text-lg mb-1">Préfecture des Hauts-de-Seine</p>
-                <p className="text-dark/50 text-sm mb-3">Août 2024 – Août 2026 · Nanterre (92)</p>
+                <p className="text-dark/50 text-sm mb-3">Août 2024 – Septembre 2026 · Nanterre (92)</p>
                 <p className="text-dark/80">
-                  Refonte de l&apos;intranet interministériel pour 400 agents. Discovery, wireframes, prototypes Figma haute fidélité, ateliers Design Thinking avec 30+ agents, intégration Joomla et Webmaster.
+                  Refonte de l&apos;intranet interministériel pour 400 agents. Discovery, wireframes, prototypes Figma haute fidélité, ateliers Design Thinking avec 30+ agents, administration du CMS Joomla (socle SIMBA fourni par le SGAMI).
                 </p>
               </div>
 
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">Product Designer</h3>
                 <p className="text-dark/70 text-lg mb-1">ICorp</p>
-                <p className="text-dark/50 text-sm mb-3">Janvier 2023 – Août 2025 · Kinshasa, RDC</p>
+                <p className="text-dark/50 text-sm mb-3">Janvier 2023 – Juillet 2024 · Kinshasa, RDC · CDD</p>
                 <p className="text-dark/80">
                   Conception produit d&apos;une solution d&apos;analyse documentaire IA pour Actif Group. Cadrage des besoins et cahier des charges, architecture produit, prototype fonctionnel testé auprès des utilisateurs, présentation à des partenaires et institutions.
                 </p>
@@ -65,7 +77,7 @@ export default function AboutPage() {
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">UX Researcher</h3>
                 <p className="text-dark/70 text-lg mb-1">Musée Royal d&apos;Afrique Centrale</p>
-                <p className="text-dark/50 text-sm mb-3">Octobre 2021 – Décembre 2023 · Tervuren, Belgique</p>
+                <p className="text-dark/50 text-sm mb-3">Octobre 2021 – Décembre 2023 · Tervuren, Belgique · mission d&apos;étude à temps partiel, menée en partie depuis Kinshasa</p>
                 <p className="text-dark/80">
                   Research complète pour une exposition interactive dédiée à la diaspora africaine. Interviews, personas, parcours visiteurs, dispositifs numériques de médiation culturelle.
                 </p>

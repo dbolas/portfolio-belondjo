@@ -8,7 +8,7 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { label: 'Réalisations', href: '/' },
   { label: 'À propos', href: '/about' },
-  { label: 'CV', href: '/cv' },
+  { label: 'CV', href: '/cv/CV-Belondjo.pdf' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -33,15 +33,27 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Liens de navigation */}
           <nav className="flex flex-wrap gap-8 justify-center md:justify-start">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-cream font-bold hover:text-orange transition-colors duration-200 text-base"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.href.endsWith('.pdf') ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cream font-bold hover:text-orange transition-colors duration-200 text-base"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-cream font-bold hover:text-orange transition-colors duration-200 text-base"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* Lien LinkedIn */}

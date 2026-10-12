@@ -67,17 +67,17 @@ export default function AboutPage() {
 
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">Product Designer</h3>
-                <p className="text-dark/70 text-lg mb-1">ICorp</p>
-                <p className="text-dark/50 text-sm mb-3">Janvier 2023 – Juillet 2024 · Kinshasa, RDC · CDD</p>
+                <p className="text-dark/70 text-lg mb-1">Indépendant</p>
+                <p className="text-dark/50 text-sm mb-3">Janvier 2023 – Janvier 2025</p>
                 <p className="text-dark/80">
-                  Conception produit d&apos;une solution d&apos;analyse documentaire IA pour Actif Group. Cadrage des besoins et cahier des charges, architecture produit, prototype fonctionnel testé auprès des utilisateurs, présentation à des partenaires et institutions.
+                  Plus de 10 sites et applications web livrés, de la recherche utilisateur à la mise en ligne. Audits et refontes pour clarifier les parcours et améliorer la conversion. Design systems remis aux clients pour qu&apos;ils restent autonomes après le projet.
                 </p>
               </div>
 
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">UX Researcher</h3>
                 <p className="text-dark/70 text-lg mb-1">Musée Royal d&apos;Afrique Centrale</p>
-                <p className="text-dark/50 text-sm mb-3">Octobre 2021 – Décembre 2023 · Tervuren, Belgique · mission d&apos;étude à temps partiel, menée en partie depuis Kinshasa</p>
+                <p className="text-dark/50 text-sm mb-3">Octobre – Décembre 2023 · Tervuren, Belgique</p>
                 <p className="text-dark/80">
                   Research complète pour une exposition interactive dédiée à la diaspora africaine. Interviews, personas, parcours visiteurs, dispositifs numériques de médiation culturelle.
                 </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">Intégrateur Web</h3>
                 <p className="text-dark/70 text-lg mb-1">Freelance</p>
-                <p className="text-dark/50 text-sm mb-3">2019 – 2021 · Strasbourg (67)</p>
+                <p className="text-dark/50 text-sm mb-3">Février 2019 – Janvier 2021 · Strasbourg (67)</p>
                 <p className="text-dark/80">
                   Intégration HTML/CSS conformes W3C, accessibilité, performances web. Création de systèmes de design légers et guidelines d&apos;édition pour clients non-techniques.
                 </p>
@@ -116,7 +116,13 @@ export default function AboutPage() {
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">Certifications Design Thinking · User Research · Design de Service · UX/UI</h3>
                 <p className="text-dark/70 text-lg mb-1">DThinking Academy</p>
-                <p className="text-dark/50 text-sm">2023</p>
+                <p className="text-dark/50 text-sm">2023 et 2024</p>
+              </div>
+
+              <div className="border-l-4 border-orange pl-6">
+                <h3 className="text-h3 text-navy mb-1">Certification Figma</h3>
+                <p className="text-dark/70 text-lg mb-1">The Cacatoès Theory</p>
+                <p className="text-dark/50 text-sm">2024</p>
               </div>
 
               <div className="border-l-4 border-orange pl-6">
@@ -154,18 +160,18 @@ export default function AboutPage() {
               </div>
 
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-3">Développement assisté par IA</h3>
-                <p className="text-dark/80">Claude Code · Next.js · Supabase · Prisma · Vercel · Better-Auth</p>
+                <h3 className="text-h3 text-navy mb-3">Ateliers &amp; équipe</h3>
+                <p className="text-dark/80">Design Thinking · Co-conception · Méthodes agiles · Scrum</p>
               </div>
 
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-3">Automatisation</h3>
-                <p className="text-dark/80">n8n · Intégrations API REST · Workflows IA · Gemini API · Prompt Engineering</p>
+                <h3 className="text-h3 text-navy mb-3">Outils</h3>
+                <p className="text-dark/80">Figma · FigJam · Miro · Maze · Notion · Jira · Illustrator · Photoshop · HTML / CSS</p>
               </div>
 
               <div className="border-l-4 border-orange pl-6">
-                <h3 className="text-h3 text-navy mb-3">Exploration IA &amp; Design</h3>
-                <p className="text-dark/80">Claude Design · Google Stitch · Prototypage IA-first</p>
+                <h3 className="text-h3 text-navy mb-3">IA générative</h3>
+                <p className="text-dark/80">Claude Design · Stitch · Midjourney · Nano Banana · Google Flow</p>
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@ const courierPrime = Courier_Prime({
 
 export const metadata: Metadata = {
   title: "Belondjo Bolankoko · Product Designer (UX/UI)",
-  description: "Portfolio de Belondjo Bolankoko, Product Designer UX/UI à Strasbourg. Recherche utilisateur, design system, accessibilité RGAA, et des produits menés jusqu'à la mise en ligne.",
+  description: "Portfolio de Belondjo Bolankoko, Product Designer UX/UI à Strasbourg, mobile en Île-de-France. Recherche utilisateur, design system, accessibilité RGAA, et des produits menés jusqu'à la mise en ligne.",
 };
 
 export default function RootLayout({

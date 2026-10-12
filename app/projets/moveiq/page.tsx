@@ -58,7 +58,7 @@ export default function MoveIQPage() {
             </div>
             <div>
               <h3 className="text-h3 text-navy mb-4">Durée</h3>
-              <p className="text-dark/80">2023 – en cours</p>
+              <p className="text-dark/80">Depuis janvier 2025</p>
               <p className="text-dark/80">Prototype avancé · Design system complet · En phase de finalisation</p>
             </div>
             <div>
@@ -146,7 +146,7 @@ export default function MoveIQPage() {
           <div id="probleme" className="fade-in-section mb-16 scroll-mt-32">
             <h2 className="text-h2 text-orange mb-6">02. Le problème</h2>
             <p className="text-lg text-dark/80 leading-relaxed mb-6">
-              20+ interviews menées auprès de coaches et parents ont révélé 3 frustrations majeures :
+              20 interviews menées auprès de coaches et parents ont révélé 3 frustrations majeures :
             </p>
 
             <div className="space-y-6 mb-10">
@@ -264,14 +264,14 @@ export default function MoveIQPage() {
             <div className="space-y-10">
               {/* Étape 1 */}
               <div>
-                <h3 className="text-2xl font-bold text-navy mb-4">1. Research terrain — 20+ interviews</h3>
+                <h3 className="text-2xl font-bold text-navy mb-4">1. Research terrain — 20 interviews</h3>
                 <p className="text-lg text-dark/80 leading-relaxed mb-4">
                   Interviews semi-structurées avec coaches et parents avant de dessiner quoi que ce soit.
                   Objectif : valider les problèmes réels, pas les hypothèses.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
-                    <span className="text-orange font-bold text-xl">20+</span>
+                    <span className="text-orange font-bold text-xl">20</span>
                     <span className="text-dark/70 text-sm ml-2">interviews coaches &amp; parents</span>
                   </div>
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
@@ -528,7 +528,7 @@ export default function MoveIQPage() {
                   <div className="text-dark/70">Interfaces déployées</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-orange mb-2">20+</div>
+                  <div className="text-4xl font-bold text-orange mb-2">20</div>
                   <div className="text-dark/70">Interviews terrain</div>
                 </div>
                 <div className="text-center">

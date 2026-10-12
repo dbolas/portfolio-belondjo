@@ -21,7 +21,7 @@ export default function IntranetInterministerielPage() {
           {/* Hero du projet */}
           <div className="mb-16">
             <h1 className="text-hero text-orange mb-4">Intranet interministériel des Hauts-de-Seine</h1>
-            <p className="text-xl text-dark/70 mb-8">UX/UI Designer • Recherche utilisateur • Architecture de l'information</p>
+            <p className="text-xl text-dark/70 mb-8">Product Designer UX/UI • Recherche utilisateur • Architecture de l'information</p>
 
             {/* Image principale */}
             <div className="w-full h-[400px] lg:h-[600px] bg-navy/10 rounded-2xl overflow-hidden flex items-center justify-center">
@@ -40,15 +40,15 @@ export default function IntranetInterministerielPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <div>
               <h3 className="text-h3 text-navy mb-4">Rôle</h3>
-              <p className="text-dark/80">UX Designer</p>
+              <p className="text-dark/80">Product Designer UX/UI</p>
               <p className="text-dark/80">Recherche utilisateur</p>
               <p className="text-dark/80">Architecture de l'information</p>
             </div>
             <div>
-              <h3 className="text-h3 text-navy mb-4">Équipe</h3>
-              <p className="text-dark/80">1 UX Designer (moi)</p>
-              <p className="text-dark/80">1 Chef de projet</p>
-              <p className="text-dark/80">2 Développeurs</p>
+              <h3 className="text-h3 text-navy mb-4">Contexte</h3>
+              <p className="text-dark/80">Préfecture des Hauts-de-Seine, Nanterre</p>
+              <p className="text-dark/80">Août 2024 – septembre 2026, CDD</p>
+              <p className="text-dark/80">Intranet et extranet</p>
             </div>
           </div>
 
@@ -179,12 +179,12 @@ export default function IntranetInterministerielPage() {
                 </p>
                 <div className="flex flex-wrap gap-4 mb-4">
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
-                    <span className="text-orange font-bold text-xl">12 agents</span>
-                    <span className="text-dark/70 text-sm ml-2">interrogés</span>
+                    <span className="text-orange font-bold text-xl">30+ entretiens</span>
+                    <span className="text-dark/70 text-sm ml-2">avec les agents</span>
                   </div>
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
-                    <span className="text-orange font-bold text-xl">6 services</span>
-                    <span className="text-dark/70 text-sm ml-2">différents</span>
+                    <span className="text-orange font-bold text-xl">11 services</span>
+                    <span className="text-dark/70 text-sm ml-2">de l'État</span>
                   </div>
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
                     <span className="text-orange font-bold text-xl">35 pages</span>
@@ -205,10 +205,6 @@ export default function IntranetInterministerielPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
-                    <span className="text-orange font-bold text-xl">Max 3 clics</span>
-                    <span className="text-dark/70 text-sm ml-2">objectif de navigation</span>
-                  </div>
-                  <div className="bg-orange/10 rounded-lg px-4 py-2">
                     <span className="text-orange font-bold text-xl">8 → 5</span>
                     <span className="text-dark/70 text-sm ml-2">rubriques principales</span>
                   </div>
@@ -219,11 +215,17 @@ export default function IntranetInterministerielPage() {
               <div>
                 <h3 className="text-2xl font-bold text-navy mb-4">3. Concevoir</h3>
                 <p className="text-lg text-dark/80 leading-relaxed mb-4">
-                  J'ai créé des wireframes, des gabarits de pages et des prototypes interactifs pour tester différentes organisations de contenu.
+                  J'ai animé des ateliers de conception avec les équipes métiers, puis créé des wireframes, des gabarits de pages et des prototypes interactifs pour tester différentes organisations de contenu. Le design system, créé sur Figma, est documenté pour les développeurs.
                 </p>
-                <div className="bg-orange/10 rounded-lg px-4 py-2 inline-block">
-                  <span className="text-orange font-bold text-xl">15 gabarits</span>
-                  <span className="text-dark/70 text-sm ml-2">créés</span>
+                <div className="flex flex-wrap gap-4">
+                  <div className="bg-orange/10 rounded-lg px-4 py-2">
+                    <span className="text-orange font-bold text-xl">6 ateliers</span>
+                    <span className="text-dark/70 text-sm ml-2">de conception</span>
+                  </div>
+                  <div className="bg-orange/10 rounded-lg px-4 py-2">
+                    <span className="text-orange font-bold text-xl">15 gabarits</span>
+                    <span className="text-dark/70 text-sm ml-2">créés</span>
+                  </div>
                 </div>
               </div>
 
@@ -234,14 +236,6 @@ export default function IntranetInterministerielPage() {
                   Des sessions de tests avec des agents ont permis d'identifier rapidement les intitulés confus et les parcours bloquants.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-6">
-                  <div className="bg-orange/10 rounded-lg px-4 py-2">
-                    <span className="text-orange font-bold text-xl">8 agents</span>
-                    <span className="text-dark/70 text-sm ml-2">testeurs</span>
-                  </div>
-                  <div className="bg-orange/10 rounded-lg px-4 py-2">
-                    <span className="text-orange font-bold text-xl">3 sessions</span>
-                    <span className="text-dark/70 text-sm ml-2">de tests</span>
-                  </div>
                   <div className="bg-orange/10 rounded-lg px-4 py-2">
                     <span className="text-orange font-bold text-xl">7 rubriques</span>
                     <span className="text-dark/70 text-sm ml-2">renommées</span>
@@ -414,7 +408,7 @@ export default function IntranetInterministerielPage() {
               <ul className="space-y-3 text-lg text-dark/80">
                 <li className="flex items-start gap-3">
                   <span className="text-orange mt-1">•</span>
-                  <span><strong>1 intranet interministériel</strong> couvrant 11 services de l'État</span>
+                  <span><strong>2 applications, l'intranet et l'extranet,</strong> rendues conformes au RGAA, pour 11 services de l'État</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-orange mt-1">•</span>
@@ -430,7 +424,7 @@ export default function IntranetInterministerielPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-orange mt-1">•</span>
-                  <span><strong>Durée du projet :</strong> 6 mois (de la recherche initiale au déploiement)</span>
+                  <span><strong>Durée :</strong> d'août 2024 à septembre 2026</span>
                 </li>
               </ul>
             </div>
@@ -444,7 +438,7 @@ export default function IntranetInterministerielPage() {
                   <h4 className="text-xl font-bold text-dark mb-3">Navigation plus fluide</h4>
                   <p className="text-lg text-dark/80 leading-relaxed">
                     Réduction du nombre de clics moyen : de <strong className="text-orange">5-7 clics</strong> à{' '}
-                    <strong className="text-orange">2-3 clics</strong> (réduction d'environ <strong className="text-orange">50%</strong>)
+                    <strong className="text-orange">2-3 clics</strong> pour trouver un document
                   </p>
                 </div>
 
@@ -457,23 +451,9 @@ export default function IntranetInterministerielPage() {
 
                 <div>
                   <h4 className="text-xl font-bold text-dark mb-3">Satisfaction utilisateur</h4>
-                  <p className="text-lg text-dark/80 leading-relaxed mb-4">
-                    Enquête post-déploiement auprès de <strong>25 agents</strong>, 2 mois après mise en ligne :
+                  <p className="text-lg text-dark/80 leading-relaxed">
+                    <strong className="text-orange">76 %</strong> des agents trouvent l'outil plus simple.
                   </p>
-                  <ul className="space-y-2 text-lg text-dark/80">
-                    <li className="flex items-start gap-3">
-                      <span className="text-orange font-bold">76%</span>
-                      <span>trouvent l'intranet "plus facile à utiliser"</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-orange font-bold">68%</span>
-                      <span>disent "trouver l'information plus rapidement qu'avant"</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-orange font-bold">82%</span>
-                      <span>apprécient la nouvelle page d'accueil avec les accès rapides</span>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>

@@ -67,7 +67,7 @@ export default function Home() {
                     Intranet interministériel des Hauts-de-Seine
                   </h3>
                   <p className="text-lg text-dark/70 leading-relaxed">
-                    Refonte UX d&apos;un intranet pour 400 agents de l&apos;État. Recherche utilisateurs, architecture de l&apos;information, design system.
+                    Refonte UX d&apos;un intranet pour 400 agents de 11 services de l&apos;État. Recherche utilisateurs, architecture de l&apos;information, design system.
                   </p>
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function Home() {
               <p className="text-sm text-dark/50 uppercase tracking-wider mb-3">À propos</p>
               <h2 className="text-h2 text-orange mb-6">Le design commence<br />par l&apos;utilisateur.</h2>
               <p className="text-lg text-dark/80 leading-relaxed mb-8">
-                Issu de l&apos;UX research, je conçois des produits centrés utilisateur — de la recherche terrain à la mise en production. Mon approche : comprendre avant de dessiner, prototyper vite, itérer.
+                Ancien scénographe, je conçois des produits centrés utilisateur — de la recherche terrain à la mise en production. Mon approche : comprendre avant de dessiner, prototyper vite, itérer.
               </p>
               <Link href="/contact">
                 <Button size="lg" iconAfter={<ArrowRight />}>Discutons</Button>
@@ -141,7 +141,7 @@ export default function Home() {
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/hero.jpeg"
-                alt="Belondjo Bolankoko, UX/UI Designer"
+                alt="Belondjo Bolankoko, Product Designer UX/UI"
                 width={800}
                 height={1000}
                 className="w-full h-auto"

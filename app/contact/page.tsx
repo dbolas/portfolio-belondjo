@@ -49,12 +49,12 @@ export default function ContactPage() {
 
                 <div>
                   <p className="text-sm text-dark/50 uppercase tracking-wider mb-2">Localisation</p>
-                  <p className="text-xl text-dark">Strasbourg (67) · mobilité Paris</p>
+                  <p className="text-xl text-dark">Strasbourg (67) · mobile en Île-de-France</p>
                 </div>
 
                 <div>
                   <p className="text-sm text-dark/50 uppercase tracking-wider mb-2">Disponibilité</p>
-                  <p className="text-xl text-dark">À partir de septembre 2026</p>
+                  <p className="text-xl text-dark">Disponible immédiatement</p>
                 </div>
               </div>
             </div>

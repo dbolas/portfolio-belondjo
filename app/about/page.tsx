@@ -67,10 +67,10 @@ export default function AboutPage() {
 
               <div className="border-l-4 border-orange pl-6">
                 <h3 className="text-h3 text-navy mb-1">Product Designer</h3>
-                <p className="text-dark/70 text-lg mb-1">Indépendant</p>
-                <p className="text-dark/50 text-sm mb-3">Janvier 2023 – Janvier 2025</p>
+                <p className="text-dark/70 text-lg mb-1">ICorp</p>
+                <p className="text-dark/50 text-sm mb-3">Janvier 2023 – Juillet 2024 · CDD, à distance depuis la France</p>
                 <p className="text-dark/80">
-                  Plus de 10 sites et applications web livrés, de la recherche utilisateur à la mise en ligne. Audits et refontes pour clarifier les parcours et améliorer la conversion. Design systems remis aux clients pour qu&apos;ils restent autonomes après le projet.
+                  Portail national des démarches administratives de la République démocratique du Congo, base de leur dématérialisation. Conception des fiches démarches : procédure, pièces à fournir, coûts, délais et services compétents. Parcours pensés pour éviter aux citoyens des déplacements inutiles et préparer la mise en ligne des procédures. Contenus validés avec les administrations concernées pour garantir une information fiable.
                 </p>
               </div>
 
